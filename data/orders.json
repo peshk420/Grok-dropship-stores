@@ -1,0 +1,26 @@
+[
+  {
+    "id": "8C5CFAD6",
+    "created": "2026-07-04T04:29:47.615579+00:00",
+    "status": "new",
+    "store": "test",
+    "customer": {
+      "name": "Test User",
+      "email": "test@test.com",
+      "phone": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "zip": ""
+    },
+    "items": [
+      {
+        "name": "Test",
+        "price": 10,
+        "qty": 1
+      }
+    ],
+    "total": 10,
+    "notes": ""
+  }
+]

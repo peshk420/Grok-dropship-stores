@@ -1,0 +1,676 @@
+{
+  "store": {
+    "name": "Summit Trail Co.",
+    "tagline": "Adventure-Ready Outdoor Gear",
+    "logoHtml": "Summit <span>Trail</span>",
+    "description": "Trending camping and outdoor gear \u2014 portable showers, LED lanterns, privacy tents, and bug protection.",
+    "email": "adventure@summittrail.co",
+    "phone": "1-800-SUMMIT",
+    "slug": "summit-trail",
+    "currency": "SEK",
+    "pricesIncludeVat": true,
+    "vatRatePct": 25,
+    "legalName": "[INSERT REGISTERED COMPANY NAME]",
+    "orgNumber": "[INSERT SWEDISH ORG. NUMBER, e.g. 556XXX-XXXX]",
+    "vatNumber": "[INSERT VAT NUMBER, e.g. SE556XXXXXXXX01]",
+    "registeredAddress": "[INSERT REGISTERED BUSINESS ADDRESS]"
+  },
+  "theme": {
+    "primary": "#588157",
+    "primaryDark": "#3a5a40",
+    "accent": "#dad7cd"
+  },
+  "hero": {
+    "title": "Gear Up. Get Out There.",
+    "subtitle": "Camping, hiking, and outdoor adventure equipment at expedition-ready prices.",
+    "badges": [
+      "50%+ Category Growth",
+      "Lightweight & Durable",
+      "14-Day Returns"
+    ]
+  },
+  "trust": [
+    {
+      "icon": "\u26fa",
+      "text": "Camping Essentials"
+    },
+    {
+      "icon": "\ud83e\udd9f",
+      "text": "Bug Protection"
+    },
+    {
+      "icon": "\ud83d\udca1",
+      "text": "Emergency Light"
+    },
+    {
+      "icon": "\ud83d\udebf",
+      "text": "Portable Hygiene"
+    }
+  ],
+  "about": {
+    "title": "Ride the Outdoor Boom",
+    "paragraphs": [
+      "Summit Trail stocks outdoor products with 50%+ search growth in 2026.",
+      "Verified suppliers with U.S. warehouse options for 7\u201314 day delivery."
+    ],
+    "features": [
+      {
+        "icon": "\ud83c\udfd5\ufe0f",
+        "text": "Camping & van life"
+      },
+      {
+        "icon": "\ud83e\udd7e",
+        "text": "Hiking essentials"
+      },
+      {
+        "icon": "\ud83c\udfa3",
+        "text": "Water sports"
+      },
+      {
+        "icon": "\ud83c\udf32",
+        "text": "Leave No Trace"
+      }
+    ]
+  },
+  "policies": {
+    "returns": {
+      "title": "Returns & Refunds",
+      "summary": "You may return most unused items within 30 days of delivery, no reason needed. Customers in the EU/Sweden additionally have a mandatory 14-day statutory right of withdrawal and a separate statutory right to claim for faulty goods for up to 3 years. Full details below.",
+      "sections": [
+        {
+          "heading": "Our Standard Return Policy",
+          "text": "Most items may be returned within 30 days of delivery for any reason, provided they are unused and in resalable condition with original packaging where practical. We do not charge a restocking fee. Contact us with your order number to start a return."
+        },
+        {
+          "heading": "Statutory Right of Withdrawal \u2014 EU & Swedish Customers",
+          "text": "Under the Swedish Distance and Off-Premises Contracts Act (distansavtalslagen) and the EU Consumer Rights Directive, you have the right to withdraw from your purchase within 14 days of receiving your goods, without giving any reason. To exercise this right, tell us clearly (e.g. by email to adventure@summittrail.co) that you wish to withdraw, then return the goods within a further 14 days. We will refund the full purchase price, including the standard delivery cost you paid, within 14 days of receiving the goods back or proof that you have sent them. You are responsible for the direct cost of returning the goods. We may reduce the refund to reflect any loss in value caused by handling the goods beyond what is necessary to check their nature and function. Sealed goods that are not suitable for return for health or hygiene reasons \u2014 for example, pool or spa chemicals \u2014 are excluded from the right of withdrawal once the seal is broken after delivery; this is disclosed on the relevant product pages."
+        },
+        {
+          "heading": "Statutory Warranty for Faulty Goods (Reklamationsr\u00e4tt)",
+          "text": "Separately from the return windows above, Swedish and EU law gives you the right to claim for goods that are faulty or do not match their description for up to 3 years after purchase (Konsumentk\u00f6plagen / the EU Sale of Goods Directive). If a fault appears, contact us and we will offer a repair, replacement, price reduction, or refund as appropriate. This statutory right exists regardless of any return deadline stated above and is not limited by it."
+        },
+        {
+          "heading": "How to Start a Return or Warranty Claim",
+          "text": "Email adventure@summittrail.co with your order number and reason for the return or claim. We will respond within 2 business days with return instructions. You do not need to wait for an authorization number before sending goods back, though including your order number helps us process it faster."
+        },
+        {
+          "heading": "Refunds",
+          "text": "Refunds are issued to your original payment method. For EU/Swedish withdrawals, refunds are issued within 14 days as described above. For other returns, refunds are issued within 14 days of us receiving the item."
+        },
+        {
+          "heading": "Damaged, Faulty, or Wrong Items",
+          "text": "If you receive a damaged, faulty, or incorrect item, contact us with photos as soon as possible. We will arrange a free replacement or full refund, including original delivery cost, at no cost to you. This is separate from \u2014 and does not reduce \u2014 your statutory warranty rights above."
+        },
+        {
+          "heading": "Customers Outside the EU (Including the US)",
+          "text": "US law does not generally require a cooling-off period for regular retail purchases, but we apply the same 30-day standard return policy described above to all customers regardless of location. Some US states provide additional consumer protections that continue to apply."
+        },
+        {
+          "heading": "If We Can't Resolve It",
+          "text": "Swedish and EU customers may bring an unresolved dispute to the National Board for Consumer Disputes (Allm\u00e4nna reklamationsn\u00e4mnden, ARN, www.arn.se) or use the EU Online Dispute Resolution platform at ec.europa.eu/consumers/odr. Using these services is free and does not require a lawyer."
+        }
+      ]
+    },
+    "shipping": {
+      "title": "Shipping Policy",
+      "summary": "Orders ship within 1\u20133 business days. Delivery typically takes 7\u201321 business days depending on supplier location. Cross-border orders may be subject to customs duties or import VAT.",
+      "sections": [
+        {
+          "heading": "Processing Time",
+          "text": "Orders are processed within 1\u20133 business days. You will receive a confirmation email with tracking once your order ships."
+        },
+        {
+          "heading": "Delivery Estimates",
+          "text": "Standard delivery: 7\u201314 business days. Extended delivery: 14\u201321 business days for items fulfilled internationally. These are estimates, not guarantees."
+        },
+        {
+          "heading": "Shipping Costs",
+          "text": "Shipping costs, if any, are shown at checkout before you pay. All prices shown include 25% VAT (moms) where applicable."
+        },
+        {
+          "heading": "Customs, Duties & Import VAT",
+          "text": "If your order is fulfilled from a supplier outside your country (including outside the EU), it may be subject to customs duties or import VAT collected by the carrier or customs authority on delivery. These charges are not included in our prices and are your responsibility as the importer of record, unless we state otherwise at checkout."
+        },
+        {
+          "heading": "Lost or Delayed Packages",
+          "text": "If tracking shows no movement for 10+ business days, contact us and we will work with the carrier and supplier to resolve it. This does not affect your statutory rights if the goods never arrive \u2014 you remain entitled to a replacement or refund."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "summary": "By purchasing from us you agree to these terms. Nothing here limits any statutory right you have under Swedish, EU, or other applicable consumer law.",
+      "sections": [
+        {
+          "heading": "Who We Are",
+          "text": "This store is operated by [INSERT REGISTERED COMPANY NAME], registered in Sweden (organisation number [INSERT SWEDISH ORG. NUMBER, e.g. 556XXX-XXXX], VAT number [INSERT VAT NUMBER, e.g. SE556XXXXXXXX01]), registered address: [INSERT REGISTERED BUSINESS ADDRESS]. You can reach us at adventure@summittrail.co."
+        },
+        {
+          "heading": "Business Model",
+          "text": "We are a retailer. Products are sourced from third-party suppliers and shipped to you, sometimes directly from the supplier. We select suppliers based on our own review process; this is not a guarantee against any and all defects, but faulty or misdescribed goods remain covered by the statutory rights described in our Returns & Refunds policy."
+        },
+        {
+          "heading": "Product Descriptions & Images",
+          "text": "We make every reasonable effort to ensure product descriptions, images, and specifications are accurate. Product photos are genuine representations of the specific item for sale unless a product page explicitly states the image is illustrative/stock and may differ from the actual product. If an item you receive does not match its description, this is covered by your statutory rights, not excluded by this clause."
+        },
+        {
+          "heading": "Pricing",
+          "text": "All prices shown include 25% VAT (moms) where applicable. We may correct genuine pricing errors before an order is confirmed. If a pricing error is discovered after you have paid, we will contact you and give you the option to confirm the order at the correct price or cancel it for a full refund. We will not change the price of an order you have already placed and paid for."
+        },
+        {
+          "heading": "Product Claims & Ratings",
+          "text": "Technical ratings shown on product pages (for example UPF, SPF, IPX water-resistance, or BTU figures) are the manufacturer's reported specifications. We do not independently re-test every item. For uses where a rating is safety-critical \u2014 sun or insect protection, flotation, or water resistance \u2014 please verify the manufacturer's documentation is sufficient for your specific need before relying on it, particularly for children or for medical/health-related use."
+        },
+        {
+          "heading": "Liability",
+          "text": "Nothing in these terms excludes or limits our liability for death or personal injury caused by negligence, for fraud, or for anything that cannot lawfully be excluded or limited under the law of your country of residence, including your statutory consumer guarantee rights and rights under applicable product liability law. Subject to that, our liability for indirect or consequential loss is excluded to the extent permitted by law."
+        },
+        {
+          "heading": "Intended Use",
+          "text": "Products are sold for ordinary consumer use and are not intended for medical, veterinary, or professional/industrial use unless explicitly stated on the product page. Pool and garden chemicals must be used and stored according to the safety information on their packaging."
+        },
+        {
+          "heading": "Governing Law & Your Right to Go to Court",
+          "text": "These terms do not deprive you of the protection of any mandatory consumer-protection law of the country in which you live. You may always bring a claim in the courts of your own country of residence, and Swedish/EU customers may use ARN or the EU ODR platform as described in our Returns & Refunds policy. We will not require you to submit to binding arbitration unless you agree to it after a dispute has arisen."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "summary": "We collect only the information needed to process orders and respond to inquiries, and we never sell your personal data. This policy explains your rights under the GDPR.",
+      "sections": [
+        {
+          "heading": "Who Is Responsible For Your Data",
+          "text": "[INSERT REGISTERED COMPANY NAME] ([INSERT REGISTERED BUSINESS ADDRESS]) is the data controller for personal data collected through this site. Contact us at adventure@summittrail.co for any privacy question or request."
+        },
+        {
+          "heading": "What We Collect",
+          "text": "Name, email, phone, shipping/billing address, and order details when you purchase or contact us. Basic technical/browsing data via cookies needed for the site to function. We only set non-essential (analytics/marketing) cookies if you consent via our cookie banner."
+        },
+        {
+          "heading": "Why We Process It, and On What Legal Basis",
+          "text": "To fulfil your order and provide support (performance of a contract); to keep accounting records (legal obligation); to keep the site secure and prevent fraud (legitimate interest); and to send marketing emails only if you have opted in (consent, which you can withdraw at any time)."
+        },
+        {
+          "heading": "Who We Share It With",
+          "text": "Fulfilment partners and shipping carriers, to deliver your order; payment processors, to process your payment (we do not store your full card number); and, only where required, tax or law-enforcement authorities. We do not sell or rent your personal data."
+        },
+        {
+          "heading": "How Long We Keep It",
+          "text": "Order and invoice records are kept for 7 years to comply with the Swedish Bookkeeping Act (Bokf\u00f6ringslagen) and equivalent accounting rules. Other personal data is deleted once it is no longer needed for the purpose it was collected for."
+        },
+        {
+          "heading": "Your Rights",
+          "text": "Under the GDPR you can ask us for access to, correction of, or deletion of your personal data, object to or restrict certain processing, and request your data in a portable format. Email adventure@summittrail.co \u2014 we respond within 30 days. You can also lodge a complaint with the Swedish Authority for Privacy Protection (Integritetsskyddsmyndigheten, IMY, www.imy.se) or your local data protection authority."
+        },
+        {
+          "heading": "Marketing Emails",
+          "text": "We only send marketing emails to customers who have actively opted in (no pre-ticked boxes). Every marketing email includes a one-click unsubscribe link."
+        }
+      ]
+    }
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Portable Camping Shower \u2014 Battery Powered",
+      "category": "Camping",
+      "price": 59.99,
+      "originalPrice": 89.99,
+      "source": "Alibaba",
+      "badge": "Trending",
+      "description": "Rechargeable pump delivers steady shower from any water source. 60-min runtime.",
+      "details": "2200mAh rechargeable. 60-min runtime. 6.5 ft hose. Suction cup and hook mount.",
+      "image": "images/1.jpg",
+      "images": [
+        "images/1.jpg"
+      ],
+      "imageKey": "camping",
+      "sku": "SKU-0001",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": false
+    },
+    {
+      "id": 2,
+      "name": "Pop-Up Privacy Tent \u2014 Changing Room",
+      "category": "Camping",
+      "price": 59.99,
+      "originalPrice": 84.99,
+      "source": "Alibaba",
+      "badge": "50% Growth",
+      "description": "Instant privacy shelter. 6.5 ft tall with carry bag.",
+      "details": "47x47x78 inches. Instant pop-up. Carry bag included. Ground stakes.",
+      "image": "images/2.jpg",
+      "images": [
+        "images/2.jpg"
+      ],
+      "imageKey": "tent",
+      "sku": "SKU-0002",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": false
+    },
+    {
+      "id": 3,
+      "name": "Ultralight 2-Person Camping Tent",
+      "category": "Camping",
+      "price": 89.99,
+      "originalPrice": 139.99,
+      "source": "Alibaba",
+      "badge": "Hot Deal",
+      "description": "3.5 lb backpacking tent with rainfly and two vestibules.",
+      "details": "3.5 lbs packed. 2-person. Full rainfly. Aluminum poles. Two vestibules.",
+      "image": "images/3.jpg",
+      "images": [
+        "images/3.jpg"
+      ],
+      "imageKey": "tent",
+      "sku": "SKU-0003",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": false
+    },
+    {
+      "id": 4,
+      "name": "Foldable Camping Cot \u2014 Off-Ground Sleep",
+      "category": "Camping",
+      "price": 64.99,
+      "originalPrice": 94.99,
+      "source": "Temu",
+      "badge": null,
+      "description": "Aluminum frame cot supports 300 lbs. Folds to briefcase size.",
+      "details": "300 lb capacity. 75x26 inches. Aluminum frame. Folds to 36x16x6 inches.",
+      "image": "images/4.jpg",
+      "images": [
+        "images/4.jpg"
+      ],
+      "imageKey": "camping",
+      "sku": "SKU-0004",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": false
+    },
+    {
+      "id": 5,
+      "name": "Mosquito Repeller Fan \u2014 Chemical-Free",
+      "category": "Bug Protection",
+      "price": 24.99,
+      "originalPrice": 36.99,
+      "source": "Temu",
+      "badge": "Best Seller",
+      "description": "Holographic blade fan deters mosquitoes without chemicals.",
+      "details": "Chemical-free. USB or 2xAA battery. 360\u00b0 holographic blades. Quiet operation.",
+      "image": "images/5.jpg",
+      "images": [
+        "images/5.jpg"
+      ],
+      "imageKey": "mosquito",
+      "sku": "SKU-0005",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": true
+    },
+    {
+      "id": 6,
+      "name": "Insect Bite Venom Extractor Kit",
+      "category": "Bug Protection",
+      "price": 14.99,
+      "originalPrice": 22.99,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Suction tool removes venom from bites and stings.",
+      "details": "Dual-size suction cups. Compact for first-aid kits. Reusable after cleaning.",
+      "image": "images/6.jpg",
+      "images": [
+        "images/6.jpg"
+      ],
+      "imageKey": "mosquito",
+      "sku": "SKU-0006",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": true
+    },
+    {
+      "id": 7,
+      "name": "DEET-Free Insect Repellent Spray \u2014 4oz",
+      "category": "Bug Protection",
+      "price": 12.99,
+      "originalPrice": 18.99,
+      "source": "Amazon Wholesale",
+      "badge": null,
+      "description": "Picaridin-based repellent effective up to 8 hours. Family safe.",
+      "details": "20% picaridin. 8-hour protection. DEET-free. 4 oz spray bottle.",
+      "image": "images/7.jpg",
+      "images": [
+        "images/7.jpg"
+      ],
+      "imageKey": "mosquito",
+      "sku": "SKU-0007",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": true
+    },
+    {
+      "id": 8,
+      "name": "Rechargeable LED Camping Lantern",
+      "category": "Lighting",
+      "price": 29.99,
+      "originalPrice": 44.99,
+      "source": "Amazon Wholesale",
+      "badge": null,
+      "description": "1000-lumen lantern with 4 modes and power bank function.",
+      "details": "1000 lumens max. 4 light modes. 5200mAh power bank. IPX4 water resistant.",
+      "image": "images/8.jpg",
+      "images": [
+        "images/8.jpg"
+      ],
+      "imageKey": "lantern",
+      "sku": "SKU-0008",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": false
+    },
+    {
+      "id": 9,
+      "name": "Headlamp \u2014 350 Lumen Rechargeable",
+      "category": "Lighting",
+      "price": 19.99,
+      "originalPrice": 29.99,
+      "source": "Temu",
+      "badge": null,
+      "description": "350-lumen headlamp with red night mode and 45-hour runtime.",
+      "details": "350 lumens. Red night mode. 45-hour low runtime. USB rechargeable. IPX4.",
+      "image": "images/9.jpg",
+      "images": [
+        "images/9.jpg"
+      ],
+      "imageKey": "lantern",
+      "sku": "SKU-0009",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": false
+    },
+    {
+      "id": 10,
+      "name": "Insulated Hiking Backpack \u2014 50L",
+      "category": "Hiking",
+      "price": 54.99,
+      "originalPrice": 79.99,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Waterproof hiking pack with rain cover and hydration sleeve.",
+      "details": "50L capacity. Rain cover included. Hydration bladder sleeve. Padded hip belt.",
+      "image": "images/10.jpg",
+      "images": [
+        "images/10.jpg"
+      ],
+      "imageKey": "backpack",
+      "sku": "SKU-0010",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": false
+    },
+    {
+      "id": 11,
+      "name": "Trekking Poles \u2014 Carbon Fiber Pair",
+      "category": "Hiking",
+      "price": 39.99,
+      "originalPrice": 59.99,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Carbon fiber trekking poles with cork grips and quick-lock.",
+      "details": "Carbon fiber shafts. Cork grips. Quick-lock adjustment. Includes tips and baskets.",
+      "image": "images/11.jpg",
+      "images": [
+        "images/11.jpg"
+      ],
+      "imageKey": "hiking",
+      "sku": "SKU-0011",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": false
+    },
+    {
+      "id": 12,
+      "name": "Portable Camping Stove \u2014 Dual Burner",
+      "category": "Cooking",
+      "price": 49.99,
+      "originalPrice": 74.99,
+      "source": "Amazon Wholesale",
+      "badge": "New",
+      "description": "Propane dual-burner with wind guards. 20,000 BTU output.",
+      "details": "20,000 BTU total. Dual burners. Wind guards. Fits 1-lb propane canisters.",
+      "image": "images/12.jpg",
+      "images": [
+        "images/12.jpg"
+      ],
+      "imageKey": "camp_stove",
+      "sku": "SKU-0012",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": true
+    },
+    {
+      "id": 13,
+      "name": "Camping Cookware Set \u2014 10 Piece",
+      "category": "Cooking",
+      "price": 34.99,
+      "originalPrice": 49.99,
+      "source": "Temu",
+      "badge": null,
+      "description": "Non-stick aluminum pots, pans, and utensils with mesh carry bag.",
+      "details": "10 pieces. Non-stick aluminum. Folding handles. Mesh storage bag.",
+      "image": "images/13.jpg",
+      "images": [
+        "images/13.jpg"
+      ],
+      "imageKey": "camp_stove",
+      "sku": "SKU-0013",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": true
+    },
+    {
+      "id": 14,
+      "name": "Emergency Survival Kit \u2014 72 Hour",
+      "category": "Safety",
+      "price": 39.99,
+      "originalPrice": 59.99,
+      "source": "Temu",
+      "badge": null,
+      "description": "Compact kit with food bars, water, first aid, and emergency blanket.",
+      "details": "Food bars, water pouches, first aid, flashlight, whistle, emergency blanket.",
+      "image": "images/14.jpg",
+      "images": [
+        "images/14.jpg"
+      ],
+      "imageKey": "survival",
+      "sku": "SKU-0014",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": true
+    },
+    {
+      "id": 15,
+      "name": "Waterproof Dry Bag Set \u2014 3 Pack",
+      "category": "Hiking",
+      "price": 22.99,
+      "originalPrice": 34.99,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Roll-top dry bags in 3L, 5L, and 10L sizes. IPX7 waterproof.",
+      "details": "3L, 5L, 10L sizes. Roll-top closure. IPX7 waterproof. Shoulder straps.",
+      "image": "images/15.jpg",
+      "images": [
+        "images/15.jpg"
+      ],
+      "imageKey": "backpack",
+      "sku": "SKU-0015",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": false
+    },
+    {
+      "id": 16,
+      "name": "Camping Hammock with Mosquito Net",
+      "category": "Camping",
+      "price": 44.99,
+      "originalPrice": 64.99,
+      "source": "Temu",
+      "badge": null,
+      "description": "Parachute nylon hammock with integrated bug net. 500 lb capacity.",
+      "details": "Parachute nylon. 500 lb capacity. Integrated mosquito net. Tree straps included.",
+      "image": "images/16.jpg",
+      "images": [
+        "images/16.jpg"
+      ],
+      "imageKey": "camping",
+      "sku": "SKU-0016",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": false
+    },
+    {
+      "id": 17,
+      "name": "Portable Power Station \u2014 200Wh",
+      "category": "Power",
+      "price": 129.99,
+      "originalPrice": 189.99,
+      "source": "Alibaba",
+      "badge": "New",
+      "description": "200Wh lithium power station with AC, USB, and DC outputs.",
+      "details": "200Wh capacity. AC outlet, 2x USB-A, USB-C, DC port. Solar chargeable.",
+      "image": "images/17.jpg",
+      "images": [
+        "images/17.jpg"
+      ],
+      "imageKey": "survival",
+      "sku": "SKU-0017",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": true
+    },
+    {
+      "id": 18,
+      "name": "Foldable Camp Chair \u2014 Heavy Duty",
+      "category": "Camping",
+      "price": 36.99,
+      "originalPrice": 54.99,
+      "source": "Temu",
+      "badge": null,
+      "description": "600D Oxford camp chair supports 330 lbs. Cup holder and carry bag.",
+      "details": "600D Oxford fabric. 330 lb capacity. Cup holder. Carry bag. 19x19x33 inches.",
+      "image": "images/18.jpg",
+      "images": [
+        "images/18.jpg"
+      ],
+      "imageKey": "camping",
+      "sku": "SKU-0018",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": false
+    },
+    {
+      "id": 19,
+      "name": "Sleeping Bag \u2014 3 Season Mummy Style",
+      "category": "Camping",
+      "price": 54.99,
+      "originalPrice": 79.99,
+      "source": "Alibaba",
+      "badge": "New",
+      "description": "Lightweight mummy sleeping bag rated to 32\u00b0F for spring through fall.",
+      "details": "32\u00b0F comfort rating. 2.8 lbs. Compression sack included. Water-resistant shell.",
+      "image": "images/19.jpg",
+      "images": [
+        "images/19.jpg"
+      ],
+      "imageKey": "camping",
+      "sku": "SKU-0019",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": false
+    },
+    {
+      "id": 20,
+      "name": "Portable Water Filter Straw \u2014 Survival",
+      "category": "Safety",
+      "price": 16.99,
+      "originalPrice": 24.99,
+      "source": "Temu",
+      "badge": null,
+      "description": "Personal water filter straw removes 99.9% bacteria from outdoor water sources.",
+      "details": "Filters 1,500 liters. Removes 99.9% bacteria. 0.1-micron membrane. 2 oz weight.",
+      "image": "images/20.jpg",
+      "images": [
+        "images/20.jpg"
+      ],
+      "imageKey": "survival",
+      "sku": "SKU-0020",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": true
+    },
+    {
+      "id": 21,
+      "name": "Campfire Grill Grate \u2014 Folding Steel",
+      "category": "Cooking",
+      "price": 29.99,
+      "originalPrice": 44.99,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Folding steel grill grate fits over campfires and fire pits.",
+      "details": "17x11 inch cooking surface. Folding legs. Chrome-plated steel. 2.2 lbs.",
+      "image": "images/21.jpg",
+      "images": [
+        "images/21.jpg"
+      ],
+      "imageKey": "camp_stove",
+      "sku": "SKU-0021",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": true
+    },
+    {
+      "id": 22,
+      "name": "Waterproof Trekking Gaiters \u2014 Pair",
+      "category": "Hiking",
+      "price": 24.99,
+      "originalPrice": 36.99,
+      "source": "Temu",
+      "badge": null,
+      "description": "Breathable gaiters keep mud, snow, and debris out of boots on trails.",
+      "details": "600D nylon. Waterproof PU coating. Adjustable top strap. One size fits most.",
+      "image": "images/22.jpg",
+      "images": [
+        "images/22.jpg"
+      ],
+      "imageKey": "hiking",
+      "sku": "SKU-0022",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": false
+    },
+    {
+      "id": 23,
+      "name": "Solar Camp Shower Bag \u2014 5 Gallon",
+      "category": "Camping",
+      "price": 19.99,
+      "originalPrice": 29.99,
+      "source": "Temu",
+      "badge": "Best Value",
+      "description": "Solar-heated PVC shower bag warms water in 3 hours of direct sun.",
+      "details": "5-gallon capacity. Solar heating panel. On/off valve. Hang rope included.",
+      "image": "images/23.jpg",
+      "images": [
+        "images/23.jpg"
+      ],
+      "imageKey": "camping",
+      "sku": "SKU-0023",
+      "inStock": true,
+      "shippingDays": "7-14 business days",
+      "regulatoryReviewNeeded": false
+    }
+  ],
+  "launchReady": false
+}

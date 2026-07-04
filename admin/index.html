@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Admin — Dropship Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+    .login-wrap { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+    .login-box { background: #1e293b; padding: 40px; border-radius: 16px; width: 380px; border: 1px solid #334155; }
+    .login-box h1 { font-size: 1.4rem; margin-bottom: 8px; }
+    .login-box p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 24px; }
+    .login-box input { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #e2e8f0; margin-bottom: 16px; font-size: 1rem; }
+    .login-box button { width: 100%; padding: 12px; background: #38bdf8; color: #0f172a; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1rem; }
+    .login-box .error { color: #f87171; font-size: 0.85rem; margin-top: 12px; display: none; }
+    .app { display: none; }
+    .app.active { display: block; }
+    .topbar { background: #1e293b; border-bottom: 1px solid #334155; padding: 16px 32px; display: flex; justify-content: space-between; align-items: center; }
+    .topbar h1 { font-size: 1.2rem; }
+    .topbar .badge { background: #ef4444; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; margin-left: 8px; }
+    .logout { background: none; border: 1px solid #475569; color: #94a3b8; padding: 8px 16px; border-radius: 6px; cursor: pointer; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; padding: 24px 32px; }
+    .stat-card { background: #1e293b; border-radius: 12px; padding: 20px; border: 1px solid #334155; }
+    .stat-card .label { color: #94a3b8; font-size: 0.85rem; }
+    .stat-card .value { font-size: 1.8rem; font-weight: 700; margin-top: 4px; }
+    .stat-card .value.money { color: #4ade80; }
+    .tabs { display: flex; gap: 4px; padding: 0 32px; border-bottom: 1px solid #334155; }
+    .tab { padding: 12px 20px; background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 0.95rem; border-bottom: 2px solid transparent; }
+    .tab.active { color: #38bdf8; border-bottom-color: #38bdf8; }
+    .panel { display: none; padding: 24px 32px 48px; }
+    .panel.active { display: block; }
+    table { width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 12px; overflow: hidden; }
+    th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #334155; font-size: 0.9rem; }
+    th { background: #334155; color: #94a3b8; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+    tr:hover { background: #263548; }
+    .status { padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
+    .status-new { background: #1e3a5f; color: #38bdf8; }
+    .status-read { background: #1a3a2a; color: #4ade80; }
+    .status-unread { background: #3b1f1f; color: #f87171; }
+    .btn-sm { padding: 4px 12px; border-radius: 6px; border: 1px solid #475569; background: #334155; color: #e2e8f0; cursor: pointer; font-size: 0.8rem; }
+    .btn-sm:hover { background: #475569; }
+    .empty { text-align: center; padding: 48px; color: #64748b; }
+    .detail-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 100; align-items: center; justify-content: center; }
+    .detail-modal.open { display: flex; }
+    .detail-box { background: #1e293b; border-radius: 16px; padding: 32px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; border: 1px solid #334155; }
+    .detail-box h3 { margin-bottom: 16px; }
+    .detail-row { margin-bottom: 8px; font-size: 0.9rem; }
+    .detail-row strong { color: #94a3b8; }
+    .private-note { background: #1e293b; margin: 0 32px 24px; padding: 16px; border-radius: 8px; border: 1px solid #334155; font-size: 0.85rem; color: #94a3b8; }
+    .private-note code { color: #38bdf8; }
+  </style>
+</head>
+<body>
+  <div class="login-wrap" id="login-screen">
+    <div class="login-box">
+      <h1>🔒 Private Admin</h1>
+      <p>Dropship portfolio dashboard. Not linked from public stores.</p>
+      <input type="password" id="password-input" placeholder="Admin password" autofocus>
+      <button onclick="login()">Sign In</button>
+      <div class="error" id="login-error">Invalid password</div>
+      <p style="margin-top:16px;font-size:0.8rem;color:#64748b;">Default password is in <code style="color:#38bdf8">admin/config.json</code></p>
+    </div>
+  </div>
+
+  <div class="app" id="app">
+    <div class="topbar">
+      <h1>📊 Dropship Admin <span class="badge" id="alert-badge" style="display:none">0</span></h1>
+      <button class="logout" onclick="logout()">Sign Out</button>
+    </div>
+
+    <div class="private-note">
+      🔐 This page is private — not linked from any store. Password: <code>admin/config.json</code> · Data stored in <code>data/orders.json</code> and <code>data/messages.json</code>
+    </div>
+
+    <div class="stats" id="stats"></div>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="orders">Orders</button>
+      <button class="tab" data-tab="messages">Messages</button>
+      <button class="tab" data-tab="subscribers">Subscribers</button>
+    </div>
+
+    <div class="panel active" id="panel-orders">
+      <table>
+        <thead><tr><th>ID</th><th>Date</th><th>Store</th><th>Customer</th><th>Total</th><th>Status</th><th>Action</th></tr></thead>
+        <tbody id="orders-body"></tbody>
+      </table>
+    </div>
+
+    <div class="panel" id="panel-messages">
+      <table>
+        <thead><tr><th>ID</th><th>Date</th><th>Store</th><th>From</th><th>Subject</th><th>Status</th><th>Action</th></tr></thead>
+        <tbody id="messages-body"></tbody>
+      </table>
+    </div>
+
+    <div class="panel" id="panel-subscribers">
+      <table>
+        <thead><tr><th>Date</th><th>Store</th><th>Email</th></tr></thead>
+        <tbody id="subs-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="detail-modal" id="detail-modal">
+    <div class="detail-box" id="detail-content"></div>
+  </div>
+
+  <script>
+    const API = '';
+    let adminKey = sessionStorage.getItem('adminKey') || '';
+
+    if (adminKey) showApp();
+
+    document.getElementById('password-input')?.addEventListener('keydown', e => {
+      if (e.key === 'Enter') login();
+    });
+
+    document.querySelectorAll('.tab').forEach(t => {
+      t.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+        document.querySelectorAll('.panel').forEach(x => x.classList.remove('active'));
+        t.classList.add('active');
+        document.getElementById('panel-' + t.dataset.tab).classList.add('active');
+      });
+    });
+
+    async function login() {
+      const pw = document.getElementById('password-input').value;
+      const res = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: pw })
+      });
+      if (res.ok) {
+        adminKey = pw;
+        sessionStorage.setItem('adminKey', pw);
+        showApp();
+      } else {
+        document.getElementById('login-error').style.display = 'block';
+      }
+    }
+
+    function logout() {
+      adminKey = '';
+      sessionStorage.removeItem('adminKey');
+      document.getElementById('app').classList.remove('active');
+      document.getElementById('login-screen').style.display = 'flex';
+    }
+
+    function showApp() {
+      document.getElementById('login-screen').style.display = 'none';
+      document.getElementById('app').classList.add('active');
+      loadDashboard();
+      setInterval(loadDashboard, 15000);
+    }
+
+    async function loadDashboard() {
+      const res = await fetch('/api/admin/dashboard', { headers: { 'X-Admin-Key': adminKey } });
+      if (!res.ok) { logout(); return; }
+      const data = await res.json();
+      renderStats(data.stats);
+      renderOrders(data.orders);
+      renderMessages(data.messages);
+      renderSubs(data.subscribers);
+      const alerts = data.stats.newOrders + data.stats.unreadMessages;
+      const badge = document.getElementById('alert-badge');
+      if (alerts > 0) { badge.textContent = alerts; badge.style.display = 'inline'; }
+      else badge.style.display = 'none';
+    }
+
+    function formatMoney(amount, currency = 'USD') {
+      const value = Number(amount || 0);
+      if (currency === 'SEK') {
+        return value.toLocaleString('sv-SE', { style: 'currency', currency: 'SEK' });
+      }
+      return '$' + value.toFixed(2);
+    }
+
+    function renderRevenueStats(revenueByCurrency) {
+      const entries = Object.entries(revenueByCurrency || {});
+      if (!entries.length) return '<div class="value money">$0.00</div>';
+      return entries.map(([currency, amount]) =>
+        `<div class="value money">${formatMoney(amount, currency)}</div>`
+      ).join('');
+    }
+
+    function renderStats(s) {
+      document.getElementById('stats').innerHTML = `
+        <div class="stat-card"><div class="label">Stores</div><div class="value">${s.storeCount || 0}</div></div>
+        <div class="stat-card"><div class="label">Total Orders</div><div class="value">${s.totalOrders}</div></div>
+        <div class="stat-card"><div class="label">New Orders</div><div class="value">${s.newOrders}</div></div>
+        <div class="stat-card"><div class="label">Unread Messages</div><div class="value">${s.unreadMessages}</div></div>
+        <div class="stat-card"><div class="label">Revenue (Pending)</div>${renderRevenueStats(s.revenueByCurrency)}</div>
+        <div class="stat-card"><div class="label">Subscribers</div><div class="value">${s.subscribers}</div></div>`;
+    }
+
+    function renderOrders(orders) {
+      const body = document.getElementById('orders-body');
+      if (!orders.length) { body.innerHTML = '<tr><td colspan="7" class="empty">No orders yet</td></tr>'; return; }
+      body.innerHTML = orders.map(o => `
+        <tr>
+          <td>${o.id}</td>
+          <td>${new Date(o.created).toLocaleString()}</td>
+          <td>${o.store}</td>
+          <td>${o.customer.name}<br><small style="color:#64748b">${o.customer.email}</small></td>
+          <td>${formatMoney(o.total, o.currency)}</td>
+          <td><span class="status status-${o.status}">${o.status}</span></td>
+          <td>
+            <button class="btn-sm" onclick='viewOrder(${JSON.stringify(o).replace(/'/g,"&#39;")})'>View</button>
+            ${o.status === 'new' ? `<button class="btn-sm" onclick="markOrder('${o.id}','fulfilled')">Fulfill</button>` : ''}
+          </td>
+        </tr>`).join('');
+    }
+
+    function renderMessages(msgs) {
+      const body = document.getElementById('messages-body');
+      if (!msgs.length) { body.innerHTML = '<tr><td colspan="7" class="empty">No messages yet</td></tr>'; return; }
+      body.innerHTML = msgs.map(m => `
+        <tr>
+          <td>${m.id}</td>
+          <td>${new Date(m.created).toLocaleString()}</td>
+          <td>${m.store}</td>
+          <td>${m.name}<br><small style="color:#64748b">${m.email}</small></td>
+          <td>${m.subject}</td>
+          <td><span class="status status-${m.status}">${m.status}</span></td>
+          <td>
+            <button class="btn-sm" onclick='viewMessage(${JSON.stringify(m).replace(/'/g,"&#39;")})'>Read</button>
+            ${m.status === 'unread' ? `<button class="btn-sm" onclick="markMessage('${m.id}','read')">Mark Read</button>` : ''}
+          </td>
+        </tr>`).join('');
+    }
+
+    function renderSubs(subs) {
+      const body = document.getElementById('subs-body');
+      if (!subs.length) { body.innerHTML = '<tr><td colspan="3" class="empty">No subscribers yet</td></tr>'; return; }
+      body.innerHTML = subs.map(s => `
+        <tr><td>${new Date(s.created).toLocaleString()}</td><td>${s.store}</td><td>${s.email}</td></tr>`).join('');
+    }
+
+    function viewOrder(o) {
+      const items = o.items.map(i => `<li>${i.qty}× ${i.name} — ${formatMoney(i.price * i.qty, o.currency)}</li>`).join('');
+      showDetail(`Order ${o.id}`, `
+        <div class="detail-row"><strong>Store:</strong> ${o.store}</div>
+        <div class="detail-row"><strong>Date:</strong> ${new Date(o.created).toLocaleString()}</div>
+        <div class="detail-row"><strong>Customer:</strong> ${o.customer.name}</div>
+        <div class="detail-row"><strong>Email:</strong> ${o.customer.email}</div>
+        <div class="detail-row"><strong>Phone:</strong> ${o.customer.phone || '—'}</div>
+        <div class="detail-row"><strong>Address:</strong> ${o.customer.address}, ${o.customer.city}, ${o.customer.state} ${o.customer.zip}</div>
+        <div class="detail-row"><strong>Items:</strong><ul style="margin-top:4px;padding-left:20px">${items}</ul></div>
+        <div class="detail-row"><strong>Total:</strong> ${formatMoney(o.total, o.currency)}</div>
+        <div class="detail-row"><strong>Notes:</strong> ${o.notes || '—'}</div>
+        <div class="detail-row"><strong>Your cost estimate:</strong> Check products.json cost fields for margin</div>
+        <button class="btn-sm" style="margin-top:16px" onclick="closeDetail()">Close</button>`);
+    }
+
+    function viewMessage(m) {
+      showDetail(`Message ${m.id}`, `
+        <div class="detail-row"><strong>From:</strong> ${m.name} (${m.email})</div>
+        <div class="detail-row"><strong>Store:</strong> ${m.store}</div>
+        <div class="detail-row"><strong>Subject:</strong> ${m.subject}</div>
+        <div class="detail-row" style="margin-top:12px;padding:12px;background:#0f172a;border-radius:8px">${m.message}</div>
+        <button class="btn-sm" style="margin-top:16px" onclick="closeDetail()">Close</button>`);
+      if (m.status === 'unread') markMessage(m.id, 'read');
+    }
+
+    function showDetail(title, html) {
+      document.getElementById('detail-content').innerHTML = `<h3>${title}</h3>${html}`;
+      document.getElementById('detail-modal').classList.add('open');
+    }
+
+    function closeDetail() { document.getElementById('detail-modal').classList.remove('open'); }
+
+    async function markOrder(id, status) {
+      await fetch(`/api/admin/orders/${id}`, { method: 'PATCH', headers: { 'Content-Type': 'application/json', 'X-Admin-Key': adminKey }, body: JSON.stringify({ status }) });
+      loadDashboard();
+    }
+
+    async function markMessage(id, status) {
+      await fetch(`/api/admin/messages/${id}`, { method: 'PATCH', headers: { 'Content-Type': 'application/json', 'X-Admin-Key': adminKey }, body: JSON.stringify({ status }) });
+      loadDashboard();
+    }
+
+    document.getElementById('detail-modal').addEventListener('click', e => {
+      if (e.target.id === 'detail-modal') closeDetail();
+    });
+  </script>
+</body>
+</html>
