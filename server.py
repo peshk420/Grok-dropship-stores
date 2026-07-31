@@ -117,7 +117,7 @@ class StoreHandler(SimpleHTTPRequestHandler):
             order = {
                 "id": str(uuid.uuid4())[:8].upper(),
                 "created": now_iso(),
-                "status": "new",
+                "status": "new",  # new | processing | supplier-confirmed | shipped | in-transit | delivered | issue | refunded | cancelled
                 "store": body.get("store", "unknown"),
                 "customer": {
                     "name": body.get("name", ""),
@@ -256,11 +256,11 @@ class StoreHandler(SimpleHTTPRequestHandler):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
     stores = discover_stores()
-    print(f"Dropship server running at http://localhost:{port}")
-    print(f"  Portfolio: http://localhost:{port}/")
-    print(f"  Admin:     http://localhost:{port}/admin/  (password in admin/config.json)")
-    print(f"  Stores API: http://localhost:{port}/api/stores")
-    print(f"  Loaded {len(stores)} store(s):")
+    print(f"Dropship server running at http://localhost:8080")
+    print(f"  Portfolio: http://localhost:8080/")
+    print(f"  Admin:     http://localhost:8080/admin/  (password in admin/config.json — CHANGE IT)")
+    print(f"  Stores API: http://localhost:8080/api/stores")
+    print(f"  Loaded {len(stores)} store(s) for SE/NO/UK/EU (full statutory policies):")
     for store in stores:
         status = "live" if store["launchReady"] else "preview"
         print(f"    - {store['folder']}: {store['name']} ({store['currency']}) [{status}]")

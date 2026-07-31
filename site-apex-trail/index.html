@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Trail — Outdoor & Fitness Gear | SE/NO/UK/EU</title>
+  <link rel="stylesheet" href="../shared/style.css">
+</head>
+<body>
+  <div class="announce-bar" id="announce-bar">Free shipping over €45 · <strong>14-day statutory withdrawal right (EU/UK/NO/SE)</strong> · 30-day store returns</div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" id="logo">Store</a>
+      <ul class="nav-links">
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="policies.html?type=returns">Policies</a></li>
+      </ul>
+      <div class="header-actions">
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" id="search-input" placeholder="Search products...">
+        </div>
+        <button class="cart-btn" id="cart-btn">🛒 <span id="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="hero-eyebrow" id="hero-eyebrow">Premium Quality</span>
+        <h1 id="hero-title">Welcome</h1>
+        <p id="hero-subtitle">Quality products at great prices</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="shop-now">Shop Collection</button>
+          <a href="policies.html?type=shipping" class="btn btn-outline">Shipping Info</a>
+        </div>
+        <div class="hero-badges" id="hero-badges"></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="num" id="stat-products">23</div><div class="lbl">Products</div></div>
+          <div class="hero-stat"><div class="num">4.8★</div><div class="lbl">Rating</div></div>
+          <div class="hero-stat"><div class="num">7–14</div><div class="lbl">Day Delivery</div></div>
+          <div class="hero-stat"><div class="num">14</div><div class="lbl">Day Returns</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-bar">
+    <div class="container trust-items" id="trust-items"></div>
+  </div>
+
+  <section class="featured-section" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Featured Picks</h2>
+          <p class="section-subtitle">Top-rated bestsellers handpicked for you</p>
+        </div>
+      </div>
+      <div class="featured-grid" id="featured-grid"></div>
+    </div>
+  </section>
+
+  <section class="categories" id="products">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Shop All Products</h2>
+          <p class="section-subtitle">Browse our full catalog by category</p>
+        </div>
+      </div>
+      <div class="category-filters" id="category-filters"></div>
+    </div>
+  </section>
+
+  <section class="products-section">
+    <div class="container">
+      <div class="products-grid" id="products-grid"></div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <div>
+        <h2 id="about-title">About Us</h2>
+        <div id="about-text"></div>
+        <div class="features-list" id="features-list"></div>
+      </div>
+      <div class="about-visual">✦</div>
+    </div>
+  </section>
+
+  <section class="newsletter-bar">
+    <div class="container">
+      <h3>Stay in the loop</h3>
+      <p>Get exclusive deals and new arrivals delivered to your inbox</p>
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <h2 style="font-family:var(--font-display);font-size:2rem;font-weight:400;margin-bottom:14px">Get in Touch</h2>
+        <p style="color:var(--text-muted);margin-bottom:20px;line-height:1.7">Questions about an order, product, or return? Our team responds within 2 business days.</p>
+        <p style="margin-bottom:8px"><strong>Email</strong><br><a href="#" id="footer-email" style="color:var(--primary)">email</a></p>
+        <p style="margin-top:16px;margin-bottom:8px"><strong>Phone</strong><br><a href="#" id="footer-phone" style="color:var(--primary)">phone</a></p>
+        <div style="margin-top:24px;display:flex;gap:16px;flex-wrap:wrap">
+          <a href="policies.html?type=returns" class="policy-link">Returns</a>
+          <a href="policies.html?type=shipping" class="policy-link">Shipping</a>
+          <a href="policies.html?type=terms" class="policy-link">Terms</a>
+          <a href="policies.html?type=privacy" class="policy-link">Privacy</a>
+        </div>
+      </div>
+      <form class="contact-form" id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <select name="subject">
+          <option>Order Inquiry</option>
+          <option>Return Request</option>
+          <option>Product Question</option>
+          <option>General Inquiry</option>
+        </select>
+        <textarea name="message" placeholder="How can we help?" required></textarea>
+        <button type="submit">Send Message</button>
+        <div class="form-success" id="contact-success">✓ Message sent! We'll reply within 2 business days.</div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand" id="footer-brand"></div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#products">All Products</a></li>
+            <li><a href="#featured">Featured</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Policies</h4>
+          <ul>
+            <li><a href="policies.html?type=returns" class="policy-footer-link" data-policy="returns">Returns &amp; Refunds</a></li>
+            <li><a href="policies.html?type=shipping" class="policy-footer-link" data-policy="shipping">Shipping Policy</a></li>
+            <li><a href="policies.html?type=terms" class="policy-footer-link" data-policy="terms">Terms of Service</a></li>
+            <li><a href="policies.html?type=privacy" class="policy-footer-link" data-policy="privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#contact">Contact Form</a></li>
+            <li><a href="#contact">Track Order</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="footer-year"></span> <span id="footer-name"></span>. All rights reserved.</span>
+        <span>Secure Checkout · SSL Encrypted</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="cart-close" id="cart-close">×</button>
+      </div>
+      <div id="cart-items"></div>
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total-price">$0.00</span>
+      </div>
+      <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <div class="checkout-overlay" id="checkout-overlay">
+    <div class="checkout-box">
+      <div id="checkout-form-view">
+        <h3 style="font-family:var(--font-display);font-size:1.6rem;margin-bottom:20px">Checkout</h3>
+        <form id="checkout-form">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="tel" name="phone" placeholder="Phone">
+          <input type="text" name="address" placeholder="Street Address" required>
+          <div class="checkout-row">
+            <input type="text" name="city" placeholder="City" required>
+            <input type="text" name="state" placeholder="State" required>
+          </div>
+          <input type="text" name="zip" placeholder="ZIP Code" required>
+          <input type="text" name="notes" placeholder="Order notes (optional)">
+          <div class="checkout-disclaimer">
+            By placing this order you agree to our <a href="policies.html?type=terms">Terms</a>,
+            <a href="policies.html?type=returns">Return Policy</a>, and
+            <a href="policies.html?type=shipping">Shipping Policy</a>.
+          </div>
+          <button type="submit" class="checkout-btn">Place Order</button>
+          <button type="button" class="btn-sm" id="checkout-close" style="width:100%;margin-top:10px;padding:12px">Cancel</button>
+        </form>
+      </div>
+      <div id="checkout-success-view" class="checkout-success" style="display:none">
+        <h3>✓ Order Placed!</h3>
+        <p>Order ID: <strong id="order-id-display"></strong></p>
+        <p style="color:#64748b;margin-top:10px;font-size:0.9rem">Confirmation email coming within 1–3 business days.</p>
+        <button onclick="document.getElementById('checkout-overlay').classList.remove('open')" class="checkout-btn" style="margin-top:20px">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../shared/currency.js"></script>
+<script src="../shared/store.js"></script>
+</body>
+</html>

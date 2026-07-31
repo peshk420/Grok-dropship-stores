@@ -1,0 +1,1372 @@
+{
+  "store": {
+    "name": "Apex Trail",
+    "tagline": "Gear for the Everyday Explorer",
+    "logoHtml": "Apex <span>Trail</span>",
+    "description": "Functional fitness, hiking, camping and travel accessories. Quality generic gear sourced direct from verified suppliers serving active lifestyles across Sweden, Norway, UK and EU.",
+    "email": "hello@apextrail.com",
+    "phone": "+44 20 1234 5678 (UK support)",
+    "slug": "apex-trail",
+    "currency": "EUR",
+    "pricesIncludeVat": true,
+    "vatRatePct": 20,
+    "legalName": "[YOUR COMPANY NAME] Ltd",
+    "orgNumber": "[UK Company No. 1XXXXXX]",
+    "vatNumber": "[VAT e.g. GB123456789]",
+    "registeredAddress": "[Registered address, London, United Kingdom]"
+  },
+  "theme": {
+    "primary": "#2c3e50",
+    "primaryDark": "#1a252f",
+    "accent": "#27ae60"
+  },
+  "hero": {
+    "title": "Ready for Your Next Adventure",
+    "subtitle": "Durable fitness accessories, lightweight outdoor tools, travel organizers and hiking essentials \u2014 practical gear that performs.",
+    "badges": [
+      "Free shipping over \u20ac59",
+      "30-day returns",
+      "Statutory 14-day withdrawal for UK/EU/NO/SE"
+    ]
+  },
+  "trust": [
+    {
+      "icon": "\ud83e\udd7e",
+      "text": "Trail Tested"
+    },
+    {
+      "icon": "\ud83d\ude9a",
+      "text": "7\u201321 Day Delivery"
+    },
+    {
+      "icon": "\ud83d\udcaa",
+      "text": "Built to Last"
+    },
+    {
+      "icon": "\ud83c\udf32",
+      "text": "SE/NO/UK/EU Shipping"
+    }
+  ],
+  "about": {
+    "title": "Why Apex Trail?",
+    "paragraphs": [
+      "We focus on practical, high-utility items that make outdoor and active life easier and more enjoyable.",
+      "Direct from suppliers \u2014 no middleman markup on quality generic gear."
+    ],
+    "features": [
+      {
+        "icon": "\ud83c\udfcb\ufe0f",
+        "text": "Fitness gear"
+      },
+      {
+        "icon": "\u26fa",
+        "text": "Camp & hike"
+      },
+      {
+        "icon": "\ud83e\uddf3",
+        "text": "Travel smart"
+      },
+      {
+        "icon": "\ud83c\udf27\ufe0f",
+        "text": "Weather ready"
+      }
+    ]
+  },
+  "policies": {
+    "returns": {
+      "title": "Returns, Refunds & Right of Withdrawal",
+      "summary": "We offer a generous returns policy. EU, Swedish, Norwegian and UK customers have statutory 14-day cooling-off (right of withdrawal) rights under distance selling laws in addition to our policy. Full details and country-specific information below.",
+      "sections": [
+        {
+          "heading": "Our Store Return Policy (Voluntary)",
+          "text": "Most unused items in original condition and packaging may be returned within 30 days of delivery for a refund (excluding shipping costs unless item is faulty). Contact us first. No restocking fee for standard returns."
+        },
+        {
+          "heading": "Statutory Right of Withdrawal \u2014 EU & Sweden (14 Days)",
+          "text": "Under the EU Consumer Rights Directive and Swedish Distansavtalslagen (Distance and Off-Premises Contracts Act), you have the right to withdraw from your purchase within 14 calendar days of receiving the goods without giving any reason. The period begins the day after delivery. You must notify us clearly (email is sufficient) within the 14 days and return the goods within another 14 days. We will refund the purchase price plus standard delivery cost paid. You pay the direct cost of returning the goods unless the item is faulty or we sent the wrong item. Sealed hygiene/personal care items (e.g. certain grooming tools once opened) and custom/personalized items are exempt once seal broken or personalization applied."
+        },
+        {
+          "heading": "Statutory Right of Withdrawal \u2014 Norway (EEA)",
+          "text": "Norway applies equivalent rules via the EEA Agreement (Angrerettloven). 14 calendar days from receipt to cancel without reason. Same refund rules as EU/Sweden: full refund of goods + standard shipping, you pay return shipping. Notify us within 14 days."
+        },
+        {
+          "heading": "Statutory Right of Withdrawal \u2014 United Kingdom",
+          "text": "Under the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 you have 14 calendar days from the day after delivery to cancel a distance contract without reason. Notify us and return goods within 14 days of notification. We refund the price of the goods and the cost of standard delivery. You are responsible for the cost of return unless the goods are faulty or misdescribed. Exceptions for sealed goods for health/hygiene reasons once unsealed."
+        },
+        {
+          "heading": "EU Online Withdrawal Button (Mandatory from 19 June 2026)",
+          "text": "For all EU customers we provide a clearly visible 'Withdraw from this purchase' button/link on order confirmation pages and in your account area (simulated here). Clicking it starts the statutory withdrawal process. We will confirm receipt and provide return instructions immediately."
+        },
+        {
+          "heading": "Faulty Goods & Legal Guarantee (Reklamation / Statutory Warranty)",
+          "text": "Separately from the 14-day withdrawal, under Swedish/EU Sale of Goods rules (Konsumentk\u00f6plagen) and equivalent in Norway/UK, you have rights for up to 3 years (or 2 years UK minimum in many cases) if goods are faulty, not as described, or not fit for purpose. Contact us with photos and order number. We will offer repair, replacement, price reduction or refund as required by law. This right cannot be limited by our returns window."
+        },
+        {
+          "heading": "How to Return or Withdraw",
+          "text": "Email the store support address with your order ID, reason (optional for withdrawal), and photos if damaged. We reply within 2 business days with return address (EU/UK warehouse partners) and RMA if needed. Clearly label package with order ID. Track the return. Refunds processed within 14 days of us receiving returned goods (or proof of posting for withdrawals). Original payment method used."
+        },
+        {
+          "heading": "Exceptions & Important Notes",
+          "text": "Opened personal hygiene items (e.g. certain brushes, masks once used), perishable goods, or items made to your specification cannot be returned once used/sealed broken. Downloadable digital items (if any) have different rules. We may deduct reasonable value loss if goods are handled beyond normal inspection."
+        },
+        {
+          "heading": "Delivery Times & Shipping (Estimates Only)",
+          "text": "Orders fulfilled via direct supplier shipping from Asia/EU/US warehouses. Typical 7-21 business days. Not guaranteed. Tracking provided where available. Delays can occur; we are not liable for carrier delays beyond reasonable control. Free shipping thresholds shown per product."
+        }
+      ]
+    },
+    "shipping": {
+      "title": "Shipping & Delivery Policy",
+      "summary": "Direct from verified suppliers in our network (Alibaba/Temu/Shein/eBay wholesale/Fyndiq-style partners). Delivery estimates 7\u201321 business days to Sweden, Norway, UK and EU. Tracking provided on most orders.",
+      "sections": [
+        {
+          "heading": "Processing",
+          "text": "We forward your order to the supplier within 1-3 business days. You receive confirmation email with expected ship date."
+        },
+        {
+          "heading": "Delivery Estimates",
+          "text": "Standard: 7-14 business days (EU/UK warehouse stock). International supplier direct: 10-21 business days. Peak seasons (summer, holidays) may add 3-7 days. These are estimates, not guarantees."
+        },
+        {
+          "heading": "Costs",
+          "text": "Shown at checkout. Many items qualify for free standard shipping over threshold. Customs/VAT: For non-EU origin goods entering EU/UK/NO/SE you may be liable for import VAT/duties (we display estimated where possible; actual handled by carrier). Prices shown include Swedish/EU VAT where applicable for EU stores."
+        },
+        {
+          "heading": "Lost/Damaged",
+          "text": "If package lost (no tracking update 15+ days) or arrives damaged, contact us within 48h with photos. We will work with supplier/carrier for replacement or refund at no extra cost to you for faulty cases."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service & Legal Disclosures",
+      "summary": "We are online retailers operating a dropshipping model. Products are sourced from third-party verified suppliers and shipped directly. This is a demo/local development server only.",
+      "sections": [
+        {
+          "heading": "Business Model & Transparency",
+          "text": "We source products from global suppliers (Alibaba, Temu, eBay wholesale partners, similar platforms serving Fyndiq/Shein-style marketplaces). We do not hold inventory. Product appearance, packaging and minor specs may vary slightly from photos due to batch differences. We clearly disclose this."
+        },
+        {
+          "heading": "Prices & Currency",
+          "text": "Prices in EUR (or local equivalent shown). Reasonable retail pricing with healthy but fair margins after supplier cost, shipping, returns, and platform fees. We may adjust prices. Errors may lead to order cancellation with full refund."
+        },
+        {
+          "heading": "No Health/Medical Claims",
+          "text": "Products are sold for general consumer use. No claims that items diagnose, treat, cure or prevent disease. Cooling products are for general comfort only. Always follow safety instructions."
+        },
+        {
+          "heading": "Limitation of Liability & Governing Law",
+          "text": "Liability limited to the price paid for the specific item(s). We are not responsible for indirect damages or delays by third parties. For EU customers, mandatory consumer protections apply regardless. Disputes: first contact support. Swedish law applies for Lumina (SE), with EU consumer protections; UK law for Apex UK sales; Norwegian for relevant."
+        },
+        {
+          "heading": "Company Information (Demo)",
+          "text": "These are demonstration stores. In a real deployment each would display: full legal company name, registered address, organization number, VAT ID (e.g. SE/NO/GB/IE), and contact email. Always verify before real purchases. This local server is for testing only."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "summary": "We collect minimal data needed to fulfill orders and reply to you. We do not sell your data. GDPR, UK GDPR, and Norwegian privacy rules respected.",
+      "sections": [
+        {
+          "heading": "Data Collected",
+          "text": "Name, email, phone (optional), full shipping address, order details, IP for fraud. Payment handled by third-party processors (we never see full card details)."
+        },
+        {
+          "heading": "Use & Sharing",
+          "text": "To process orders, communicate, improve site, comply with tax/consumer law (records kept 3-7 years). Shared only with fulfillment partners, carriers, and authorities as legally required. No sale of personal data."
+        },
+        {
+          "heading": "Your Rights",
+          "text": "Access, rectification, erasure, restriction, portability, objection, and withdrawal of consent. Email the store address. We respond within 30 days (or 1 month). You may complain to your local authority: Datainspektionen/IMY (SE), Datatilsynet (NO), ICO (UK), or national DPA in your EU country."
+        },
+        {
+          "heading": "Cookies & Marketing",
+          "text": "Essential cookies only for cart/function. No pre-ticked marketing. Every newsletter has instant unsubscribe. We respect Do Not Track where applicable."
+        },
+        {
+          "heading": "Data Retention",
+          "text": "Orders kept for tax, warranty and legal compliance (minimum 3 years, up to 7 for some records)."
+        }
+      ]
+    }
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Non-Slip Yoga Mat \u2014 6mm Extra Thick",
+      "category": "Fitness",
+      "price": 22.99,
+      "originalPrice": 34.99,
+      "cost": 6.8,
+      "source": "Alibaba",
+      "badge": "Best Seller",
+      "description": "Eco TPE mat with alignment lines and carrying strap.",
+      "details": "183x61cm. 6mm cushion. Non-slip both sides. Includes strap.",
+      "image": "images/1.jpg",
+      "images": [
+        "images/1.jpg"
+      ],
+      "imageKey": "fitness",
+      "sku": "SKU-0001",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 2,
+      "name": "Resistance Bands Set \u2014 5 Level Loop",
+      "category": "Fitness",
+      "price": 14.99,
+      "originalPrice": 22.99,
+      "cost": 3.9,
+      "source": "Temu",
+      "badge": null,
+      "description": "Fabric loop bands for glute, leg, arm and full body workouts.",
+      "details": "5 resistance levels. Non-slip inner. Carry bag. Exercise guide.",
+      "image": "images/2.jpg",
+      "images": [
+        "images/2.jpg"
+      ],
+      "imageKey": "fitness",
+      "sku": "SKU-0002",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 3,
+      "name": "Foam Roller \u2014 High Density 45cm",
+      "category": "Fitness",
+      "price": 17.99,
+      "originalPrice": 26.99,
+      "cost": 5.0,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Deep tissue massage roller for recovery and mobility.",
+      "details": "EPP high density. 45x15cm. Lightweight. Trigger point texture.",
+      "image": "images/3.jpg",
+      "images": [
+        "images/3.jpg"
+      ],
+      "imageKey": "fitness",
+      "sku": "SKU-0003",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 4,
+      "name": "Jump Rope \u2014 Adjustable Speed Cable",
+      "category": "Fitness",
+      "price": 11.99,
+      "originalPrice": 17.99,
+      "cost": 3.0,
+      "source": "Temu",
+      "badge": null,
+      "description": "Ball bearing speed rope for cardio and boxing training.",
+      "details": "Adjustable 2.8m. Comfort handles. Fast spin. Carry bag.",
+      "image": "images/4.jpg",
+      "images": [
+        "images/4.jpg"
+      ],
+      "imageKey": "fitness",
+      "sku": "SKU-0004",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 5,
+      "name": "Posture Corrector Brace \u2014 Adjustable",
+      "category": "Fitness",
+      "price": 16.99,
+      "originalPrice": 24.99,
+      "cost": 4.5,
+      "source": "Alibaba",
+      "badge": "Trending",
+      "description": "Comfortable upper back support for desk and daily wear.",
+      "details": "Breathable. One size fits most. Adjustable straps. Discreet under clothes.",
+      "image": "images/5.jpg",
+      "images": [
+        "images/5.jpg"
+      ],
+      "imageKey": "fitness",
+      "sku": "SKU-0005",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 6,
+      "name": "Mini Massage Gun \u2014 Deep Tissue",
+      "category": "Fitness",
+      "price": 29.99,
+      "originalPrice": 44.99,
+      "cost": 9.2,
+      "source": "Temu",
+      "badge": null,
+      "description": "Portable percussive massager with 4 heads and 3 speeds.",
+      "details": "USB-C. Quiet <45dB. 4 attachments. 4-6h battery. Travel size.",
+      "image": "images/6.jpg",
+      "images": [
+        "images/6.jpg"
+      ],
+      "imageKey": "fitness",
+      "sku": "SKU-0006",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 7,
+      "name": "Acupressure Mat & Pillow Set",
+      "category": "Fitness",
+      "price": 19.99,
+      "originalPrice": 29.99,
+      "cost": 5.6,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Spiked mat for back, neck and foot relaxation.",
+      "details": "Cotton + ABS spikes. Includes pillow. 20 min sessions typical.",
+      "image": "images/7.jpg",
+      "images": [
+        "images/7.jpg"
+      ],
+      "imageKey": "fitness",
+      "sku": "SKU-0007",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 8,
+      "name": "Pull-Up Assist Bands \u2014 Heavy Set 3",
+      "category": "Fitness",
+      "price": 18.99,
+      "originalPrice": 27.99,
+      "cost": 5.3,
+      "source": "Temu",
+      "badge": null,
+      "description": "Extra thick resistance bands for assisted pull-ups and mobility.",
+      "details": "3 levels (15-85lb). Natural latex. Door anchor included.",
+      "image": "images/8.jpg",
+      "images": [
+        "images/8.jpg"
+      ],
+      "imageKey": "fitness",
+      "sku": "SKU-0008",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 9,
+      "name": "Yoga Block Set \u2014 2 Pack + Strap",
+      "category": "Fitness",
+      "price": 13.99,
+      "originalPrice": 19.99,
+      "cost": 3.7,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "High density EVA blocks and cotton strap for alignment.",
+      "details": "23x15x10cm blocks. 2.5m strap. Lightweight. Odor resistant.",
+      "image": "images/9.jpg",
+      "images": [
+        "images/9.jpg"
+      ],
+      "imageKey": "fitness",
+      "sku": "SKU-0009",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 10,
+      "name": "Travel Yoga Mat \u2014 Foldable Thin",
+      "category": "Fitness",
+      "price": 15.99,
+      "originalPrice": 23.99,
+      "cost": 4.3,
+      "source": "Temu",
+      "badge": null,
+      "description": "Compact 1.5mm mat that folds into its own bag.",
+      "details": "160x60cm. Sweat resistant. Machine washable. 400g.",
+      "image": "images/10.jpg",
+      "images": [
+        "images/10.jpg"
+      ],
+      "imageKey": "fitness",
+      "sku": "SKU-0010",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 11,
+      "name": "Portable Camping Lantern \u2014 1000 Lumen",
+      "category": "Outdoor",
+      "price": 24.99,
+      "originalPrice": 36.99,
+      "cost": 7.5,
+      "source": "Alibaba",
+      "badge": "Hot",
+      "description": "Rechargeable LED lantern with power bank and multiple modes.",
+      "details": "4 light modes. 5200mAh. IPX4. 360\u00b0 + directional. USB-C.",
+      "image": "images/11.jpg",
+      "images": [
+        "images/11.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0011",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 12,
+      "name": "Headlamp Rechargeable \u2014 350 Lumen",
+      "category": "Outdoor",
+      "price": 16.99,
+      "originalPrice": 24.99,
+      "cost": 4.7,
+      "source": "Temu",
+      "badge": null,
+      "description": "Comfortable wide beam head torch with red night mode.",
+      "details": "USB rechargeable. 45h runtime low. Adjustable strap. IPX4.",
+      "image": "images/12.jpg",
+      "images": [
+        "images/12.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0012",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 13,
+      "name": "Folding Trekking Poles \u2014 Carbon Look",
+      "category": "Outdoor",
+      "price": 29.99,
+      "originalPrice": 44.99,
+      "cost": 8.9,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Lightweight 3-section poles with cork grip and quick lock.",
+      "details": "Pair. 280g each. 5 height settings. Baskets & tips included.",
+      "image": "images/13.jpg",
+      "images": [
+        "images/13.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0013",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 14,
+      "name": "Waterproof Dry Bag \u2014 20L Roll Top",
+      "category": "Outdoor",
+      "price": 15.99,
+      "originalPrice": 23.99,
+      "cost": 4.4,
+      "source": "Temu",
+      "badge": null,
+      "description": "IPX7 roll-top dry sack for kayaking, hiking, beach.",
+      "details": "20 liter. 500D PVC. Adjustable strap. Floats if dropped.",
+      "image": "images/14.jpg",
+      "images": [
+        "images/14.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0014",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 15,
+      "name": "Portable Hammock with Tree Straps",
+      "category": "Outdoor",
+      "price": 21.99,
+      "originalPrice": 32.99,
+      "cost": 6.3,
+      "source": "Alibaba",
+      "badge": "Trending",
+      "description": "Parachute nylon double hammock with integrated bug net option.",
+      "details": "Supports 300kg. Fast setup. Stuff sack. 2 carabiners.",
+      "image": "images/15.jpg",
+      "images": [
+        "images/15.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0015",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 16,
+      "name": "Solar Shower Bag \u2014 5 Gallon",
+      "category": "Outdoor",
+      "price": 14.99,
+      "originalPrice": 21.99,
+      "cost": 3.9,
+      "source": "Temu",
+      "badge": null,
+      "description": "Camping solar heated shower for beach, hike, festival.",
+      "details": "20L. Heats in sun 3h. On/off valve. Hanging rope.",
+      "image": "images/16.jpg",
+      "images": [
+        "images/16.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0016",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 17,
+      "name": "Pop-Up Beach / Privacy Tent",
+      "category": "Outdoor",
+      "price": 34.99,
+      "originalPrice": 49.99,
+      "cost": 10.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Instant 2-person changing room or small shelter.",
+      "details": "47x47x78\". Sand pockets. 2 windows. Carry bag.",
+      "image": "images/17.jpg",
+      "images": [
+        "images/17.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0017",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 18,
+      "name": "Folding Camp Chair \u2014 330lb Capacity",
+      "category": "Outdoor",
+      "price": 26.99,
+      "originalPrice": 39.99,
+      "cost": 8.0,
+      "source": "Temu",
+      "badge": null,
+      "description": "Heavy duty 600D fabric chair with cup holder and bag.",
+      "details": "Supports 150kg. Quick fold. 1.8kg. Carry bag.",
+      "image": "images/18.jpg",
+      "images": [
+        "images/18.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0018",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 19,
+      "name": "Portable Camping Stove \u2014 Single Burner",
+      "category": "Outdoor",
+      "price": 18.99,
+      "originalPrice": 27.99,
+      "cost": 5.4,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Windproof butane/propane stove for backpacking.",
+      "details": "3000W. Piezo ignition. Folds small. 1lb canister compatible.",
+      "image": "images/19.jpg",
+      "images": [
+        "images/19.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0019",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 20,
+      "name": "Collapsible Water Container \u2014 10L",
+      "category": "Outdoor",
+      "price": 11.99,
+      "originalPrice": 17.99,
+      "cost": 3.1,
+      "source": "Temu",
+      "badge": null,
+      "description": "Food grade foldable water jug with spout.",
+      "details": "BPA free. Folds to 5cm. Carry handle. 10 liter.",
+      "image": "images/20.jpg",
+      "images": [
+        "images/20.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0020",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 21,
+      "name": "LED Head Torch + Red Light 2 Pack",
+      "category": "Outdoor",
+      "price": 19.99,
+      "originalPrice": 29.99,
+      "cost": 5.7,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Two lightweight headlamps for hiking and camping.",
+      "details": "200 lumen each. 3 modes + red. USB charge. 2-pack.",
+      "image": "images/21.jpg",
+      "images": [
+        "images/21.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0021",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 22,
+      "name": "Waterproof Phone Pouch \u2014 Floatable 2 Pack",
+      "category": "Travel",
+      "price": 9.99,
+      "originalPrice": 14.99,
+      "cost": 2.4,
+      "source": "Temu",
+      "badge": null,
+      "description": "IPX8 touchscreen phone case with lanyard for water activities.",
+      "details": "Fits up to 7\". Floatable. Neck strap. 2-pack.",
+      "image": "images/22.jpg",
+      "images": [
+        "images/22.jpg"
+      ],
+      "imageKey": "travel",
+      "sku": "SKU-0022",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 23,
+      "name": "Compression Packing Cubes \u2014 6 Piece Set",
+      "category": "Travel",
+      "price": 18.99,
+      "originalPrice": 27.99,
+      "cost": 5.3,
+      "source": "Alibaba",
+      "badge": "Best Seller",
+      "description": "Organize luggage with compression zip cubes.",
+      "details": "6 sizes. Double zip. Mesh top. Fits carry-on perfectly.",
+      "image": "images/23.jpg",
+      "images": [
+        "images/23.jpg"
+      ],
+      "imageKey": "travel",
+      "sku": "SKU-0023",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 24,
+      "name": "Neck Pillow Memory Foam \u2014 Travel",
+      "category": "Travel",
+      "price": 14.99,
+      "originalPrice": 21.99,
+      "cost": 4.0,
+      "source": "Temu",
+      "badge": null,
+      "description": "Ergonomic U-shape pillow with washable cover.",
+      "details": "Soft memory foam. Snap buttons. Compact pouch.",
+      "image": "images/24.jpg",
+      "images": [
+        "images/24.jpg"
+      ],
+      "imageKey": "travel",
+      "sku": "SKU-0024",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 25,
+      "name": "RFID Blocking Passport Wallet",
+      "category": "Travel",
+      "price": 12.99,
+      "originalPrice": 18.99,
+      "cost": 3.4,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Slim travel document holder with multiple card slots.",
+      "details": "Blocks 13.56MHz. 10+ card slots. Coin pocket. Passport fit.",
+      "image": "images/25.jpg",
+      "images": [
+        "images/25.jpg"
+      ],
+      "imageKey": "travel",
+      "sku": "SKU-0025",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 26,
+      "name": "Portable Luggage Scale \u2014 Digital",
+      "category": "Travel",
+      "price": 11.99,
+      "originalPrice": 17.99,
+      "cost": 3.1,
+      "source": "Temu",
+      "badge": null,
+      "description": "Accurate 50kg hanging scale for baggage.",
+      "details": "Backlit. Tare. 1g precision. Batteries included.",
+      "image": "images/26.jpg",
+      "images": [
+        "images/26.jpg"
+      ],
+      "imageKey": "travel",
+      "sku": "SKU-0026",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 27,
+      "name": "Foldable Travel Duffel \u2014 40L",
+      "category": "Travel",
+      "price": 17.99,
+      "originalPrice": 25.99,
+      "cost": 4.9,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Lightweight packable duffel that fits in its own pocket.",
+      "details": "40L. Water resistant. Shoulder + handles. 300g packed.",
+      "image": "images/27.jpg",
+      "images": [
+        "images/27.jpg"
+      ],
+      "imageKey": "travel",
+      "sku": "SKU-0027",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 28,
+      "name": "Eye Mask + Ear Plugs Travel Set",
+      "category": "Travel",
+      "price": 8.99,
+      "originalPrice": 12.99,
+      "cost": 2.2,
+      "source": "Temu",
+      "badge": null,
+      "description": "Contoured sleep mask and soft silicone plugs.",
+      "details": "Light blocking. Adjustable. 2 pairs plugs. Carry pouch.",
+      "image": "images/28.jpg",
+      "images": [
+        "images/28.jpg"
+      ],
+      "imageKey": "travel",
+      "sku": "SKU-0028",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 29,
+      "name": "Hiking Backpack 35L \u2014 Waterproof",
+      "category": "Outdoor",
+      "price": 39.99,
+      "originalPrice": 59.99,
+      "cost": 12.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Daypack with rain cover, hydration sleeve and hip belt.",
+      "details": "35L. Padded straps. Multiple pockets. 1.1kg.",
+      "image": "images/29.jpg",
+      "images": [
+        "images/29.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0029",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 30,
+      "name": "Camping Cookware Mess Kit \u2014 10pc",
+      "category": "Outdoor",
+      "price": 24.99,
+      "originalPrice": 36.99,
+      "cost": 7.2,
+      "source": "Temu",
+      "badge": null,
+      "description": "Non-stick pots, pans, plates, cups and utensils.",
+      "details": "Light aluminum. Folding handles. Mesh bag. 2-3 people.",
+      "image": "images/30.jpg",
+      "images": [
+        "images/30.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0030",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 31,
+      "name": "Emergency Survival Kit \u2014 72 Hour",
+      "category": "Outdoor",
+      "price": 22.99,
+      "originalPrice": 33.99,
+      "cost": 6.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Compact kit with food, water, blanket, fire starter.",
+      "details": "Food bars, water, first aid, whistle, blanket, multi-tool.",
+      "image": "images/31.jpg",
+      "images": [
+        "images/31.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0031",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 32,
+      "name": "Mosquito Head Net & Repellent Band",
+      "category": "Outdoor",
+      "price": 9.99,
+      "originalPrice": 14.99,
+      "cost": 2.5,
+      "source": "Temu",
+      "badge": null,
+      "description": "Fine mesh head net + DEET-free repellent wristband.",
+      "details": "One size. Breathable mesh. 2 bands included.",
+      "image": "images/32.jpg",
+      "images": [
+        "images/32.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0032",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 33,
+      "name": "Portable Power Bank 20000mAh \u2014 Fast Charge",
+      "category": "Travel",
+      "price": 19.99,
+      "originalPrice": 29.99,
+      "cost": 5.8,
+      "source": "Alibaba",
+      "badge": "Hot",
+      "description": "Dual USB-C PD power bank for phones and tablets.",
+      "details": "20000mAh. 20W PD. 2x USB-A + C. LED display.",
+      "image": "images/33.jpg",
+      "images": [
+        "images/33.jpg"
+      ],
+      "imageKey": "travel",
+      "sku": "SKU-0033",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 34,
+      "name": "Folding Stool \u2014 Compact 3 Leg",
+      "category": "Outdoor",
+      "price": 13.99,
+      "originalPrice": 19.99,
+      "cost": 3.7,
+      "source": "Temu",
+      "badge": null,
+      "description": "Lightweight portable stool for hiking, fishing, festivals.",
+      "details": "Supports 120kg. Folds to 25cm. Carry strap. 500g.",
+      "image": "images/34.jpg",
+      "images": [
+        "images/34.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0034",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 35,
+      "name": "Insulated Water Bottle \u2014 1L Wide Mouth",
+      "category": "Outdoor",
+      "price": 16.99,
+      "originalPrice": 24.99,
+      "cost": 4.7,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Double wall vacuum bottle keeps cold 24h / hot 12h.",
+      "details": "18/8 steel. Powder coat. Leak proof. Fits filters.",
+      "image": "images/35.jpg",
+      "images": [
+        "images/35.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0035",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 36,
+      "name": "Carabiner Set \u2014 6 Heavy Duty",
+      "category": "Outdoor",
+      "price": 10.99,
+      "originalPrice": 15.99,
+      "cost": 2.8,
+      "source": "Temu",
+      "badge": null,
+      "description": "D-shape locking and non-locking carabiners.",
+      "details": "Aluminum. 6 mixed sizes. Keyring + 2 large.",
+      "image": "images/36.jpg",
+      "images": [
+        "images/36.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0036",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 37,
+      "name": "Microfiber Quick Dry Towel \u2014 3 Pack",
+      "category": "Travel",
+      "price": 12.99,
+      "originalPrice": 18.99,
+      "cost": 3.4,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Ultra absorbent fast dry towels for gym, beach, travel.",
+      "details": "3 sizes (S/M/L). Includes pouch. Sand resistant.",
+      "image": "images/37.jpg",
+      "images": [
+        "images/37.jpg"
+      ],
+      "imageKey": "travel",
+      "sku": "SKU-0037",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 38,
+      "name": "Portable Espresso Maker \u2014 Manual Press",
+      "category": "Outdoor",
+      "price": 27.99,
+      "originalPrice": 41.99,
+      "cost": 8.3,
+      "source": "Temu",
+      "badge": "Trending",
+      "description": "Hand powered espresso maker for travel and camping.",
+      "details": "Makes real espresso. No electricity. Compact 250g.",
+      "image": "images/38.jpg",
+      "images": [
+        "images/38.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0038",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 39,
+      "name": "Hiking Gaiters \u2014 Waterproof Pair",
+      "category": "Outdoor",
+      "price": 15.99,
+      "originalPrice": 23.99,
+      "cost": 4.4,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Breathable lower leg protection from mud, snow, ticks.",
+      "details": "600D. Adjustable top. Hook under boot. One size.",
+      "image": "images/39.jpg",
+      "images": [
+        "images/39.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0039",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 40,
+      "name": "Sleeping Bag Liner \u2014 Silk Feel",
+      "category": "Outdoor",
+      "price": 14.99,
+      "originalPrice": 21.99,
+      "cost": 4.0,
+      "source": "Temu",
+      "badge": null,
+      "description": "Lightweight liner adds warmth and keeps bag clean.",
+      "details": "Rectangular. Machine wash. 200x90cm. 180g.",
+      "image": "images/40.jpg",
+      "images": [
+        "images/40.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0040",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 41,
+      "name": "Camping Pillow \u2014 Inflatable Compact",
+      "category": "Outdoor",
+      "price": 9.99,
+      "originalPrice": 14.99,
+      "cost": 2.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Ultralight inflatable pillow for tent or travel.",
+      "details": "Folds to fist size. Soft fleece top. 40x30cm inflated.",
+      "image": "images/41.jpg",
+      "images": [
+        "images/41.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0041",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 42,
+      "name": "LED Lantern String \u2014 5m Battery",
+      "category": "Outdoor",
+      "price": 12.99,
+      "originalPrice": 18.99,
+      "cost": 3.4,
+      "source": "Temu",
+      "badge": null,
+      "description": "Warm white camping string lights with timer and remote.",
+      "details": "Battery or USB. 8 modes. IP65. 50 LEDs.",
+      "image": "images/42.jpg",
+      "images": [
+        "images/42.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0042",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 43,
+      "name": "Multi Tool Pliers \u2014 12 in 1",
+      "category": "Outdoor",
+      "price": 13.99,
+      "originalPrice": 19.99,
+      "cost": 3.7,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Stainless multi-function tool with sheath.",
+      "details": "Pliers, knife, saw, file, screwdriver etc. 12 functions.",
+      "image": "images/43.jpg",
+      "images": [
+        "images/43.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0043",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 44,
+      "name": "Water Filter Straw \u2014 Personal",
+      "category": "Outdoor",
+      "price": 10.99,
+      "originalPrice": 15.99,
+      "cost": 2.8,
+      "source": "Temu",
+      "badge": null,
+      "description": "0.1 micron filter removes 99.9% bacteria from water.",
+      "details": "Filters 1500L. Drink direct or from bottle. 2oz.",
+      "image": "images/44.jpg",
+      "images": [
+        "images/44.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0044",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 45,
+      "name": "Folding Table \u2014 Compact Aluminum",
+      "category": "Outdoor",
+      "price": 29.99,
+      "originalPrice": 44.99,
+      "cost": 9.0,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Light roll-up table for picnic and camp.",
+      "details": "60x40cm. 1.1kg. Rolls small. Strong frame.",
+      "image": "images/45.jpg",
+      "images": [
+        "images/45.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0045",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 46,
+      "name": "Thermal Base Layer Set \u2014 Top + Bottom",
+      "category": "Outdoor",
+      "price": 24.99,
+      "originalPrice": 36.99,
+      "cost": 7.3,
+      "source": "Temu",
+      "badge": null,
+      "description": "Merino-blend long underwear for cold weather.",
+      "details": "Men/Women fit. 4-way stretch. Quick dry. S-2XL.",
+      "image": "images/46.jpg",
+      "images": [
+        "images/46.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0046",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 47,
+      "name": "Reflective Safety Vest + Armband Set",
+      "category": "Outdoor",
+      "price": 8.99,
+      "originalPrice": 12.99,
+      "cost": 2.1,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "High vis vest and slap bands for running, cycling, hiking.",
+      "details": "Adjustable. 360\u00b0 reflectors. One size. 2 armbands.",
+      "image": "images/47.jpg",
+      "images": [
+        "images/47.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0047",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 48,
+      "name": "Hiking Daypack Rain Cover",
+      "category": "Outdoor",
+      "price": 9.99,
+      "originalPrice": 14.99,
+      "cost": 2.4,
+      "source": "Temu",
+      "badge": null,
+      "description": "Waterproof pack cover for 25-45L backpacks.",
+      "details": "Elastic hem. 3 sizes. Bright colors for visibility.",
+      "image": "images/48.jpg",
+      "images": [
+        "images/48.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0048",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 49,
+      "name": "Portable Bidet \u2014 Travel Friendly",
+      "category": "Travel",
+      "price": 11.99,
+      "originalPrice": 17.99,
+      "cost": 3.1,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Handheld personal bidet bottle for camping and travel.",
+      "details": "450ml. Angled nozzle. Easy squeeze. Hygienic.",
+      "image": "images/49.jpg",
+      "images": [
+        "images/49.jpg"
+      ],
+      "imageKey": "travel",
+      "sku": "SKU-0049",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 50,
+      "name": "Dry Sack Set \u2014 3 Sizes",
+      "category": "Outdoor",
+      "price": 14.99,
+      "originalPrice": 21.99,
+      "cost": 4.0,
+      "source": "Temu",
+      "badge": null,
+      "description": "Roll top dry bags 3L / 8L / 15L.",
+      "details": "IPX7. 3 pack. Assorted colors. Strong seams.",
+      "image": "images/50.jpg",
+      "images": [
+        "images/50.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0050",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 51,
+      "name": "Fishing Tackle Bag \u2014 Small",
+      "category": "Outdoor",
+      "price": 16.99,
+      "originalPrice": 24.99,
+      "cost": 4.7,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Compact organizer for lures, hooks, tools.",
+      "details": "Water resistant. Many pockets. Shoulder strap.",
+      "image": "images/51.jpg",
+      "images": [
+        "images/51.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0051",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 52,
+      "name": "Bug Repellent Wristbands \u2014 10 Pack",
+      "category": "Outdoor",
+      "price": 7.99,
+      "originalPrice": 11.99,
+      "cost": 1.9,
+      "source": "Temu",
+      "badge": null,
+      "description": "Natural citronella bands for adults and kids.",
+      "details": "Up to 120h protection each. Adjustable. 10 pack.",
+      "image": "images/52.jpg",
+      "images": [
+        "images/52.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0052",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 53,
+      "name": "Compact Binoculars \u2014 10x25",
+      "category": "Outdoor",
+      "price": 18.99,
+      "originalPrice": 27.99,
+      "cost": 5.3,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Lightweight roof prism binoculars for hiking and events.",
+      "details": "10x25. 280g. Foldable. Carry case + strap.",
+      "image": "images/53.jpg",
+      "images": [
+        "images/53.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0053",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 54,
+      "name": "Tactical Pen \u2014 Multi Function",
+      "category": "Travel",
+      "price": 12.99,
+      "originalPrice": 18.99,
+      "cost": 3.4,
+      "source": "Temu",
+      "badge": null,
+      "description": "Stainless pen with glass breaker and stylus.",
+      "details": "Writes smooth. Tungsten tip. Pocket clip. Gift box.",
+      "image": "images/54.jpg",
+      "images": [
+        "images/54.jpg"
+      ],
+      "imageKey": "travel",
+      "sku": "SKU-0054",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 55,
+      "name": "Reflective Guyline Set \u2014 8 Pack",
+      "category": "Outdoor",
+      "price": 9.99,
+      "originalPrice": 14.99,
+      "cost": 2.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Bright guy ropes with tensioners for tents and tarps.",
+      "details": "4m each. 8 lines + 8 adjusters. Highly visible.",
+      "image": "images/55.jpg",
+      "images": [
+        "images/55.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0055",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 56,
+      "name": "Portable Shower Tent \u2014 1 Person",
+      "category": "Outdoor",
+      "price": 32.99,
+      "originalPrice": 47.99,
+      "cost": 9.8,
+      "source": "Temu",
+      "badge": null,
+      "description": "Instant privacy shelter for camping showers.",
+      "details": "90x90x190cm. Ventilated. Roll up door. Carry bag.",
+      "image": "images/56.jpg",
+      "images": [
+        "images/56.jpg"
+      ],
+      "imageKey": "outdoor",
+      "sku": "SKU-0056",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    }
+  ],
+  "launchReady": true
+}

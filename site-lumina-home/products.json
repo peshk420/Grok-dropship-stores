@@ -1,0 +1,1372 @@
+{
+  "store": {
+    "name": "Lumina Home",
+    "tagline": "Timeless Essentials for Modern Living",
+    "logoHtml": "Lumina <span>Home</span>",
+    "description": "Curated minimalist kitchen, organization, lighting and home storage essentials. Sourced directly from verified suppliers on Alibaba, Temu, eBay wholesale and similar platforms serving EU, UK, Sweden and Norway.",
+    "email": "support@lumina-home.com",
+    "phone": "+46 8 123 4567 (SE support)",
+    "slug": "lumina-home",
+    "currency": "EUR",
+    "pricesIncludeVat": true,
+    "vatRatePct": 25,
+    "legalName": "[YOUR COMPANY NAME] AB",
+    "orgNumber": "[ORG NR e.g. 559XXX-XXXX]",
+    "vatNumber": "[VAT e.g. SE559XXXXXXXX01]",
+    "registeredAddress": "[Registered business address, City, Sweden]"
+  },
+  "theme": {
+    "primary": "#3d5a5b",
+    "primaryDark": "#2c4445",
+    "accent": "#d4a373"
+  },
+  "hero": {
+    "title": "Beautifully Simple Home Essentials",
+    "subtitle": "Quality kitchen tools, clever organizers, warm lighting and storage that lasts \u2014 shipped direct from trusted suppliers to Sweden, Norway, UK & EU.",
+    "badges": [
+      "Free shipping over \u20ac49",
+      "30-day easy returns",
+      "14-day statutory EU/UK/NO/SE withdrawal right"
+    ]
+  },
+  "trust": [
+    {
+      "icon": "\ud83d\ude9a",
+      "text": "7\u201321 Day Delivery"
+    },
+    {
+      "icon": "\u2b50",
+      "text": "4.8\u2605 Average"
+    },
+    {
+      "icon": "\ud83d\udd12",
+      "text": "Secure Checkout"
+    },
+    {
+      "icon": "\ud83c\udf0d",
+      "text": "Ships to SE/NO/UK/EU"
+    }
+  ],
+  "about": {
+    "title": "Why Lumina Home?",
+    "paragraphs": [
+      "We select durable, well-designed everyday items that improve daily life without clutter.",
+      "Direct supplier model means better prices than big retail while maintaining high standards."
+    ],
+    "features": [
+      {
+        "icon": "\ud83c\udf73",
+        "text": "Kitchen that works"
+      },
+      {
+        "icon": "\ud83d\uddc4\ufe0f",
+        "text": "Smart organization"
+      },
+      {
+        "icon": "\ud83d\udca1",
+        "text": "Warm lighting"
+      },
+      {
+        "icon": "\u267b\ufe0f",
+        "text": "Quality materials"
+      }
+    ]
+  },
+  "policies": {
+    "returns": {
+      "title": "Returns, Refunds & Right of Withdrawal",
+      "summary": "We offer a generous returns policy. EU, Swedish, Norwegian and UK customers have statutory 14-day cooling-off (right of withdrawal) rights under distance selling laws in addition to our policy. Full details and country-specific information below.",
+      "sections": [
+        {
+          "heading": "Our Store Return Policy (Voluntary)",
+          "text": "Most unused items in original condition and packaging may be returned within 30 days of delivery for a refund (excluding shipping costs unless item is faulty). Contact us first. No restocking fee for standard returns."
+        },
+        {
+          "heading": "Statutory Right of Withdrawal \u2014 EU & Sweden (14 Days)",
+          "text": "Under the EU Consumer Rights Directive and Swedish Distansavtalslagen (Distance and Off-Premises Contracts Act), you have the right to withdraw from your purchase within 14 calendar days of receiving the goods without giving any reason. The period begins the day after delivery. You must notify us clearly (email is sufficient) within the 14 days and return the goods within another 14 days. We will refund the purchase price plus standard delivery cost paid. You pay the direct cost of returning the goods unless the item is faulty or we sent the wrong item. Sealed hygiene/personal care items (e.g. certain grooming tools once opened) and custom/personalized items are exempt once seal broken or personalization applied."
+        },
+        {
+          "heading": "Statutory Right of Withdrawal \u2014 Norway (EEA)",
+          "text": "Norway applies equivalent rules via the EEA Agreement (Angrerettloven). 14 calendar days from receipt to cancel without reason. Same refund rules as EU/Sweden: full refund of goods + standard shipping, you pay return shipping. Notify us within 14 days."
+        },
+        {
+          "heading": "Statutory Right of Withdrawal \u2014 United Kingdom",
+          "text": "Under the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 you have 14 calendar days from the day after delivery to cancel a distance contract without reason. Notify us and return goods within 14 days of notification. We refund the price of the goods and the cost of standard delivery. You are responsible for the cost of return unless the goods are faulty or misdescribed. Exceptions for sealed goods for health/hygiene reasons once unsealed."
+        },
+        {
+          "heading": "EU Online Withdrawal Button (Mandatory from 19 June 2026)",
+          "text": "For all EU customers we provide a clearly visible 'Withdraw from this purchase' button/link on order confirmation pages and in your account area (simulated here). Clicking it starts the statutory withdrawal process. We will confirm receipt and provide return instructions immediately."
+        },
+        {
+          "heading": "Faulty Goods & Legal Guarantee (Reklamation / Statutory Warranty)",
+          "text": "Separately from the 14-day withdrawal, under Swedish/EU Sale of Goods rules (Konsumentk\u00f6plagen) and equivalent in Norway/UK, you have rights for up to 3 years (or 2 years UK minimum in many cases) if goods are faulty, not as described, or not fit for purpose. Contact us with photos and order number. We will offer repair, replacement, price reduction or refund as required by law. This right cannot be limited by our returns window."
+        },
+        {
+          "heading": "How to Return or Withdraw",
+          "text": "Email the store support address with your order ID, reason (optional for withdrawal), and photos if damaged. We reply within 2 business days with return address (EU/UK warehouse partners) and RMA if needed. Clearly label package with order ID. Track the return. Refunds processed within 14 days of us receiving returned goods (or proof of posting for withdrawals). Original payment method used."
+        },
+        {
+          "heading": "Exceptions & Important Notes",
+          "text": "Opened personal hygiene items (e.g. certain brushes, masks once used), perishable goods, or items made to your specification cannot be returned once used/sealed broken. Downloadable digital items (if any) have different rules. We may deduct reasonable value loss if goods are handled beyond normal inspection."
+        },
+        {
+          "heading": "Delivery Times & Shipping (Estimates Only)",
+          "text": "Orders fulfilled via direct supplier shipping from Asia/EU/US warehouses. Typical 7-21 business days. Not guaranteed. Tracking provided where available. Delays can occur; we are not liable for carrier delays beyond reasonable control. Free shipping thresholds shown per product."
+        }
+      ]
+    },
+    "shipping": {
+      "title": "Shipping & Delivery Policy",
+      "summary": "Direct from verified suppliers in our network (Alibaba/Temu/Shein/eBay wholesale/Fyndiq-style partners). Delivery estimates 7\u201321 business days to Sweden, Norway, UK and EU. Tracking provided on most orders.",
+      "sections": [
+        {
+          "heading": "Processing",
+          "text": "We forward your order to the supplier within 1-3 business days. You receive confirmation email with expected ship date."
+        },
+        {
+          "heading": "Delivery Estimates",
+          "text": "Standard: 7-14 business days (EU/UK warehouse stock). International supplier direct: 10-21 business days. Peak seasons (summer, holidays) may add 3-7 days. These are estimates, not guarantees."
+        },
+        {
+          "heading": "Costs",
+          "text": "Shown at checkout. Many items qualify for free standard shipping over threshold. Customs/VAT: For non-EU origin goods entering EU/UK/NO/SE you may be liable for import VAT/duties (we display estimated where possible; actual handled by carrier). Prices shown include Swedish/EU VAT where applicable for EU stores."
+        },
+        {
+          "heading": "Lost/Damaged",
+          "text": "If package lost (no tracking update 15+ days) or arrives damaged, contact us within 48h with photos. We will work with supplier/carrier for replacement or refund at no extra cost to you for faulty cases."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service & Legal Disclosures",
+      "summary": "We are online retailers operating a dropshipping model. Products are sourced from third-party verified suppliers and shipped directly. This is a demo/local development server only.",
+      "sections": [
+        {
+          "heading": "Business Model & Transparency",
+          "text": "We source products from global suppliers (Alibaba, Temu, eBay wholesale partners, similar platforms serving Fyndiq/Shein-style marketplaces). We do not hold inventory. Product appearance, packaging and minor specs may vary slightly from photos due to batch differences. We clearly disclose this."
+        },
+        {
+          "heading": "Prices & Currency",
+          "text": "Prices in EUR (or local equivalent shown). Reasonable retail pricing with healthy but fair margins after supplier cost, shipping, returns, and platform fees. We may adjust prices. Errors may lead to order cancellation with full refund."
+        },
+        {
+          "heading": "No Health/Medical Claims",
+          "text": "Products are sold for general consumer use. No claims that items diagnose, treat, cure or prevent disease. Cooling products are for general comfort only. Always follow safety instructions."
+        },
+        {
+          "heading": "Limitation of Liability & Governing Law",
+          "text": "Liability limited to the price paid for the specific item(s). We are not responsible for indirect damages or delays by third parties. For EU customers, mandatory consumer protections apply regardless. Disputes: first contact support. Swedish law applies for Lumina (SE), with EU consumer protections; UK law for Apex UK sales; Norwegian for relevant."
+        },
+        {
+          "heading": "Company Information (Demo)",
+          "text": "These are demonstration stores. In a real deployment each would display: full legal company name, registered address, organization number, VAT ID (e.g. SE/NO/GB/IE), and contact email. Always verify before real purchases. This local server is for testing only."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "summary": "We collect minimal data needed to fulfill orders and reply to you. We do not sell your data. GDPR, UK GDPR, and Norwegian privacy rules respected.",
+      "sections": [
+        {
+          "heading": "Data Collected",
+          "text": "Name, email, phone (optional), full shipping address, order details, IP for fraud. Payment handled by third-party processors (we never see full card details)."
+        },
+        {
+          "heading": "Use & Sharing",
+          "text": "To process orders, communicate, improve site, comply with tax/consumer law (records kept 3-7 years). Shared only with fulfillment partners, carriers, and authorities as legally required. No sale of personal data."
+        },
+        {
+          "heading": "Your Rights",
+          "text": "Access, rectification, erasure, restriction, portability, objection, and withdrawal of consent. Email the store address. We respond within 30 days (or 1 month). You may complain to your local authority: Datainspektionen/IMY (SE), Datatilsynet (NO), ICO (UK), or national DPA in your EU country."
+        },
+        {
+          "heading": "Cookies & Marketing",
+          "text": "Essential cookies only for cart/function. No pre-ticked marketing. Every newsletter has instant unsubscribe. We respect Do Not Track where applicable."
+        },
+        {
+          "heading": "Data Retention",
+          "text": "Orders kept for tax, warranty and legal compliance (minimum 3 years, up to 7 for some records)."
+        }
+      ]
+    }
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Stainless Steel Portable Blender Bottle \u2014 500ml",
+      "category": "Kitchen",
+      "price": 29.99,
+      "originalPrice": 44.99,
+      "cost": 9.8,
+      "source": "Temu",
+      "badge": "Trending",
+      "description": "USB rechargeable personal blender for smoothies and shakes on the go.",
+      "details": "Food-grade stainless + BPA-free. 6-blade system. 4000mAh battery. Easy clean.",
+      "image": "images/1.jpg",
+      "images": [
+        "images/1.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0001",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 2,
+      "name": "Digital Kitchen Scale \u2014 5kg Precision",
+      "category": "Kitchen",
+      "price": 18.99,
+      "originalPrice": 27.99,
+      "cost": 5.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Ultra-precise 1g resolution scale with tare and hold function.",
+      "details": "Stainless platform. Backlit LCD. 5kg capacity. Auto-off. Batteries included.",
+      "image": "images/2.jpg",
+      "images": [
+        "images/2.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0002",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 3,
+      "name": "Vegetable Chopper & Dicer Set \u2014 5 Blades",
+      "category": "Kitchen",
+      "price": 24.99,
+      "originalPrice": 36.99,
+      "cost": 7.2,
+      "source": "Temu",
+      "badge": "Best Seller",
+      "description": "Manual food chopper with multiple blade options for veggies, nuts, herbs.",
+      "details": "BPA-free container. 5 interchangeable blades. 1200ml capacity. Dishwasher safe top rack.",
+      "image": "images/3.jpg",
+      "images": [
+        "images/3.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0003",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 4,
+      "name": "Silicone Kitchen Utensil Set \u2014 10 Piece",
+      "category": "Kitchen",
+      "price": 22.99,
+      "originalPrice": 33.99,
+      "cost": 6.8,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Heat-resistant non-stick silicone tools with acacia wood handles.",
+      "details": "Includes spatula, spoon, tongs, whisk, brush, ladle etc. Up to 220\u00b0C.",
+      "image": "images/4.jpg",
+      "images": [
+        "images/4.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0004",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 5,
+      "name": "Reusable Silicone Food Storage Bags \u2014 6 Pack",
+      "category": "Kitchen",
+      "price": 16.99,
+      "originalPrice": 24.99,
+      "cost": 4.9,
+      "source": "Temu",
+      "badge": null,
+      "description": "Leak-proof zip bags for freezer, fridge, sous vide and snacks.",
+      "details": "Stand-up design. Various sizes. Dishwasher & microwave safe. Reduces plastic waste.",
+      "image": "images/5.jpg",
+      "images": [
+        "images/5.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0005",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 6,
+      "name": "Insulated Stainless Travel Tumbler \u2014 600ml",
+      "category": "Kitchen",
+      "price": 19.99,
+      "originalPrice": 29.99,
+      "cost": 6.2,
+      "source": "Alibaba",
+      "badge": "Hot",
+      "description": "Double-wall vacuum keeps drinks hot 8h or cold 24h. Fits car cupholders.",
+      "details": "18/8 food-grade steel. Leak-proof lid. Straw & sip options. 600ml.",
+      "image": "images/6.jpg",
+      "images": [
+        "images/6.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0006",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 7,
+      "name": "Bento Lunch Box with Dividers & Utensils",
+      "category": "Kitchen",
+      "price": 14.99,
+      "originalPrice": 22.99,
+      "cost": 4.1,
+      "source": "Temu",
+      "badge": null,
+      "description": "Stackable leak-proof compartments for balanced meals.",
+      "details": "Microwave & dishwasher safe. Includes fork/spoon. 3 compartments + sauce cup.",
+      "image": "images/7.jpg",
+      "images": [
+        "images/7.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0007",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 8,
+      "name": "Glass Oil & Vinegar Dispenser Set \u2014 2x500ml",
+      "category": "Kitchen",
+      "price": 21.99,
+      "originalPrice": 31.99,
+      "cost": 6.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Drip-free pour spouts with labels for kitchen counter.",
+      "details": "Borosilicate glass. Stainless pourers. Non-slip base. Easy refill.",
+      "image": "images/8.jpg",
+      "images": [
+        "images/8.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0008",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 9,
+      "name": "Digital Instant Read Meat Thermometer",
+      "category": "Kitchen",
+      "price": 13.99,
+      "originalPrice": 19.99,
+      "cost": 3.8,
+      "source": "Temu",
+      "badge": null,
+      "description": "Foldable probe with large backlit display. 3-5 second read.",
+      "details": "\u00b10.5\u00b0C accuracy. Waterproof. Auto wake. Magnetic back. Calibration option.",
+      "image": "images/9.jpg",
+      "images": [
+        "images/9.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0009",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 10,
+      "name": "Spice Rack Organizer \u2014 4 Tier Rotating",
+      "category": "Kitchen",
+      "price": 27.99,
+      "originalPrice": 39.99,
+      "cost": 8.9,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "360\u00b0 rotating bamboo spice rack holds 20+ jars.",
+      "details": "Natural bamboo. Non-slip base. 4 shelves. Easy clean.",
+      "image": "images/10.jpg",
+      "images": [
+        "images/10.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0010",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 11,
+      "name": "Drawer Organizer Set \u2014 8 Piece Bamboo",
+      "category": "Home Organization",
+      "price": 18.99,
+      "originalPrice": 27.99,
+      "cost": 5.4,
+      "source": "Temu",
+      "badge": null,
+      "description": "Adjustable dividers for kitchen, office and bathroom drawers.",
+      "details": "Expand from 4-12 inches. Natural finish. Non-slip pads.",
+      "image": "images/11.jpg",
+      "images": [
+        "images/11.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0011",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 12,
+      "name": "Under-Bed Storage Bags \u2014 2 Large Zip",
+      "category": "Home Organization",
+      "price": 16.99,
+      "originalPrice": 24.99,
+      "cost": 4.7,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Extra capacity under-bed organizers with clear window.",
+      "details": "90x65x20cm. Reinforced handles. Moth & dust proof. 2-pack.",
+      "image": "images/12.jpg",
+      "images": [
+        "images/12.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0012",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 13,
+      "name": "Vacuum Storage Bags \u2014 8 Piece Set",
+      "category": "Home Organization",
+      "price": 19.99,
+      "originalPrice": 29.99,
+      "cost": 5.8,
+      "source": "Temu",
+      "badge": null,
+      "description": "Space-saving compression bags for clothes, bedding, travel.",
+      "details": "Works with any vacuum. 4 sizes. Double-zip + valve. Reusable.",
+      "image": "images/13.jpg",
+      "images": [
+        "images/13.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0013",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 14,
+      "name": "Adhesive Wall Hooks \u2014 Heavy Duty 20 Pack",
+      "category": "Home Organization",
+      "price": 12.99,
+      "originalPrice": 18.99,
+      "cost": 3.2,
+      "source": "Temu",
+      "badge": null,
+      "description": "Strong damage-free hooks for towels, coats, kitchen tools.",
+      "details": "Holds up to 5kg each. Waterproof. Removable without residue.",
+      "image": "images/14.jpg",
+      "images": [
+        "images/14.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0014",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 15,
+      "name": "LED Strip Lights \u2014 5m RGB with Remote",
+      "category": "Lighting",
+      "price": 15.99,
+      "originalPrice": 23.99,
+      "cost": 4.5,
+      "source": "Alibaba",
+      "badge": "Trending",
+      "description": "Flexible 5050 LED strip, 16 colors, music sync option.",
+      "details": "IP65 waterproof. Cuttable. 12V adapter. Strong 3M tape. App optional.",
+      "image": "images/15.jpg",
+      "images": [
+        "images/15.jpg"
+      ],
+      "imageKey": "lighting",
+      "sku": "SKU-0015",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 16,
+      "name": "Dimmable Touch Table Lamp \u2014 Warm White",
+      "category": "Lighting",
+      "price": 29.99,
+      "originalPrice": 44.99,
+      "cost": 9.2,
+      "source": "Temu",
+      "badge": null,
+      "description": "Modern bedside or desk lamp with 3 brightness levels.",
+      "details": "USB rechargeable or plug. Fabric shade. 3000K warm light. 8h battery.",
+      "image": "images/16.jpg",
+      "images": [
+        "images/16.jpg"
+      ],
+      "imageKey": "lighting",
+      "sku": "SKU-0016",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 17,
+      "name": "Solar Powered String Lights \u2014 10m 100 LED",
+      "category": "Lighting",
+      "price": 17.99,
+      "originalPrice": 26.99,
+      "cost": 5.1,
+      "source": "Alibaba",
+      "badge": "Best Value",
+      "description": "Outdoor/indoor warm white solar fairy lights with timer.",
+      "details": "8 modes. Auto on/off. Weatherproof. 2m lead wire. No wiring needed.",
+      "image": "images/17.jpg",
+      "images": [
+        "images/17.jpg"
+      ],
+      "imageKey": "lighting",
+      "sku": "SKU-0017",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 18,
+      "name": "Rechargeable LED Desk Lamp with Clamp",
+      "category": "Lighting",
+      "price": 24.99,
+      "originalPrice": 36.99,
+      "cost": 7.5,
+      "source": "Temu",
+      "badge": null,
+      "description": "Eye-care 3 color modes, adjustable arm and brightness.",
+      "details": "10W. 5V USB-C. 3 color temps. Stepless dim. Clamp or base.",
+      "image": "images/18.jpg",
+      "images": [
+        "images/18.jpg"
+      ],
+      "imageKey": "lighting",
+      "sku": "SKU-0018",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 19,
+      "name": "Closet Hanging Organizer \u2014 6 Shelf",
+      "category": "Storage",
+      "price": 14.99,
+      "originalPrice": 21.99,
+      "cost": 4.0,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Collapsible fabric shelf organizer for sweaters, shoes, bags.",
+      "details": "Hangs from closet rod. 6 compartments. Sturdy cardboard insert.",
+      "image": "images/19.jpg",
+      "images": [
+        "images/19.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0019",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 20,
+      "name": "Over-Door Hanging Organizer \u2014 24 Pocket",
+      "category": "Storage",
+      "price": 16.99,
+      "originalPrice": 24.99,
+      "cost": 4.8,
+      "source": "Temu",
+      "badge": null,
+      "description": "Clear pocket shoe and accessory organizer for doors.",
+      "details": "Fits most doors. 24 large pockets. Metal hooks. Breathable.",
+      "image": "images/20.jpg",
+      "images": [
+        "images/20.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0020",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 21,
+      "name": "Cable Management Box & Clips Set",
+      "category": "Home Organization",
+      "price": 13.99,
+      "originalPrice": 19.99,
+      "cost": 3.6,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Hide power strips and excess cables neatly.",
+      "details": "Large box + 20 clips + ties + sleeve. Fire retardant.",
+      "image": "images/21.jpg",
+      "images": [
+        "images/21.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0021",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 22,
+      "name": "Desk Drawer Organizer Tray \u2014 Bamboo",
+      "category": "Home Organization",
+      "price": 15.99,
+      "originalPrice": 23.99,
+      "cost": 4.5,
+      "source": "Temu",
+      "badge": null,
+      "description": "5-compartment tray for pens, notes, phone, accessories.",
+      "details": "Fits most drawers. Natural bamboo. Non-slip base.",
+      "image": "images/22.jpg",
+      "images": [
+        "images/22.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0022",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 23,
+      "name": "Laundry Hamper with Lid \u2014 60L Foldable",
+      "category": "Storage",
+      "price": 21.99,
+      "originalPrice": 31.99,
+      "cost": 6.4,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Large capacity with lid and handles. Collapses flat.",
+      "details": "Oxford fabric. Sturdy steel frame. Easy carry. 60 liter.",
+      "image": "images/23.jpg",
+      "images": [
+        "images/23.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0023",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 24,
+      "name": "Shower Caddy Corner Shelf \u2014 3 Tier",
+      "category": "Bath & Storage",
+      "price": 18.99,
+      "originalPrice": 27.99,
+      "cost": 5.3,
+      "source": "Temu",
+      "badge": null,
+      "description": "Rust-proof aluminum corner caddy with adhesive or screw.",
+      "details": "Holds 15kg. 3 tiers + soap dish. No drilling option.",
+      "image": "images/24.jpg",
+      "images": [
+        "images/24.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0024",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 25,
+      "name": "Towel Rack Wall Mounted \u2014 2 Bar",
+      "category": "Bath & Storage",
+      "price": 19.99,
+      "originalPrice": 28.99,
+      "cost": 5.7,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Stainless steel double towel bar with shelf.",
+      "details": "40cm wide. Strong fixings. Modern brushed finish.",
+      "image": "images/25.jpg",
+      "images": [
+        "images/25.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0025",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 26,
+      "name": "Makeup Organizer with Drawers \u2014 Acrylic",
+      "category": "Storage",
+      "price": 16.99,
+      "originalPrice": 24.99,
+      "cost": 4.7,
+      "source": "Temu",
+      "badge": null,
+      "description": "Clear 4-drawer cosmetic storage for bathroom or vanity.",
+      "details": "Dust proof. 360\u00b0 rotation option available in variants.",
+      "image": "images/26.jpg",
+      "images": [
+        "images/26.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0026",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 27,
+      "name": "Shoe Rack \u2014 4 Tier Stackable Metal",
+      "category": "Storage",
+      "price": 23.99,
+      "originalPrice": 34.99,
+      "cost": 7.1,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Heavy duty freestanding shoe shelf for entryway.",
+      "details": "Holds 12-16 pairs. Rust resistant. Easy no-tool assembly.",
+      "image": "images/27.jpg",
+      "images": [
+        "images/27.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0027",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 28,
+      "name": "Wall Mounted Key & Mail Holder",
+      "category": "Home Organization",
+      "price": 11.99,
+      "originalPrice": 17.99,
+      "cost": 3.1,
+      "source": "Temu",
+      "badge": null,
+      "description": "Decorative entryway organizer with hooks and shelf.",
+      "details": "Wood + metal. 5 hooks. Small shelf for mail.",
+      "image": "images/28.jpg",
+      "images": [
+        "images/28.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0028",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 29,
+      "name": "Floating Wall Shelves \u2014 Set of 3",
+      "category": "Storage",
+      "price": 24.99,
+      "originalPrice": 36.99,
+      "cost": 7.4,
+      "source": "Alibaba",
+      "badge": "New",
+      "description": "Modern invisible bracket wood shelves for decor and books.",
+      "details": "40/50/60cm lengths. 15kg per shelf. Easy install template.",
+      "image": "images/29.jpg",
+      "images": [
+        "images/29.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0029",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 30,
+      "name": "Jewelry Organizer Box with Mirror",
+      "category": "Storage",
+      "price": 17.99,
+      "originalPrice": 25.99,
+      "cost": 5.0,
+      "source": "Temu",
+      "badge": null,
+      "description": "Large capacity ring/earring/necklace case with lid mirror.",
+      "details": "Velvet interior. 5 layers. Lock option. Travel size available.",
+      "image": "images/30.jpg",
+      "images": [
+        "images/30.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0030",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 31,
+      "name": "Pantry Door Organizer \u2014 6 Basket",
+      "category": "Kitchen Storage",
+      "price": 19.99,
+      "originalPrice": 29.99,
+      "cost": 5.9,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Over door metal basket pantry organizer.",
+      "details": "Fits standard doors. 6 deep baskets. No drilling.",
+      "image": "images/31.jpg",
+      "images": [
+        "images/31.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0031",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 32,
+      "name": "Wine Rack Countertop \u2014 6 Bottle",
+      "category": "Kitchen",
+      "price": 15.99,
+      "originalPrice": 23.99,
+      "cost": 4.4,
+      "source": "Temu",
+      "badge": null,
+      "description": "Stable wood or metal countertop wine holder.",
+      "details": "Holds 6 standard bottles. Non-slip. Compact footprint.",
+      "image": "images/32.jpg",
+      "images": [
+        "images/32.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0032",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 33,
+      "name": "Cutting Board Set \u2014 3 Size Bamboo",
+      "category": "Kitchen",
+      "price": 18.99,
+      "originalPrice": 27.99,
+      "cost": 5.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Reversible bamboo boards with juice groove.",
+      "details": "Large, medium, small. Easy clean. Knife friendly.",
+      "image": "images/33.jpg",
+      "images": [
+        "images/33.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0033",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 34,
+      "name": "Electric Salt & Pepper Grinder Set",
+      "category": "Kitchen",
+      "price": 22.99,
+      "originalPrice": 33.99,
+      "cost": 6.7,
+      "source": "Temu",
+      "badge": null,
+      "description": "Automatic one-hand grinders with light and adjustable coarseness.",
+      "details": "Battery operated. LED light. Refillable. 2-pack.",
+      "image": "images/34.jpg",
+      "images": [
+        "images/34.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0034",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 35,
+      "name": "Silicone Baking Mat Set \u2014 3 Size",
+      "category": "Kitchen",
+      "price": 14.99,
+      "originalPrice": 21.99,
+      "cost": 4.0,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Non-stick reusable baking sheets for oven and air fryer.",
+      "details": "Macaron size + half + full. Heat to 230\u00b0C. Easy clean.",
+      "image": "images/35.jpg",
+      "images": [
+        "images/35.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0035",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 36,
+      "name": "Collapsible Colander & Strainer Set",
+      "category": "Kitchen",
+      "price": 13.99,
+      "originalPrice": 19.99,
+      "cost": 3.7,
+      "source": "Temu",
+      "badge": null,
+      "description": "Space saving silicone colanders that fold flat.",
+      "details": "2 sizes. Heat resistant. Dishwasher safe.",
+      "image": "images/36.jpg",
+      "images": [
+        "images/36.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0036",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 37,
+      "name": "Ice Cube Tray with Lid \u2014 2 Pack",
+      "category": "Kitchen",
+      "price": 9.99,
+      "originalPrice": 14.99,
+      "cost": 2.6,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Easy release silicone ice trays with stackable lids.",
+      "details": "Makes 32 cubes. Flexible. No spill lid. BPA free.",
+      "image": "images/37.jpg",
+      "images": [
+        "images/37.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0037",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 38,
+      "name": "French Press Coffee Maker \u2014 1L Glass",
+      "category": "Kitchen",
+      "price": 16.99,
+      "originalPrice": 24.99,
+      "cost": 4.8,
+      "source": "Temu",
+      "badge": null,
+      "description": "Heat resistant borosilicate with stainless plunger.",
+      "details": "1 liter / 8 cup. Dishwasher safe parts. 3-layer filter.",
+      "image": "images/38.jpg",
+      "images": [
+        "images/38.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0038",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 39,
+      "name": "Measuring Cup & Spoon Set \u2014 13 Piece",
+      "category": "Kitchen",
+      "price": 11.99,
+      "originalPrice": 17.99,
+      "cost": 3.0,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Stainless nested measuring tools with leveler.",
+      "details": "Accurate to 1/8 tsp. Engraved markings. Hangable.",
+      "image": "images/39.jpg",
+      "images": [
+        "images/39.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0039",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 40,
+      "name": "Dish Drying Rack \u2014 Roll-Up Silicone",
+      "category": "Kitchen",
+      "price": 14.99,
+      "originalPrice": 21.99,
+      "cost": 4.1,
+      "source": "Temu",
+      "badge": null,
+      "description": "Foldable over-sink drying mat that rolls for storage.",
+      "details": "Heat safe. Drains into sink. Large 50x40cm.",
+      "image": "images/40.jpg",
+      "images": [
+        "images/40.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0040",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 41,
+      "name": "Lunch Box Stainless Steel \u2014 Leak Proof",
+      "category": "Kitchen",
+      "price": 15.99,
+      "originalPrice": 23.99,
+      "cost": 4.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Insulated 2-compartment bento for hot or cold food.",
+      "details": "800ml. Keeps warm 4-6h. Includes utensils.",
+      "image": "images/41.jpg",
+      "images": [
+        "images/41.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0041",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 42,
+      "name": "Mini Food Processor Chopper \u2014 USB",
+      "category": "Kitchen",
+      "price": 19.99,
+      "originalPrice": 29.99,
+      "cost": 5.8,
+      "source": "Temu",
+      "badge": "Trending",
+      "description": "Electric garlic/herb/veggie chopper, cordless.",
+      "details": "250ml. One button. 2 speeds. Rechargeable.",
+      "image": "images/42.jpg",
+      "images": [
+        "images/42.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0042",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 43,
+      "name": "Kitchen Sink Caddy & Sponge Holder",
+      "category": "Kitchen",
+      "price": 12.99,
+      "originalPrice": 18.99,
+      "cost": 3.4,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Hanging or counter sink organizer for brush and sponge.",
+      "details": "Rust proof. Drip tray. Strong adhesive or suction.",
+      "image": "images/43.jpg",
+      "images": [
+        "images/43.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0043",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 44,
+      "name": "Glass Food Storage Jars \u2014 6 Pack",
+      "category": "Kitchen",
+      "price": 23.99,
+      "originalPrice": 34.99,
+      "cost": 7.0,
+      "source": "Temu",
+      "badge": null,
+      "description": "Airtight bamboo lid jars for pantry staples.",
+      "details": "6 sizes. Labels included. Dishwasher safe glass.",
+      "image": "images/44.jpg",
+      "images": [
+        "images/44.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0044",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 45,
+      "name": "Mandoline Slicer with Safety Guard",
+      "category": "Kitchen",
+      "price": 17.99,
+      "originalPrice": 26.99,
+      "cost": 5.1,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Adjustable thickness professional vegetable slicer.",
+      "details": "Stainless blade. 5 thickness settings. Julienne option.",
+      "image": "images/45.jpg",
+      "images": [
+        "images/45.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0045",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 46,
+      "name": "Electric Kettle \u2014 1.7L Fast Boil",
+      "category": "Kitchen",
+      "price": 26.99,
+      "originalPrice": 39.99,
+      "cost": 8.2,
+      "source": "Temu",
+      "badge": null,
+      "description": "Stainless cordless kettle with auto shut-off.",
+      "details": "1500-1800W. Boil dry protection. Cool touch handle.",
+      "image": "images/46.jpg",
+      "images": [
+        "images/46.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0046",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 47,
+      "name": "Fruit & Vegetable Washing Bowl with Strainer",
+      "category": "Kitchen",
+      "price": 13.99,
+      "originalPrice": 19.99,
+      "cost": 3.7,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Collapsible 2-in-1 produce washer and drainer.",
+      "details": "5L. Silicone. Easy store flat.",
+      "image": "images/47.jpg",
+      "images": [
+        "images/47.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0047",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 48,
+      "name": "Knife Sharpener \u2014 3 Stage Professional",
+      "category": "Kitchen",
+      "price": 14.99,
+      "originalPrice": 21.99,
+      "cost": 3.9,
+      "source": "Temu",
+      "badge": null,
+      "description": "Diamond, ceramic and steel stages for all knives.",
+      "details": "Non-slip base. Safe hand grip. Works on serrated.",
+      "image": "images/48.jpg",
+      "images": [
+        "images/48.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0048",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 49,
+      "name": "Bread Box \u2014 Large Bamboo with Lid",
+      "category": "Kitchen",
+      "price": 21.99,
+      "originalPrice": 31.99,
+      "cost": 6.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Keeps bread fresh longer with ventilation.",
+      "details": "Holds 2 loaves. Window lid. Easy clean.",
+      "image": "images/49.jpg",
+      "images": [
+        "images/49.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0049",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 50,
+      "name": "Reusable Beeswax Food Wraps \u2014 6 Pack",
+      "category": "Kitchen",
+      "price": 15.99,
+      "originalPrice": 23.99,
+      "cost": 4.3,
+      "source": "Temu",
+      "badge": "Eco",
+      "description": "Natural fabric wraps for covering bowls and wrapping food.",
+      "details": "Various sizes. Washable. Compostable at end of life.",
+      "image": "images/50.jpg",
+      "images": [
+        "images/50.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0050",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 51,
+      "name": "Coffee Scale with Timer \u2014 Precision",
+      "category": "Kitchen",
+      "price": 24.99,
+      "originalPrice": 36.99,
+      "cost": 7.4,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "0.1g accuracy pour-over scale with built-in timer.",
+      "details": "USB rechargeable. Auto timer. Water resistant.",
+      "image": "images/51.jpg",
+      "images": [
+        "images/51.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0051",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 52,
+      "name": "Handheld Milk Frother \u2014 USB Rechargeable",
+      "category": "Kitchen",
+      "price": 11.99,
+      "originalPrice": 17.99,
+      "cost": 3.1,
+      "source": "Temu",
+      "badge": null,
+      "description": "Powerful whisk for lattes, matcha, eggs.",
+      "details": "3 speeds. 25s froth. Easy clean. Stand included.",
+      "image": "images/52.jpg",
+      "images": [
+        "images/52.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0052",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 53,
+      "name": "Dish Brush Set with Holder \u2014 3 Piece",
+      "category": "Kitchen",
+      "price": 9.99,
+      "originalPrice": 14.99,
+      "cost": 2.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Bamboo handle brushes for dishes, vegetables, bottles.",
+      "details": "Replaceable heads. Wall holder. Natural.",
+      "image": "images/53.jpg",
+      "images": [
+        "images/53.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0053",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 54,
+      "name": "Air Tight Pasta & Cereal Containers \u2014 4 Pack",
+      "category": "Kitchen Storage",
+      "price": 18.99,
+      "originalPrice": 27.99,
+      "cost": 5.4,
+      "source": "Temu",
+      "badge": null,
+      "description": "Stackable pantry containers with one-hand pour lid.",
+      "details": "2.5L + 1.8L sizes. BPA free. Labels + marker.",
+      "image": "images/54.jpg",
+      "images": [
+        "images/54.jpg"
+      ],
+      "imageKey": "storage",
+      "sku": "SKU-0054",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 55,
+      "name": "Silicone Pot Holders & Oven Mitt Set",
+      "category": "Kitchen",
+      "price": 12.99,
+      "originalPrice": 18.99,
+      "cost": 3.3,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Heat resistant up to 250\u00b0C with non-slip grip.",
+      "details": "2 mitts + 2 holders. Easy clean. Hanging loop.",
+      "image": "images/55.jpg",
+      "images": [
+        "images/55.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0055",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 56,
+      "name": "Mini Digital Timer \u2014 Magnetic 2 Pack",
+      "category": "Kitchen",
+      "price": 8.99,
+      "originalPrice": 12.99,
+      "cost": 2.1,
+      "source": "Temu",
+      "badge": null,
+      "description": "Loud alarm kitchen timers for cooking and productivity.",
+      "details": "99 min. Large digits. Strong magnet. 2-pack.",
+      "image": "images/56.jpg",
+      "images": [
+        "images/56.jpg"
+      ],
+      "imageKey": "kitchen",
+      "sku": "SKU-0056",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    }
+  ],
+  "launchReady": true
+}

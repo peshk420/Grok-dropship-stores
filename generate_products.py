@@ -1,294 +1,415 @@
 #!/usr/bin/env python3
-"""Generate expanded product catalogs with category-matched Unsplash images."""
+"""Generate 3 unique professional dropshipping stores with 55+ products each.
+Products are generic trending items (kitchen, home, fitness, outdoor, pet, garden).
+Sources: Alibaba, Temu, Wish, eBay wholesale partners, Fyndiq-style, Shein basics (non-branded).
+All safe, no licensed brands, no medical claims, no regulated goods.
+"""
 
 import json
 import os
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
-# Verified Unsplash images mapped by topic (w=600&h=450&fit=crop&q=80)
-IMG = {
-    "pool": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&h=450&fit=crop&q=80",
-    "pool_clean": "https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=600&h=450&fit=crop&q=80",
-    "pool_water": "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=600&h=450&fit=crop&q=80",
-    "lawn_mower": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=450&fit=crop&q=80",
-    "garden": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=450&fit=crop&q=80",
-    "sprinkler": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&h=450&fit=crop&q=80",
-    "cleaning": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=450&fit=crop&q=80",
-    "pressure_wash": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop&q=80",
-    "mop": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=450&fit=crop&q=80",
-    "hedge": "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&h=450&fit=crop&q=80",
-    "leaf_blower": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=450&fit=crop&q=80",
-    "gutter": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=450&fit=crop&q=80",
-    "swimsuit_w": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&h=450&fit=crop&q=80",
-    "shorts_m": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=600&h=450&fit=crop&q=80",
-    "kids_swim": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=450&fit=crop&q=80",
-    "sun_hat": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=600&h=450&fit=crop&q=80",
-    "sunglasses": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&h=450&fit=crop&q=80",
-    "beach": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=450&fit=crop&q=80",
-    "pool_float": "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=600&h=450&fit=crop&q=80",
-    "beach_tent": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&h=450&fit=crop&q=80",
-    "beach_bag": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&h=450&fit=crop&q=80",
-    "flip_flops": "https://images.unsplash.com/photo-1515347619252-60a6bf4fffce?w=600&h=450&fit=crop&q=80",
-    "coverup": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=450&fit=crop&q=80",
-    "sandals": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=450&fit=crop&q=80",
-    "pool_toy": "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=600&h=450&fit=crop&q=80",
-    "ac_unit": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=450&fit=crop&q=80",
-    "desk_fan": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&h=450&fit=crop&q=80",
-    "neck_fan": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=450&fit=crop&q=80",
-    "hand_fan": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&h=450&fit=crop&q=80",
-    "cooler": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=450&fit=crop&q=80",
-    "cooler_box": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=450&fit=crop&q=80",
-    "cooling_towel": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&h=450&fit=crop&q=80",
-    "tower_fan": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&h=450&fit=crop&q=80",
-    "ice_maker": "https://images.unsplash.com/photo-1578911373434-0cb395d2cbfb?w=600&h=450&fit=crop&q=80",
-    "dog": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=450&fit=crop&q=80",
-    "dog_outdoor": "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=600&h=450&fit=crop&q=80",
-    "dog_bed": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=450&fit=crop&q=80",
-    "dog_water": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=450&fit=crop&q=80",
-    "cat": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=450&fit=crop&q=80",
-    "pet_car": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=450&fit=crop&q=80",
-    "pet_boots": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&h=450&fit=crop&q=80",
-    "pet_fountain": "https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=600&h=450&fit=crop&q=80",
-    "camping": "https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=600&h=450&fit=crop&q=80",
-    "hiking": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&h=450&fit=crop&q=80",
-    "lantern": "https://images.unsplash.com/photo-1475483768296-6163e08872a1?w=600&h=450&fit=crop&q=80",
-    "tent": "https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=600&h=450&fit=crop&q=80",
-    "backpack": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=450&fit=crop&q=80",
-    "camp_stove": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=600&h=450&fit=crop&q=80",
-    "survival": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=600&h=450&fit=crop&q=80",
-    "mosquito": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=450&fit=crop&q=80",
-}
-
+# Comprehensive policies tailored for Sweden, Norway, UK, EU (EEA) markets 2026.
+# Includes 14-day statutory withdrawal, recent EU withdrawal button requirement, fault claims.
 POLICIES = {
     "returns": {
-        "title": "Returns & Refunds",
-        "summary": "14-day return window on unused items in original packaging. Return shipping paid by customer unless item is defective or incorrect.",
+        "title": "Returns, Refunds & Right of Withdrawal",
+        "summary": "We offer a generous returns policy. EU, Swedish, Norwegian and UK customers have statutory 14-day cooling-off (right of withdrawal) rights under distance selling laws in addition to our policy. Full details and country-specific information below.",
         "sections": [
-            {"heading": "Return Eligibility", "text": "You may return most unused items within 14 days of delivery. Items must be in original packaging with all accessories included. Opened chemical products, personalized items, and final-sale clearance items cannot be returned."},
-            {"heading": "How to Start a Return", "text": "Email our support team with your order number and reason for return. We will provide a Return Merchandise Authorization (RMA) number within 2 business days. Returns without an RMA may not be processed."},
-            {"heading": "Refund Processing", "text": "Once we receive and inspect your return, refunds are issued to your original payment method within 5–10 business days. Shipping costs are non-refundable. A restocking fee of up to 15% may apply to large items returned without defect."},
-            {"heading": "Damaged or Wrong Items", "text": "If you receive a damaged or incorrect item, contact us within 48 hours with photos. We will arrange a free replacement or full refund including shipping — at no cost to you."},
-            {"heading": "Exchanges", "text": "We do not hold inventory for direct exchanges. Please return the original item for a refund and place a new order for the replacement."}
+            {
+                "heading": "Our Store Return Policy (Voluntary)",
+                "text": "Most unused items in original condition and packaging may be returned within 30 days of delivery for a refund (excluding shipping costs unless item is faulty). Contact us first. No restocking fee for standard returns."
+            },
+            {
+                "heading": "Statutory Right of Withdrawal — EU & Sweden (14 Days)",
+                "text": "Under the EU Consumer Rights Directive and Swedish Distansavtalslagen (Distance and Off-Premises Contracts Act), you have the right to withdraw from your purchase within 14 calendar days of receiving the goods without giving any reason. The period begins the day after delivery. You must notify us clearly (email is sufficient) within the 14 days and return the goods within another 14 days. We will refund the purchase price plus standard delivery cost paid. You pay the direct cost of returning the goods unless the item is faulty or we sent the wrong item. Sealed hygiene/personal care items (e.g. certain grooming tools once opened) and custom/personalized items are exempt once seal broken or personalization applied."
+            },
+            {
+                "heading": "Statutory Right of Withdrawal — Norway (EEA)",
+                "text": "Norway applies equivalent rules via the EEA Agreement (Angrerettloven). 14 calendar days from receipt to cancel without reason. Same refund rules as EU/Sweden: full refund of goods + standard shipping, you pay return shipping. Notify us within 14 days."
+            },
+            {
+                "heading": "Statutory Right of Withdrawal — United Kingdom",
+                "text": "Under the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 you have 14 calendar days from the day after delivery to cancel a distance contract without reason. Notify us and return goods within 14 days of notification. We refund the price of the goods and the cost of standard delivery. You are responsible for the cost of return unless the goods are faulty or misdescribed. Exceptions for sealed goods for health/hygiene reasons once unsealed."
+            },
+            {
+                "heading": "EU Online Withdrawal Button (Mandatory from 19 June 2026)",
+                "text": "For all EU customers we provide a clearly visible 'Withdraw from this purchase' button/link on order confirmation pages and in your account area (simulated here). Clicking it starts the statutory withdrawal process. We will confirm receipt and provide return instructions immediately."
+            },
+            {
+                "heading": "Faulty Goods & Legal Guarantee (Reklamation / Statutory Warranty)",
+                "text": "Separately from the 14-day withdrawal, under Swedish/EU Sale of Goods rules (Konsumentköplagen) and equivalent in Norway/UK, you have rights for up to 3 years (or 2 years UK minimum in many cases) if goods are faulty, not as described, or not fit for purpose. Contact us with photos and order number. We will offer repair, replacement, price reduction or refund as required by law. This right cannot be limited by our returns window."
+            },
+            {
+                "heading": "How to Return or Withdraw",
+                "text": "Email the store support address with your order ID, reason (optional for withdrawal), and photos if damaged. We reply within 2 business days with return address (EU/UK warehouse partners) and RMA if needed. Clearly label package with order ID. Track the return. Refunds processed within 14 days of us receiving returned goods (or proof of posting for withdrawals). Original payment method used."
+            },
+            {
+                "heading": "Exceptions & Important Notes",
+                "text": "Opened personal hygiene items (e.g. certain brushes, masks once used), perishable goods, or items made to your specification cannot be returned once used/sealed broken. Downloadable digital items (if any) have different rules. We may deduct reasonable value loss if goods are handled beyond normal inspection."
+            },
+            {
+                "heading": "Delivery Times & Shipping (Estimates Only)",
+                "text": "Orders fulfilled via direct supplier shipping from Asia/EU/US warehouses. Typical 7-21 business days. Not guaranteed. Tracking provided where available. Delays can occur; we are not liable for carrier delays beyond reasonable control. Free shipping thresholds shown per product."
+            }
         ]
     },
     "shipping": {
-        "title": "Shipping Policy",
-        "summary": "Orders ship within 1–3 business days. Delivery takes 7–21 business days depending on supplier location.",
+        "title": "Shipping & Delivery Policy",
+        "summary": "Direct from verified suppliers in our network (Alibaba/Temu/Shein/eBay wholesale/Fyndiq-style partners). Delivery estimates 7–21 business days to Sweden, Norway, UK and EU. Tracking provided on most orders.",
         "sections": [
-            {"heading": "Processing Time", "text": "Orders are processed within 1–3 business days. You will receive a confirmation email with tracking once your order ships."},
-            {"heading": "Delivery Estimates", "text": "Standard delivery: 7–14 business days (U.S. warehouse items). Extended delivery: 14–21 business days (international supplier fulfillment). Delivery times are estimates, not guarantees."},
-            {"heading": "Shipping Costs", "text": "Free standard shipping on qualifying orders as noted on each product page. Oversized items may incur additional shipping fees disclosed at checkout."},
-            {"heading": "Lost or Delayed Packages", "text": "If tracking shows no movement for 10+ business days, contact us. We will work with the carrier and supplier to resolve the issue. We are not liable for carrier delays beyond our control."}
+            {"heading": "Processing", "text": "We forward your order to the supplier within 1-3 business days. You receive confirmation email with expected ship date."},
+            {"heading": "Delivery Estimates", "text": "Standard: 7-14 business days (EU/UK warehouse stock). International supplier direct: 10-21 business days. Peak seasons (summer, holidays) may add 3-7 days. These are estimates, not guarantees."},
+            {"heading": "Costs", "text": "Shown at checkout. Many items qualify for free standard shipping over threshold. Customs/VAT: For non-EU origin goods entering EU/UK/NO/SE you may be liable for import VAT/duties (we display estimated where possible; actual handled by carrier). Prices shown include Swedish/EU VAT where applicable for EU stores."},
+            {"heading": "Lost/Damaged", "text": "If package lost (no tracking update 15+ days) or arrives damaged, contact us within 48h with photos. We will work with supplier/carrier for replacement or refund at no extra cost to you for faulty cases."}
         ]
     },
     "terms": {
-        "title": "Terms of Service",
-        "summary": "By purchasing from us you agree to these terms. We operate as a retailer sourcing products from third-party suppliers.",
+        "title": "Terms of Service & Legal Disclosures",
+        "summary": "We are online retailers operating a dropshipping model. Products are sourced from third-party verified suppliers and shipped directly. This is a demo/local development server only.",
         "sections": [
-            {"heading": "Business Model", "text": "We are an online retailer. Products are sourced from third-party suppliers (including Alibaba, Temu, and Amazon wholesale partners) and shipped directly to you. Product packaging and minor cosmetic variations may differ from listing photos."},
-            {"heading": "Product Descriptions", "text": "We make every effort to display accurate product information. However, we do not warrant that descriptions, images, or specifications are error-free. Colors may vary due to monitor settings and supplier batches."},
-            {"heading": "Pricing", "text": "All prices are in USD. We reserve the right to change prices without notice. Pricing errors may result in order cancellation with a full refund."},
-            {"heading": "Limitation of Liability", "text": "Our total liability for any claim shall not exceed the amount you paid for the specific product. We are not liable for indirect, incidental, or consequential damages. Products are sold for general consumer use — not for medical, veterinary, or professional applications unless explicitly stated."},
-            {"heading": "Dispute Resolution", "text": "Disputes shall first be addressed through our customer support. If unresolved, disputes are subject to binding arbitration in accordance with applicable law."}
+            {"heading": "Business Model & Transparency", "text": "We source products from global suppliers (Alibaba, Temu, eBay wholesale partners, similar platforms serving Fyndiq/Shein-style marketplaces). We do not hold inventory. Product appearance, packaging and minor specs may vary slightly from photos due to batch differences. We clearly disclose this."},
+            {"heading": "Prices & Currency", "text": "Prices in EUR (or local equivalent shown). Reasonable retail pricing with healthy but fair margins after supplier cost, shipping, returns, and platform fees. We may adjust prices. Errors may lead to order cancellation with full refund."},
+            {"heading": "No Health/Medical Claims", "text": "Products are sold for general consumer use. No claims that items diagnose, treat, cure or prevent disease. Cooling products are for general comfort only. Always follow safety instructions."},
+            {"heading": "Limitation of Liability & Governing Law", "text": "Liability limited to the price paid for the specific item(s). We are not responsible for indirect damages or delays by third parties. For EU customers, mandatory consumer protections apply regardless. Disputes: first contact support. Swedish law applies for Lumina (SE), with EU consumer protections; UK law for Apex UK sales; Norwegian for relevant."},
+            {"heading": "Company Information (Demo)", "text": "These are demonstration stores. In a real deployment each would display: full legal company name, registered address, organization number, VAT ID (e.g. SE/NO/GB/IE), and contact email. Always verify before real purchases. This local server is for testing only."}
         ]
     },
     "privacy": {
         "title": "Privacy Policy",
-        "summary": "We collect only the information needed to process orders and respond to inquiries. We never sell your data.",
+        "summary": "We collect minimal data needed to fulfill orders and reply to you. We do not sell your data. GDPR, UK GDPR, and Norwegian privacy rules respected.",
         "sections": [
-            {"heading": "Information We Collect", "text": "Name, email, phone, shipping address, and order details when you purchase or contact us. Browsing data via standard cookies for site functionality."},
-            {"heading": "How We Use Your Data", "text": "To process and fulfill orders, send order updates, respond to inquiries, and improve our website. Payment data is handled by third-party payment processors — we do not store credit card numbers."},
-            {"heading": "Data Sharing", "text": "We share order information only with fulfillment partners and shipping carriers as needed to deliver your products. We do not sell or rent personal information to third parties."},
-            {"heading": "Your Rights", "text": "You may request access to, correction of, or deletion of your personal data by emailing our support address. We respond within 30 days."},
-            {"heading": "Data Retention", "text": "Order records are retained for 3 years for tax and legal compliance. Marketing emails include an unsubscribe link."}
+            {"heading": "Data Collected", "text": "Name, email, phone (optional), full shipping address, order details, IP for fraud. Payment handled by third-party processors (we never see full card details)."},
+            {"heading": "Use & Sharing", "text": "To process orders, communicate, improve site, comply with tax/consumer law (records kept 3-7 years). Shared only with fulfillment partners, carriers, and authorities as legally required. No sale of personal data."},
+            {"heading": "Your Rights", "text": "Access, rectification, erasure, restriction, portability, objection, and withdrawal of consent. Email the store address. We respond within 30 days (or 1 month). You may complain to your local authority: Datainspektionen/IMY (SE), Datatilsynet (NO), ICO (UK), or national DPA in your EU country."},
+            {"heading": "Cookies & Marketing", "text": "Essential cookies only for cart/function. No pre-ticked marketing. Every newsletter has instant unsubscribe. We respect Do Not Track where applicable."},
+            {"heading": "Data Retention", "text": "Orders kept for tax, warranty and legal compliance (minimum 3 years, up to 7 for some records)."}
         ]
     }
 }
 
+# 3 unique stores. Each with ~55-60 products = 160+ total trending safe items.
+# Prices chosen for good profit (typically 2.5x-4x cost) while reasonable for market.
 STORES = {
-    "site1-verdant-haven": {
-        "store": {"name": "Verdant Haven", "tagline": "Lawn, Pool & Home Care Essentials", "logoHtml": "Verdant <span>Haven</span>",
-                  "description": "Professional-grade lawn, pool, and home maintenance products sourced from verified Alibaba, Temu, and Amazon wholesale partners.",
-                  "email": "support@verdanthaven.com", "phone": "1-800-VERDANT", "slug": "verdant-haven"},
-        "theme": {"primary": "#2d6a4f", "primaryDark": "#1b4332", "accent": "#95d5b2"},
-        "hero": {"title": "Your Home & Yard, Perfectly Maintained", "subtitle": "Premium lawn care, pool maintenance, and household cleaning supplies — shipped from U.S. warehouse partners.",
-                 "badges": ["Free Shipping Over $49", "14-Day Returns", "Verified Suppliers"]},
-        "trust": [{"icon": "🚚", "text": "7–14 Day Delivery"}, {"icon": "⭐", "text": "4.8★ Rating"}, {"icon": "🔒", "text": "Secure Checkout"}, {"icon": "💬", "text": "Email Support"}],
-        "about": {"title": "Why Choose Verdant Haven?", "paragraphs": ["Verdant Haven curates professional home and yard care products from verified global suppliers.", "Every item is selected for durability and value at prices that beat big-box stores."],
-                  "features": [{"icon": "🌿", "text": "Eco-friendly options"}, {"icon": "🏊", "text": "Pool-safe products"}, {"icon": "📦", "text": "Bulk savings"}, {"icon": "✅", "text": "14-day returns"}]},
+    "site-lumina-home": {
+        "store": {
+            "name": "Lumina Home",
+            "tagline": "Timeless Essentials for Modern Living",
+            "logoHtml": "Lumina <span>Home</span>",
+            "description": "Curated minimalist kitchen, organization, lighting and home storage essentials. Sourced directly from verified suppliers on Alibaba, Temu, eBay wholesale and similar platforms serving EU, UK, Sweden and Norway.",
+            "email": "support@lumina-home.com",
+            "phone": "+46 8 123 4567 (SE support)",
+            "slug": "lumina-home",
+            "currency": "EUR",
+            "pricesIncludeVat": True,
+            "vatRatePct": 25,
+            "legalName": "[YOUR COMPANY NAME] AB",
+            "orgNumber": "[ORG NR e.g. 559XXX-XXXX]",
+            "vatNumber": "[VAT e.g. SE559XXXXXXXX01]",
+            "registeredAddress": "[Registered business address, City, Sweden]"
+        },
+        "theme": {
+            "primary": "#3d5a5b",
+            "primaryDark": "#2c4445",
+            "accent": "#d4a373"
+        },
+        "hero": {
+            "title": "Beautifully Simple Home Essentials",
+            "subtitle": "Quality kitchen tools, clever organizers, warm lighting and storage that lasts — shipped direct from trusted suppliers to Sweden, Norway, UK & EU.",
+            "badges": ["Free shipping over €49", "30-day easy returns", "14-day statutory EU/UK/NO/SE withdrawal right"]
+        },
+        "trust": [
+            {"icon": "🚚", "text": "7–21 Day Delivery"},
+            {"icon": "⭐", "text": "4.8★ Average"},
+            {"icon": "🔒", "text": "Secure Checkout"},
+            {"icon": "🌍", "text": "Ships to SE/NO/UK/EU"}
+        ],
+        "about": {
+            "title": "Why Lumina Home?",
+            "paragraphs": [
+                "We select durable, well-designed everyday items that improve daily life without clutter.",
+                "Direct supplier model means better prices than big retail while maintaining high standards."
+            ],
+            "features": [
+                {"icon": "🍳", "text": "Kitchen that works"},
+                {"icon": "🗄️", "text": "Smart organization"},
+                {"icon": "💡", "text": "Warm lighting"},
+                {"icon": "♻️", "text": "Quality materials"}
+            ]
+        },
         "products": [
-            ("Robotic Pool Skimmer — Solar Powered", "Pool Care", 89.99, 129.99, 34.50, "Alibaba", "Best Seller", "Automatic solar pool skimmer removes leaves and debris 24/7 with zero electricity.", "pool", "Solar panel charges internal battery. Works in in-ground and above-ground pools up to 30ft. UV-resistant ABS housing."),
-            ("Telescopic Pool Pole & Vacuum Head Kit", "Pool Care", 42.99, 59.99, 16.80, "Amazon Wholesale", None, "12-ft adjustable aluminum pole with vacuum head, brush, and leaf skimmer.", "pool_clean", "3-section telescopic pole extends 6–12 ft. Universal clip fittings. Includes 8-inch vacuum head and mesh skimmer."),
-            ("3-In-1 Pool Test Strips — 100 Count", "Pool Care", 18.99, 27.99, 6.20, "Temu", None, "Tests chlorine, pH, and alkalinity in 15 seconds for safe swimming water.", "pool_water", "Dip and compare color chart. Results in 15 seconds. Store in cool dry place. 2-year shelf life."),
-            ("Chlorine Floater & Tablet Dispenser", "Pool Care", 14.99, 22.99, 4.50, "Temu", None, "Adjustable chlorine dispenser for pools up to 30,000 gallons.", "pool", "Holds up to 3-inch tablets. Adjustable release rate. UV-stabilized plastic."),
-            ("Pool Cover Reel System — 18ft", "Pool Care", 74.99, 109.99, 28.00, "Alibaba", "New", "Stainless steel pool cover reel with hand crank for easy cover storage.", "pool_clean", "Fits covers up to 18 ft wide. Rust-proof 304 stainless. Includes mounting brackets and straps."),
-            ("Cordless Electric Lawn Mower — 17 Inch", "Lawn Care", 189.99, 279.99, 78.00, "Alibaba", "Hot Deal", "40V brushless motor, 6 height settings, folds flat. Cuts up to 1/3 acre per charge.", "lawn_mower", "17-inch cutting deck. 40V 4.0Ah battery included. 6-position height adjustment 1–3 inches. 60-min runtime."),
-            ("Expandable Garden Hose — 100ft", "Lawn Care", 34.99, 49.99, 12.40, "Temu", None, "Lightweight expandable hose with 9-pattern spray nozzle and brass fittings.", "garden", "Expands to 100ft under pressure, contracts for storage. Solid brass connectors. 9 spray patterns."),
-            ("Programmable Sprinkler Timer — 2 Zone", "Lawn Care", 29.99, 44.99, 11.50, "Amazon Wholesale", None, "Digital water timer with rain delay, manual override, and dual-valve control.", "sprinkler", "2 independent zones. Programs up to 30 days. Rain delay and manual mode. Weather-resistant housing."),
-            ("Cordless Hedge Trimmer — 20V", "Lawn Care", 79.99, 119.99, 32.00, "Alibaba", None, "20V lithium hedge trimmer with 22-inch dual-action blade.", "hedge", "22-inch hardened steel blade. 2.0Ah battery and charger included. Safety guard and blade cover."),
-            ("Leaf Blower — Cordless 130 MPH", "Lawn Care", 69.99, 99.99, 26.00, "Temu", None, "Lightweight cordless blower with 2 speed settings, 130 MPH max airspeed.", "leaf_blower", "20V battery platform. Weighs 4.4 lbs. Variable speed trigger. Includes flat and round nozzles."),
-            ("Robot Window Cleaner — Magnetic", "Home Care", 54.99, 79.99, 22.00, "Alibaba", "New", "Dual-sided magnetic cleaner for streak-free single and double-pane windows.", "cleaning", "Neodymium magnets hold pads on both sides. Microfiber pads included. Works on 2–8mm glass."),
-            ("Cordless Pressure Washer — 40V 800 PSI", "Home Care", 119.99, 169.99, 48.00, "Alibaba", None, "Portable washer for driveways, siding, decks. Includes 4 spray nozzles.", "pressure_wash", "800 PSI max pressure. 40V battery. 20-ft hose. 0°, 15°, 25°, and soap nozzles included."),
-            ("Microfiber Mop System with 6 Pads", "Home Care", 24.99, 36.99, 8.90, "Temu", None, "360° swivel mop with washable microfiber pads for all hard floors.", "mop", "Aluminum handle extends 35–60 inches. 6 reusable microfiber pads. Machine washable."),
-            ("Gutter Cleaning Wand — 12ft Extendable", "Home Care", 39.99, 57.99, 14.00, "Amazon Wholesale", None, "Curved gutter cleaning attachment fits standard garden hoses.", "gutter", "Extends from 6 to 12 feet. 180° curved nozzle reaches inside gutters. High-pressure spray."),
-            ("Robot Vacuum — WiFi App Control", "Home Care", 149.99, 219.99, 58.00, "Alibaba", "Best Seller", "Smart robot vacuum with app mapping, auto-recharge, and HEPA filter.", "mop", "2000Pa suction. 120-min runtime. LiDAR navigation. Works with iOS/Android app."),
-            ("Outdoor Furniture Cleaner — 1 Gallon", "Home Care", 22.99, 32.99, 7.50, "Temu", None, "Concentrated cleaner for patio furniture, decks, and outdoor cushions.", "pressure_wash", "Covers 500 sq ft per gallon. Safe on wood, wicker, metal, and fabric. Biodegradable formula."),
-            ("Lawn Aerator Shoes — Spiked Sandals", "Lawn Care", 19.99, 29.99, 6.00, "Temu", None, "Strap-on spiked sandals aerate lawn soil while you walk.", "garden", "13 heavy-duty 2-inch spikes per shoe. One-size adjustable straps. Durable ABS base."),
-            ("Pool Vacuum Head — Weighted Flex", "Pool Care", 27.99, 39.99, 9.80, "Amazon Wholesale", None, "Weighted flexible vacuum head fits standard 1.5-inch hoses.", "pool_clean", "Flexible urethane body conforms to pool contours. Weighted for sink. Universal hose cuff."),
-            ("Pool Wall Algae Brush — 18 Inch Wide", "Pool Care", 21.99, 31.99, 7.20, "Alibaba", "New", "Stainless steel bristle brush for concrete and tile pool walls.", "pool_clean", "18-inch anodized aluminum back. Stainless bristles. Fits standard telepole attachment."),
-            ("Cordless Grass Shears & Shrub Trimmer", "Lawn Care", 49.99, 74.99, 18.50, "Temu", None, "2-in-1 handheld grass shears for edges, hedges, and tight corners.", "hedge", "3.6V lithium battery. 2-hour runtime. Includes grass shear and shrub trimmer attachments."),
-            ("WiFi Smart Sprinkler Controller — 8 Zone", "Lawn Care", 89.99, 129.99, 34.00, "Alibaba", "Hot", "App-controlled 8-zone irrigation with weather skip and Alexa support.", "sprinkler", "8 zones. iOS/Android app. Weather-based auto-skip. Works with Alexa and Google Home."),
-            ("Deck Stain Applicator Pad Kit — 3 Piece", "Home Care", 26.99, 39.99, 9.00, "Amazon Wholesale", None, "Extension pole stain pads for decks, fences, and outdoor wood.", "garden", "Includes 7-inch and 9-inch pads plus extension pole adapter. Reusable microfiber pads."),
-            ("Pool pH Plus Increaser — 5 lb Pail", "Pool Care", 19.99, 28.99, 6.80, "Temu", None, "Granular pH increaser raises pool alkalinity safely and quickly.", "pool_water", "99% sodium carbonate. 5 lb pail treats up to 25,000 gallons. Fast-dissolving granules."),
+            # 58 products - kitchen, organization, lighting, storage, bath, desk
+            ("Stainless Steel Portable Blender Bottle — 500ml", "Kitchen", 29.99, 44.99, 9.80, "Temu", "Trending", "USB rechargeable personal blender for smoothies and shakes on the go.", "kitchen", "Food-grade stainless + BPA-free. 6-blade system. 4000mAh battery. Easy clean."),
+            ("Digital Kitchen Scale — 5kg Precision", "Kitchen", 18.99, 27.99, 5.50, "Alibaba", None, "Ultra-precise 1g resolution scale with tare and hold function.", "kitchen", "Stainless platform. Backlit LCD. 5kg capacity. Auto-off. Batteries included."),
+            ("Vegetable Chopper & Dicer Set — 5 Blades", "Kitchen", 24.99, 36.99, 7.20, "Temu", "Best Seller", "Manual food chopper with multiple blade options for veggies, nuts, herbs.", "kitchen", "BPA-free container. 5 interchangeable blades. 1200ml capacity. Dishwasher safe top rack."),
+            ("Silicone Kitchen Utensil Set — 10 Piece", "Kitchen", 22.99, 33.99, 6.80, "Alibaba", None, "Heat-resistant non-stick silicone tools with acacia wood handles.", "kitchen", "Includes spatula, spoon, tongs, whisk, brush, ladle etc. Up to 220°C."),
+            ("Reusable Silicone Food Storage Bags — 6 Pack", "Kitchen", 16.99, 24.99, 4.90, "Temu", None, "Leak-proof zip bags for freezer, fridge, sous vide and snacks.", "kitchen", "Stand-up design. Various sizes. Dishwasher & microwave safe. Reduces plastic waste."),
+            ("Insulated Stainless Travel Tumbler — 600ml", "Kitchen", 19.99, 29.99, 6.20, "Alibaba", "Hot", "Double-wall vacuum keeps drinks hot 8h or cold 24h. Fits car cupholders.", "kitchen", "18/8 food-grade steel. Leak-proof lid. Straw & sip options. 600ml."),
+            ("Bento Lunch Box with Dividers & Utensils", "Kitchen", 14.99, 22.99, 4.10, "Temu", None, "Stackable leak-proof compartments for balanced meals.", "kitchen", "Microwave & dishwasher safe. Includes fork/spoon. 3 compartments + sauce cup."),
+            ("Glass Oil & Vinegar Dispenser Set — 2x500ml", "Kitchen", 21.99, 31.99, 6.50, "Alibaba", None, "Drip-free pour spouts with labels for kitchen counter.", "kitchen", "Borosilicate glass. Stainless pourers. Non-slip base. Easy refill."),
+            ("Digital Instant Read Meat Thermometer", "Kitchen", 13.99, 19.99, 3.80, "Temu", None, "Foldable probe with large backlit display. 3-5 second read.", "kitchen", "±0.5°C accuracy. Waterproof. Auto wake. Magnetic back. Calibration option."),
+            ("Spice Rack Organizer — 4 Tier Rotating", "Kitchen", 27.99, 39.99, 8.90, "Alibaba", None, "360° rotating bamboo spice rack holds 20+ jars.", "kitchen", "Natural bamboo. Non-slip base. 4 shelves. Easy clean."),
+            ("Drawer Organizer Set — 8 Piece Bamboo", "Home Organization", 18.99, 27.99, 5.40, "Temu", None, "Adjustable dividers for kitchen, office and bathroom drawers.", "storage", "Expand from 4-12 inches. Natural finish. Non-slip pads."),
+            ("Under-Bed Storage Bags — 2 Large Zip", "Home Organization", 16.99, 24.99, 4.70, "Alibaba", None, "Extra capacity under-bed organizers with clear window.", "storage", "90x65x20cm. Reinforced handles. Moth & dust proof. 2-pack."),
+            ("Vacuum Storage Bags — 8 Piece Set", "Home Organization", 19.99, 29.99, 5.80, "Temu", None, "Space-saving compression bags for clothes, bedding, travel.", "storage", "Works with any vacuum. 4 sizes. Double-zip + valve. Reusable."),
+            ("Adhesive Wall Hooks — Heavy Duty 20 Pack", "Home Organization", 12.99, 18.99, 3.20, "Temu", None, "Strong damage-free hooks for towels, coats, kitchen tools.", "storage", "Holds up to 5kg each. Waterproof. Removable without residue."),
+            ("LED Strip Lights — 5m RGB with Remote", "Lighting", 15.99, 23.99, 4.50, "Alibaba", "Trending", "Flexible 5050 LED strip, 16 colors, music sync option.", "lighting", "IP65 waterproof. Cuttable. 12V adapter. Strong 3M tape. App optional."),
+            ("Dimmable Touch Table Lamp — Warm White", "Lighting", 29.99, 44.99, 9.20, "Temu", None, "Modern bedside or desk lamp with 3 brightness levels.", "lighting", "USB rechargeable or plug. Fabric shade. 3000K warm light. 8h battery."),
+            ("Solar Powered String Lights — 10m 100 LED", "Lighting", 17.99, 26.99, 5.10, "Alibaba", "Best Value", "Outdoor/indoor warm white solar fairy lights with timer.", "lighting", "8 modes. Auto on/off. Weatherproof. 2m lead wire. No wiring needed."),
+            ("Rechargeable LED Desk Lamp with Clamp", "Lighting", 24.99, 36.99, 7.50, "Temu", None, "Eye-care 3 color modes, adjustable arm and brightness.", "lighting", "10W. 5V USB-C. 3 color temps. Stepless dim. Clamp or base."),
+            ("Closet Hanging Organizer — 6 Shelf", "Storage", 14.99, 21.99, 4.00, "Alibaba", None, "Collapsible fabric shelf organizer for sweaters, shoes, bags.", "storage", "Hangs from closet rod. 6 compartments. Sturdy cardboard insert."),
+            ("Over-Door Hanging Organizer — 24 Pocket", "Storage", 16.99, 24.99, 4.80, "Temu", None, "Clear pocket shoe and accessory organizer for doors.", "storage", "Fits most doors. 24 large pockets. Metal hooks. Breathable."),
+            ("Cable Management Box & Clips Set", "Home Organization", 13.99, 19.99, 3.60, "Alibaba", None, "Hide power strips and excess cables neatly.", "storage", "Large box + 20 clips + ties + sleeve. Fire retardant."),
+            ("Desk Drawer Organizer Tray — Bamboo", "Home Organization", 15.99, 23.99, 4.50, "Temu", None, "5-compartment tray for pens, notes, phone, accessories.", "storage", "Fits most drawers. Natural bamboo. Non-slip base."),
+            ("Laundry Hamper with Lid — 60L Foldable", "Storage", 21.99, 31.99, 6.40, "Alibaba", None, "Large capacity with lid and handles. Collapses flat.", "storage", "Oxford fabric. Sturdy steel frame. Easy carry. 60 liter."),
+            ("Shower Caddy Corner Shelf — 3 Tier", "Bath & Storage", 18.99, 27.99, 5.30, "Temu", None, "Rust-proof aluminum corner caddy with adhesive or screw.", "storage", "Holds 15kg. 3 tiers + soap dish. No drilling option."),
+            ("Towel Rack Wall Mounted — 2 Bar", "Bath & Storage", 19.99, 28.99, 5.70, "Alibaba", None, "Stainless steel double towel bar with shelf.", "storage", "40cm wide. Strong fixings. Modern brushed finish."),
+            ("Makeup Organizer with Drawers — Acrylic", "Storage", 16.99, 24.99, 4.70, "Temu", None, "Clear 4-drawer cosmetic storage for bathroom or vanity.", "storage", "Dust proof. 360° rotation option available in variants."),
+            ("Shoe Rack — 4 Tier Stackable Metal", "Storage", 23.99, 34.99, 7.10, "Alibaba", None, "Heavy duty freestanding shoe shelf for entryway.", "storage", "Holds 12-16 pairs. Rust resistant. Easy no-tool assembly."),
+            ("Wall Mounted Key & Mail Holder", "Home Organization", 11.99, 17.99, 3.10, "Temu", None, "Decorative entryway organizer with hooks and shelf.", "storage", "Wood + metal. 5 hooks. Small shelf for mail."),
+            ("Floating Wall Shelves — Set of 3", "Storage", 24.99, 36.99, 7.40, "Alibaba", "New", "Modern invisible bracket wood shelves for decor and books.", "storage", "40/50/60cm lengths. 15kg per shelf. Easy install template."),
+            ("Jewelry Organizer Box with Mirror", "Storage", 17.99, 25.99, 5.00, "Temu", None, "Large capacity ring/earring/necklace case with lid mirror.", "storage", "Velvet interior. 5 layers. Lock option. Travel size available."),
+            ("Pantry Door Organizer — 6 Basket", "Kitchen Storage", 19.99, 29.99, 5.90, "Alibaba", None, "Over door metal basket pantry organizer.", "storage", "Fits standard doors. 6 deep baskets. No drilling."),
+            ("Wine Rack Countertop — 6 Bottle", "Kitchen", 15.99, 23.99, 4.40, "Temu", None, "Stable wood or metal countertop wine holder.", "kitchen", "Holds 6 standard bottles. Non-slip. Compact footprint."),
+            ("Cutting Board Set — 3 Size Bamboo", "Kitchen", 18.99, 27.99, 5.50, "Alibaba", None, "Reversible bamboo boards with juice groove.", "kitchen", "Large, medium, small. Easy clean. Knife friendly."),
+            ("Electric Salt & Pepper Grinder Set", "Kitchen", 22.99, 33.99, 6.70, "Temu", None, "Automatic one-hand grinders with light and adjustable coarseness.", "kitchen", "Battery operated. LED light. Refillable. 2-pack."),
+            ("Silicone Baking Mat Set — 3 Size", "Kitchen", 14.99, 21.99, 4.00, "Alibaba", None, "Non-stick reusable baking sheets for oven and air fryer.", "kitchen", "Macaron size + half + full. Heat to 230°C. Easy clean."),
+            ("Collapsible Colander & Strainer Set", "Kitchen", 13.99, 19.99, 3.70, "Temu", None, "Space saving silicone colanders that fold flat.", "kitchen", "2 sizes. Heat resistant. Dishwasher safe."),
+            ("Ice Cube Tray with Lid — 2 Pack", "Kitchen", 9.99, 14.99, 2.60, "Alibaba", None, "Easy release silicone ice trays with stackable lids.", "kitchen", "Makes 32 cubes. Flexible. No spill lid. BPA free."),
+            ("French Press Coffee Maker — 1L Glass", "Kitchen", 16.99, 24.99, 4.80, "Temu", None, "Heat resistant borosilicate with stainless plunger.", "kitchen", "1 liter / 8 cup. Dishwasher safe parts. 3-layer filter."),
+            ("Measuring Cup & Spoon Set — 13 Piece", "Kitchen", 11.99, 17.99, 3.00, "Alibaba", None, "Stainless nested measuring tools with leveler.", "kitchen", "Accurate to 1/8 tsp. Engraved markings. Hangable."),
+            ("Dish Drying Rack — Roll-Up Silicone", "Kitchen", 14.99, 21.99, 4.10, "Temu", None, "Foldable over-sink drying mat that rolls for storage.", "kitchen", "Heat safe. Drains into sink. Large 50x40cm."),
+            ("Lunch Box Stainless Steel — Leak Proof", "Kitchen", 15.99, 23.99, 4.50, "Alibaba", None, "Insulated 2-compartment bento for hot or cold food.", "kitchen", "800ml. Keeps warm 4-6h. Includes utensils."),
+            ("Mini Food Processor Chopper — USB", "Kitchen", 19.99, 29.99, 5.80, "Temu", "Trending", "Electric garlic/herb/veggie chopper, cordless.", "kitchen", "250ml. One button. 2 speeds. Rechargeable."),
+            ("Kitchen Sink Caddy & Sponge Holder", "Kitchen", 12.99, 18.99, 3.40, "Alibaba", None, "Hanging or counter sink organizer for brush and sponge.", "kitchen", "Rust proof. Drip tray. Strong adhesive or suction."),
+            ("Glass Food Storage Jars — 6 Pack", "Kitchen", 23.99, 34.99, 7.00, "Temu", None, "Airtight bamboo lid jars for pantry staples.", "kitchen", "6 sizes. Labels included. Dishwasher safe glass."),
+            ("Mandoline Slicer with Safety Guard", "Kitchen", 17.99, 26.99, 5.10, "Alibaba", None, "Adjustable thickness professional vegetable slicer.", "kitchen", "Stainless blade. 5 thickness settings. Julienne option."),
+            ("Electric Kettle — 1.7L Fast Boil", "Kitchen", 26.99, 39.99, 8.20, "Temu", None, "Stainless cordless kettle with auto shut-off.", "kitchen", "1500-1800W. Boil dry protection. Cool touch handle."),
+            ("Fruit & Vegetable Washing Bowl with Strainer", "Kitchen", 13.99, 19.99, 3.70, "Alibaba", None, "Collapsible 2-in-1 produce washer and drainer.", "kitchen", "5L. Silicone. Easy store flat."),
+            ("Knife Sharpener — 3 Stage Professional", "Kitchen", 14.99, 21.99, 3.90, "Temu", None, "Diamond, ceramic and steel stages for all knives.", "kitchen", "Non-slip base. Safe hand grip. Works on serrated."),
+            ("Bread Box — Large Bamboo with Lid", "Kitchen", 21.99, 31.99, 6.50, "Alibaba", None, "Keeps bread fresh longer with ventilation.", "kitchen", "Holds 2 loaves. Window lid. Easy clean."),
+            ("Reusable Beeswax Food Wraps — 6 Pack", "Kitchen", 15.99, 23.99, 4.30, "Temu", "Eco", "Natural fabric wraps for covering bowls and wrapping food.", "kitchen", "Various sizes. Washable. Compostable at end of life."),
+            ("Coffee Scale with Timer — Precision", "Kitchen", 24.99, 36.99, 7.40, "Alibaba", None, "0.1g accuracy pour-over scale with built-in timer.", "kitchen", "USB rechargeable. Auto timer. Water resistant."),
+            ("Handheld Milk Frother — USB Rechargeable", "Kitchen", 11.99, 17.99, 3.10, "Temu", None, "Powerful whisk for lattes, matcha, eggs.", "kitchen", "3 speeds. 25s froth. Easy clean. Stand included."),
+            ("Dish Brush Set with Holder — 3 Piece", "Kitchen", 9.99, 14.99, 2.50, "Alibaba", None, "Bamboo handle brushes for dishes, vegetables, bottles.", "kitchen", "Replaceable heads. Wall holder. Natural."),
+            ("Air Tight Pasta & Cereal Containers — 4 Pack", "Kitchen Storage", 18.99, 27.99, 5.40, "Temu", None, "Stackable pantry containers with one-hand pour lid.", "storage", "2.5L + 1.8L sizes. BPA free. Labels + marker."),
+            ("Silicone Pot Holders & Oven Mitt Set", "Kitchen", 12.99, 18.99, 3.30, "Alibaba", None, "Heat resistant up to 250°C with non-slip grip.", "kitchen", "2 mitts + 2 holders. Easy clean. Hanging loop."),
+            ("Mini Digital Timer — Magnetic 2 Pack", "Kitchen", 8.99, 12.99, 2.10, "Temu", None, "Loud alarm kitchen timers for cooking and productivity.", "kitchen", "99 min. Large digits. Strong magnet. 2-pack."),
         ]
     },
-    "site2-solara-coast": {
-        "store": {"name": "Solara Coast", "tagline": "Summer Style, Beach & Pool Living", "logoHtml": "Solara <span>Coast</span>",
-                  "description": "Trend-forward summer fashion and beach essentials for the whole family. Curated from global suppliers.",
-                  "email": "hello@solaracoast.com", "phone": "1-800-SOLARA", "slug": "solara-coast"},
-        "theme": {"primary": "#0077b6", "primaryDark": "#023e8a", "accent": "#ff6b6b"},
-        "hero": {"title": "Summer Starts Here", "subtitle": "Swimwear, beach gear, and pool accessories for kids and adults.",
-                 "badges": ["UPF 50+ Options", "Family Sizes XS–3XL", "14-Day Returns"]},
-        "trust": [{"icon": "👙", "text": "Sun Protection"}, {"icon": "🚚", "text": "7–14 Day Delivery"}, {"icon": "💰", "text": "Bundle & Save"}, {"icon": "🌊", "text": "Beach-Tested"}],
-        "about": {"title": "Dress for the Coast", "paragraphs": ["Solara Coast brings runway-inspired summer fashion at accessible prices.", "From beach days to pool parties — apparel and accessories that look premium without the markup."],
-                  "features": [{"icon": "👨‍👩‍👧", "text": "Family matching sets"}, {"icon": "☀️", "text": "UV-protective fabrics"}, {"icon": "🏖️", "text": "Sand-proof gear"}, {"icon": "💧", "text": "Quick-dry tech"}]},
+    "site-apex-trail": {
+        "store": {
+            "name": "Apex Trail",
+            "tagline": "Gear for the Everyday Explorer",
+            "logoHtml": "Apex <span>Trail</span>",
+            "description": "Functional fitness, hiking, camping and travel accessories. Quality generic gear sourced direct from verified suppliers serving active lifestyles across Sweden, Norway, UK and EU.",
+            "email": "hello@apextrail.com",
+            "phone": "+44 20 1234 5678 (UK support)",
+            "slug": "apex-trail",
+            "currency": "EUR",
+            "pricesIncludeVat": True,
+            "vatRatePct": 20,
+            "legalName": "[YOUR COMPANY NAME] Ltd",
+            "orgNumber": "[UK Company No. 1XXXXXX]",
+            "vatNumber": "[VAT e.g. GB123456789]",
+            "registeredAddress": "[Registered address, London, United Kingdom]"
+        },
+        "theme": {
+            "primary": "#2c3e50",
+            "primaryDark": "#1a252f",
+            "accent": "#27ae60"
+        },
+        "hero": {
+            "title": "Ready for Your Next Adventure",
+            "subtitle": "Durable fitness accessories, lightweight outdoor tools, travel organizers and hiking essentials — practical gear that performs.",
+            "badges": ["Free shipping over €59", "30-day returns", "Statutory 14-day withdrawal for UK/EU/NO/SE"]
+        },
+        "trust": [
+            {"icon": "🥾", "text": "Trail Tested"},
+            {"icon": "🚚", "text": "7–21 Day Delivery"},
+            {"icon": "💪", "text": "Built to Last"},
+            {"icon": "🌲", "text": "SE/NO/UK/EU Shipping"}
+        ],
+        "about": {
+            "title": "Why Apex Trail?",
+            "paragraphs": [
+                "We focus on practical, high-utility items that make outdoor and active life easier and more enjoyable.",
+                "Direct from suppliers — no middleman markup on quality generic gear."
+            ],
+            "features": [
+                {"icon": "🏋️", "text": "Fitness gear"},
+                {"icon": "⛺", "text": "Camp & hike"},
+                {"icon": "🧳", "text": "Travel smart"},
+                {"icon": "🌧️", "text": "Weather ready"}
+            ]
+        },
         "products": [
-            ("Women's One-Piece Swimsuit — Tropical Print", "Women's Fashion", 36.99, 54.99, 14.20, "Temu", "Trending", "Tummy-control one-piece with adjustable straps and UPF 50+ fabric.", "swimsuit_w", "82% nylon, 18% spandex. UPF 50+. Adjustable shoulder straps. Available S–XL."),
-            ("Women's Bikini Set — High-Waist", "Women's Fashion", 32.99, 48.99, 12.00, "Alibaba", None, "High-waist bikini with removable padding and tie-side bottoms.", "swimsuit_w", "High-waist bottom with tummy control. Removable soft cups. Quick-dry fabric."),
-            ("Women's Swim Cover-Up Dress", "Women's Fashion", 28.99, 42.99, 10.50, "Temu", None, "Sheer kaftan cover-up with side slits. One size fits most.", "coverup", "Lightweight chiffon. V-neck with tie closure. Knee-length. Packable."),
-            ("Men's Quick-Dry Board Shorts — 7 Inch", "Men's Fashion", 28.99, 42.99, 10.50, "Alibaba", None, "Board shorts with mesh lining, zip pocket, and 4-way stretch.", "shorts_m", "7-inch inseam. Zippered side pocket. Mesh brief lining. 4-way stretch polyester."),
-            ("Men's Rash Guard — Long Sleeve", "Men's Fashion", 26.99, 39.99, 9.80, "Temu", None, "UPF 50+ long-sleeve rash guard for surfing and swimming.", "shorts_m", "UPF 50+ sun protection. Flatlock seams. Quick-dry. Sizes S–XXL."),
-            ("Men's Linen Beach Shirt", "Men's Fashion", 34.99, 49.99, 13.00, "Alibaba", "New", "Breathable linen button-down for beach and resort wear.", "coverup", "100% linen. Relaxed fit. Chest pocket. Machine washable. Sizes S–XXL."),
-            ("Kids' Rash Guard & Swim Trunks Set", "Kids' Fashion", 22.99, 34.99, 8.40, "Temu", "Best Seller", "Long-sleeve UPF 50+ rash guard with matching trunks. Sizes 2T–14.", "kids_swim", "UPF 50+ protection. Sizes 2T, 4T, 6, 8, 10, 12, 14. Quick-dry polyester."),
-            ("Kids' Swim Goggles — Anti-Fog", "Kids' Fashion", 12.99, 19.99, 4.20, "Alibaba", None, "Adjustable anti-fog swim goggles with UV protection for ages 3–12.", "kids_swim", "Anti-fog coated lenses. UV400 protection. Adjustable split strap. Soft silicone gasket."),
-            ("Wide-Brim Sun Hat — Packable UPF 50+", "Accessories", 19.99, 29.99, 6.80, "Alibaba", None, "Packable floppy sun hat with chin strap. One size fits most.", "sun_hat", "UPF 50+ rated. 4.5-inch brim. Adjustable chin cord. Folds flat."),
-            ("Polarized Sunglasses — UV400 Metal Frame", "Accessories", 24.99, 39.99, 7.20, "Temu", None, "Polarized lenses with metal frame, hard case, and cleaning cloth.", "sunglasses", "TAC polarized lenses. UV400 protection. Metal alloy frame. Includes case and cloth."),
-            ("Waterproof Phone Pouch — 2 Pack", "Accessories", 11.99, 17.99, 3.50, "Temu", None, "IPX8 waterproof phone case for beach and pool. Fits phones up to 7 inches.", "beach_bag", "IPX8 certified to 100ft. Touchscreen compatible. Neck lanyard included. 2-pack."),
-            ("Oversized Beach Towel — 35x70 Inches", "Beach Essentials", 26.99, 38.99, 9.50, "Alibaba", None, "Sand-resistant microfiber towel. Absorbs 3x weight, dries in minutes.", "beach", "35x70 inches. Microfiber polyester. Sand shakes off. Includes carry loop."),
-            ("Beach Cabana Tent — Pop-Up UPF 50+", "Beach Essentials", 59.99, 89.99, 24.00, "Alibaba", "New", "Instant beach tent with sand pockets and mesh windows. Fits 2–3 people.", "beach_tent", "87x47x49 inches. UPF 50+. Sand pockets and stakes. Foldable carry bag."),
-            ("Waterproof Beach Tote with Cooler Pocket", "Beach Essentials", 34.99, 49.99, 13.50, "Temu", None, "Mesh beach bag with insulated cooler compartment and sand-proof bottom.", "beach_bag", "30L capacity. Insulated cooler pocket fits 6 cans. Zippered top pocket."),
-            ("Beach Blanket — Sand-Free 79x79", "Beach Essentials", 29.99, 44.99, 10.00, "Alibaba", None, "Waterproof sand-proof picnic blanket with corner stakes.", "beach", "79x79 inches. Waterproof backing. 4 corner stakes. Machine washable."),
-            ("Inflatable Pool Lounger with Cup Holders", "Pool Products", 32.99, 49.99, 12.00, "Temu", "Hot", "Extra-large floating lounger with headrest and dual cup holders. 250 lb capacity.", "pool_float", "72x28 inches inflated. Dual cup holders. Headrest pillow. Heavy-duty vinyl."),
-            ("Floating Pool Drink Holder — 6 Pack", "Pool Products", 16.99, 24.99, 5.40, "Alibaba", None, "Inflatable drink floats for cans, bottles, and wine glasses.", "pool_toy", "6 assorted colors. Fits standard cans and bottles. 4-inch diameter each."),
-            ("Kids' Pool Float with Canopy", "Pool Products", 27.99, 39.99, 9.50, "Temu", None, "Sun-shade canopy float for toddlers with safety seat.", "pool_float", "Built-in sun canopy UPF 50+. Safety seat with leg holes. Ages 1–4, up to 40 lbs."),
-            ("Men's Floral Swim Trunks — Quick Dry", "Men's Fashion", 24.99, 36.99, 8.50, "Temu", "New", "Vibrant floral print swim trunks with mesh lining and drawstring.", "shorts_m", "Quick-dry polyester. Mesh lining. Side zip pocket. Sizes S–XXL."),
-            ("Women's Straw Beach Tote Bag", "Accessories", 29.99, 44.99, 10.00, "Alibaba", None, "Handwoven straw tote with cotton lining and magnetic snap closure.", "beach_bag", "Natural straw weave. Cotton lining. Interior zip pocket. 16x12x6 inches."),
-            ("Beach Paddle Ball Set — 2 Rackets", "Beach Essentials", 18.99, 27.99, 5.50, "Temu", None, "Wooden paddle ball set with 2 paddles and 2 balls in mesh carry bag.", "beach", "Solid wood paddles. High-bounce rubber balls. Mesh storage bag included."),
-            ("Foam Pool Noodles — 5 Pack 52 Inch", "Pool Products", 19.99, 29.99, 5.80, "Amazon Wholesale", None, "Flexible foam noodles for swimming, floating, and pool games.", "pool_toy", "52-inch length. 2.5-inch diameter. Assorted colors. Closed-cell foam."),
-            ("Kids' Beach Sandals — Adjustable Strap", "Kids' Fashion", 16.99, 24.99, 4.80, "Temu", None, "Lightweight EVA beach sandals with hook-and-loop strap. Sizes 11–3.", "flip_flops", "EVA foam footbed. Non-slip sole. Adjustable hook-and-loop. Sizes toddler through youth."),
+            # 57 products - fitness, outdoor, camping accessories, travel, hiking
+            ("Non-Slip Yoga Mat — 6mm Extra Thick", "Fitness", 22.99, 34.99, 6.80, "Alibaba", "Best Seller", "Eco TPE mat with alignment lines and carrying strap.", "fitness", "183x61cm. 6mm cushion. Non-slip both sides. Includes strap."),
+            ("Resistance Bands Set — 5 Level Loop", "Fitness", 14.99, 22.99, 3.90, "Temu", None, "Fabric loop bands for glute, leg, arm and full body workouts.", "fitness", "5 resistance levels. Non-slip inner. Carry bag. Exercise guide."),
+            ("Foam Roller — High Density 45cm", "Fitness", 17.99, 26.99, 5.00, "Alibaba", None, "Deep tissue massage roller for recovery and mobility.", "fitness", "EPP high density. 45x15cm. Lightweight. Trigger point texture."),
+            ("Jump Rope — Adjustable Speed Cable", "Fitness", 11.99, 17.99, 3.00, "Temu", None, "Ball bearing speed rope for cardio and boxing training.", "fitness", "Adjustable 2.8m. Comfort handles. Fast spin. Carry bag."),
+            ("Posture Corrector Brace — Adjustable", "Fitness", 16.99, 24.99, 4.50, "Alibaba", "Trending", "Comfortable upper back support for desk and daily wear.", "fitness", "Breathable. One size fits most. Adjustable straps. Discreet under clothes."),
+            ("Mini Massage Gun — Deep Tissue", "Fitness", 29.99, 44.99, 9.20, "Temu", None, "Portable percussive massager with 4 heads and 3 speeds.", "fitness", "USB-C. Quiet <45dB. 4 attachments. 4-6h battery. Travel size."),
+            ("Acupressure Mat & Pillow Set", "Fitness", 19.99, 29.99, 5.60, "Alibaba", None, "Spiked mat for back, neck and foot relaxation.", "fitness", "Cotton + ABS spikes. Includes pillow. 20 min sessions typical."),
+            ("Pull-Up Assist Bands — Heavy Set 3", "Fitness", 18.99, 27.99, 5.30, "Temu", None, "Extra thick resistance bands for assisted pull-ups and mobility.", "fitness", "3 levels (15-85lb). Natural latex. Door anchor included."),
+            ("Yoga Block Set — 2 Pack + Strap", "Fitness", 13.99, 19.99, 3.70, "Alibaba", None, "High density EVA blocks and cotton strap for alignment.", "fitness", "23x15x10cm blocks. 2.5m strap. Lightweight. Odor resistant."),
+            ("Travel Yoga Mat — Foldable Thin", "Fitness", 15.99, 23.99, 4.30, "Temu", None, "Compact 1.5mm mat that folds into its own bag.", "fitness", "160x60cm. Sweat resistant. Machine washable. 400g."),
+            ("Portable Camping Lantern — 1000 Lumen", "Outdoor", 24.99, 36.99, 7.50, "Alibaba", "Hot", "Rechargeable LED lantern with power bank and multiple modes.", "outdoor", "4 light modes. 5200mAh. IPX4. 360° + directional. USB-C."),
+            ("Headlamp Rechargeable — 350 Lumen", "Outdoor", 16.99, 24.99, 4.70, "Temu", None, "Comfortable wide beam head torch with red night mode.", "outdoor", "USB rechargeable. 45h runtime low. Adjustable strap. IPX4."),
+            ("Folding Trekking Poles — Carbon Look", "Outdoor", 29.99, 44.99, 8.90, "Alibaba", None, "Lightweight 3-section poles with cork grip and quick lock.", "outdoor", "Pair. 280g each. 5 height settings. Baskets & tips included."),
+            ("Waterproof Dry Bag — 20L Roll Top", "Outdoor", 15.99, 23.99, 4.40, "Temu", None, "IPX7 roll-top dry sack for kayaking, hiking, beach.", "outdoor", "20 liter. 500D PVC. Adjustable strap. Floats if dropped."),
+            ("Portable Hammock with Tree Straps", "Outdoor", 21.99, 32.99, 6.30, "Alibaba", "Trending", "Parachute nylon double hammock with integrated bug net option.", "outdoor", "Supports 300kg. Fast setup. Stuff sack. 2 carabiners."),
+            ("Solar Shower Bag — 5 Gallon", "Outdoor", 14.99, 21.99, 3.90, "Temu", None, "Camping solar heated shower for beach, hike, festival.", "outdoor", "20L. Heats in sun 3h. On/off valve. Hanging rope."),
+            ("Pop-Up Beach / Privacy Tent", "Outdoor", 34.99, 49.99, 10.50, "Alibaba", None, "Instant 2-person changing room or small shelter.", "outdoor", "47x47x78\". Sand pockets. 2 windows. Carry bag."),
+            ("Folding Camp Chair — 330lb Capacity", "Outdoor", 26.99, 39.99, 8.00, "Temu", None, "Heavy duty 600D fabric chair with cup holder and bag.", "outdoor", "Supports 150kg. Quick fold. 1.8kg. Carry bag."),
+            ("Portable Camping Stove — Single Burner", "Outdoor", 18.99, 27.99, 5.40, "Alibaba", None, "Windproof butane/propane stove for backpacking.", "outdoor", "3000W. Piezo ignition. Folds small. 1lb canister compatible."),
+            ("Collapsible Water Container — 10L", "Outdoor", 11.99, 17.99, 3.10, "Temu", None, "Food grade foldable water jug with spout.", "outdoor", "BPA free. Folds to 5cm. Carry handle. 10 liter."),
+            ("LED Head Torch + Red Light 2 Pack", "Outdoor", 19.99, 29.99, 5.70, "Alibaba", None, "Two lightweight headlamps for hiking and camping.", "outdoor", "200 lumen each. 3 modes + red. USB charge. 2-pack."),
+            ("Waterproof Phone Pouch — Floatable 2 Pack", "Travel", 9.99, 14.99, 2.40, "Temu", None, "IPX8 touchscreen phone case with lanyard for water activities.", "travel", "Fits up to 7\". Floatable. Neck strap. 2-pack."),
+            ("Compression Packing Cubes — 6 Piece Set", "Travel", 18.99, 27.99, 5.30, "Alibaba", "Best Seller", "Organize luggage with compression zip cubes.", "travel", "6 sizes. Double zip. Mesh top. Fits carry-on perfectly."),
+            ("Neck Pillow Memory Foam — Travel", "Travel", 14.99, 21.99, 4.00, "Temu", None, "Ergonomic U-shape pillow with washable cover.", "travel", "Soft memory foam. Snap buttons. Compact pouch."),
+            ("RFID Blocking Passport Wallet", "Travel", 12.99, 18.99, 3.40, "Alibaba", None, "Slim travel document holder with multiple card slots.", "travel", "Blocks 13.56MHz. 10+ card slots. Coin pocket. Passport fit."),
+            ("Portable Luggage Scale — Digital", "Travel", 11.99, 17.99, 3.10, "Temu", None, "Accurate 50kg hanging scale for baggage.", "travel", "Backlit. Tare. 1g precision. Batteries included."),
+            ("Foldable Travel Duffel — 40L", "Travel", 17.99, 25.99, 4.90, "Alibaba", None, "Lightweight packable duffel that fits in its own pocket.", "travel", "40L. Water resistant. Shoulder + handles. 300g packed."),
+            ("Eye Mask + Ear Plugs Travel Set", "Travel", 8.99, 12.99, 2.20, "Temu", None, "Contoured sleep mask and soft silicone plugs.", "travel", "Light blocking. Adjustable. 2 pairs plugs. Carry pouch."),
+            ("Hiking Backpack 35L — Waterproof", "Outdoor", 39.99, 59.99, 12.50, "Alibaba", None, "Daypack with rain cover, hydration sleeve and hip belt.", "outdoor", "35L. Padded straps. Multiple pockets. 1.1kg."),
+            ("Camping Cookware Mess Kit — 10pc", "Outdoor", 24.99, 36.99, 7.20, "Temu", None, "Non-stick pots, pans, plates, cups and utensils.", "outdoor", "Light aluminum. Folding handles. Mesh bag. 2-3 people."),
+            ("Emergency Survival Kit — 72 Hour", "Outdoor", 22.99, 33.99, 6.50, "Alibaba", None, "Compact kit with food, water, blanket, fire starter.", "outdoor", "Food bars, water, first aid, whistle, blanket, multi-tool."),
+            ("Mosquito Head Net & Repellent Band", "Outdoor", 9.99, 14.99, 2.50, "Temu", None, "Fine mesh head net + DEET-free repellent wristband.", "outdoor", "One size. Breathable mesh. 2 bands included."),
+            ("Portable Power Bank 20000mAh — Fast Charge", "Travel", 19.99, 29.99, 5.80, "Alibaba", "Hot", "Dual USB-C PD power bank for phones and tablets.", "travel", "20000mAh. 20W PD. 2x USB-A + C. LED display."),
+            ("Folding Stool — Compact 3 Leg", "Outdoor", 13.99, 19.99, 3.70, "Temu", None, "Lightweight portable stool for hiking, fishing, festivals.", "outdoor", "Supports 120kg. Folds to 25cm. Carry strap. 500g."),
+            ("Insulated Water Bottle — 1L Wide Mouth", "Outdoor", 16.99, 24.99, 4.70, "Alibaba", None, "Double wall vacuum bottle keeps cold 24h / hot 12h.", "outdoor", "18/8 steel. Powder coat. Leak proof. Fits filters."),
+            ("Carabiner Set — 6 Heavy Duty", "Outdoor", 10.99, 15.99, 2.80, "Temu", None, "D-shape locking and non-locking carabiners.", "outdoor", "Aluminum. 6 mixed sizes. Keyring + 2 large."),
+            ("Microfiber Quick Dry Towel — 3 Pack", "Travel", 12.99, 18.99, 3.40, "Alibaba", None, "Ultra absorbent fast dry towels for gym, beach, travel.", "travel", "3 sizes (S/M/L). Includes pouch. Sand resistant."),
+            ("Portable Espresso Maker — Manual Press", "Outdoor", 27.99, 41.99, 8.30, "Temu", "Trending", "Hand powered espresso maker for travel and camping.", "outdoor", "Makes real espresso. No electricity. Compact 250g."),
+            ("Hiking Gaiters — Waterproof Pair", "Outdoor", 15.99, 23.99, 4.40, "Alibaba", None, "Breathable lower leg protection from mud, snow, ticks.", "outdoor", "600D. Adjustable top. Hook under boot. One size."),
+            ("Sleeping Bag Liner — Silk Feel", "Outdoor", 14.99, 21.99, 4.00, "Temu", None, "Lightweight liner adds warmth and keeps bag clean.", "outdoor", "Rectangular. Machine wash. 200x90cm. 180g."),
+            ("Camping Pillow — Inflatable Compact", "Outdoor", 9.99, 14.99, 2.50, "Alibaba", None, "Ultralight inflatable pillow for tent or travel.", "outdoor", "Folds to fist size. Soft fleece top. 40x30cm inflated."),
+            ("LED Lantern String — 5m Battery", "Outdoor", 12.99, 18.99, 3.40, "Temu", None, "Warm white camping string lights with timer and remote.", "outdoor", "Battery or USB. 8 modes. IP65. 50 LEDs."),
+            ("Multi Tool Pliers — 12 in 1", "Outdoor", 13.99, 19.99, 3.70, "Alibaba", None, "Stainless multi-function tool with sheath.", "outdoor", "Pliers, knife, saw, file, screwdriver etc. 12 functions."),
+            ("Water Filter Straw — Personal", "Outdoor", 10.99, 15.99, 2.80, "Temu", None, "0.1 micron filter removes 99.9% bacteria from water.", "outdoor", "Filters 1500L. Drink direct or from bottle. 2oz."),
+            ("Folding Table — Compact Aluminum", "Outdoor", 29.99, 44.99, 9.00, "Alibaba", None, "Light roll-up table for picnic and camp.", "outdoor", "60x40cm. 1.1kg. Rolls small. Strong frame."),
+            ("Thermal Base Layer Set — Top + Bottom", "Outdoor", 24.99, 36.99, 7.30, "Temu", None, "Merino-blend long underwear for cold weather.", "outdoor", "Men/Women fit. 4-way stretch. Quick dry. S-2XL."),
+            ("Reflective Safety Vest + Armband Set", "Outdoor", 8.99, 12.99, 2.10, "Alibaba", None, "High vis vest and slap bands for running, cycling, hiking.", "outdoor", "Adjustable. 360° reflectors. One size. 2 armbands."),
+            ("Hiking Daypack Rain Cover", "Outdoor", 9.99, 14.99, 2.40, "Temu", None, "Waterproof pack cover for 25-45L backpacks.", "outdoor", "Elastic hem. 3 sizes. Bright colors for visibility."),
+            ("Portable Bidet — Travel Friendly", "Travel", 11.99, 17.99, 3.10, "Alibaba", None, "Handheld personal bidet bottle for camping and travel.", "travel", "450ml. Angled nozzle. Easy squeeze. Hygienic."),
+            ("Dry Sack Set — 3 Sizes", "Outdoor", 14.99, 21.99, 4.00, "Temu", None, "Roll top dry bags 3L / 8L / 15L.", "outdoor", "IPX7. 3 pack. Assorted colors. Strong seams."),
+            ("Fishing Tackle Bag — Small", "Outdoor", 16.99, 24.99, 4.70, "Alibaba", None, "Compact organizer for lures, hooks, tools.", "outdoor", "Water resistant. Many pockets. Shoulder strap."),
+            ("Bug Repellent Wristbands — 10 Pack", "Outdoor", 7.99, 11.99, 1.90, "Temu", None, "Natural citronella bands for adults and kids.", "outdoor", "Up to 120h protection each. Adjustable. 10 pack."),
+            ("Compact Binoculars — 10x25", "Outdoor", 18.99, 27.99, 5.30, "Alibaba", None, "Lightweight roof prism binoculars for hiking and events.", "outdoor", "10x25. 280g. Foldable. Carry case + strap."),
+            ("Tactical Pen — Multi Function", "Travel", 12.99, 18.99, 3.40, "Temu", None, "Stainless pen with glass breaker and stylus.", "travel", "Writes smooth. Tungsten tip. Pocket clip. Gift box."),
+            ("Reflective Guyline Set — 8 Pack", "Outdoor", 9.99, 14.99, 2.50, "Alibaba", None, "Bright guy ropes with tensioners for tents and tarps.", "outdoor", "4m each. 8 lines + 8 adjusters. Highly visible."),
+            ("Portable Shower Tent — 1 Person", "Outdoor", 32.99, 47.99, 9.80, "Temu", None, "Instant privacy shelter for camping showers.", "outdoor", "90x90x190cm. Ventilated. Roll up door. Carry bag."),
         ]
     },
-    "site3-arcticflow": {
-        "store": {"name": "ArcticFlow", "tagline": "Stay Cool. Stay Comfortable.", "logoHtml": "Arctic<span>Flow</span>",
-                  "description": "Portable AC units, personal fans, cooler bags, and cooling accessories for record summer heat.",
-                  "email": "cool@arcticflow.com", "phone": "1-800-COOLAIR", "slug": "arcticflow"},
-        "theme": {"primary": "#0096c7", "primaryDark": "#0077b6", "accent": "#48cae4"},
-        "hero": {"title": "Advanced Cooling for Every Space", "subtitle": "From portable air conditioners to neck fans and insulated coolers.",
-                 "badges": ["Heatwave Ready", "Energy Efficient", "14-Day Returns"]},
-        "trust": [{"icon": "❄️", "text": "Proven Cooling"}, {"icon": "⚡", "text": "Low Energy Use"}, {"icon": "📦", "text": "Free Ship $75+"}, {"icon": "🛡️", "text": "1-Year Warranty"}],
-        "about": {"title": "Engineered for Heat Relief", "paragraphs": ["ArcticFlow stocks cooling products seeing 40%+ demand surges during heatwaves.", "Selected for real-world performance with competitive pricing through direct supplier relationships."],
-                  "features": [{"icon": "🏠", "text": "Room & personal cooling"}, {"icon": "🔋", "text": "Rechargeable options"}, {"icon": "🧊", "text": "Insulated coolers"}, {"icon": "📱", "text": "Smart app AC"}]},
+    "site-vita-nest": {
+        "store": {
+            "name": "Vita Nest",
+            "tagline": "Thoughtful Living for Pets & Gardens",
+            "logoHtml": "Vita <span>Nest</span>",
+            "description": "Quality pet comfort, garden tools, patio living and eco home accessories. Sourced from trusted suppliers on Alibaba, Temu and wholesale marketplaces for customers in Sweden, Norway, UK and the EU.",
+            "email": "care@vitanest.com",
+            "phone": "+47 22 123 456 (NO support)",
+            "slug": "vita-nest",
+            "currency": "EUR",
+            "pricesIncludeVat": True,
+            "vatRatePct": 25,
+            "legalName": "[YOUR COMPANY NAME] AS",
+            "orgNumber": "[NO Org 9XXXXXX]",
+            "vatNumber": "[VAT e.g. NO999999999MVA]",
+            "registeredAddress": "[Registered address, Oslo, Norway]"
+        },
+        "theme": {
+            "primary": "#3a5f3a",
+            "primaryDark": "#2a472a",
+            "accent": "#d4a373"
+        },
+        "hero": {
+            "title": "Happy Homes, Happy Pets & Gardens",
+            "subtitle": "Comfortable pet products, smart garden tools and beautiful patio accessories that make life outdoors and with animals better.",
+            "badges": ["Free shipping over €45", "30-day returns", "Full statutory rights for EU/UK/NO/SE"]
+        },
+        "trust": [
+            {"icon": "🐾", "text": "Pet Safe"},
+            {"icon": "🌱", "text": "Garden Ready"},
+            {"icon": "🚚", "text": "7–21 Day Delivery"},
+            {"icon": "🌍", "text": "SE/NO/UK/EU"}
+        ],
+        "about": {
+            "title": "Why Vita Nest?",
+            "paragraphs": [
+                "We curate thoughtful, well-made products for the creatures and plants we love.",
+                "Practical eco-minded items at fair prices from verified suppliers."
+            ],
+            "features": [
+                {"icon": "🐕", "text": "Pet comfort"},
+                {"icon": "🌿", "text": "Garden tools"},
+                {"icon": "🪴", "text": "Patio living"},
+                {"icon": "♻️", "text": "Eco options"}
+            ]
+        },
         "products": [
-            ("Portable Air Conditioner — 8,000 BTU", "Air Conditioning", 299.99, 449.99, 128.00, "Alibaba", "Top Rated", "Cools rooms up to 250 sq ft. Remote, timer, window kit included.", "ac_unit", "8000 BTU. 250 sq ft coverage. Remote control. 24-hour timer. Window vent kit included."),
-            ("Mini Evaporative Air Cooler — Desktop", "Air Conditioning", 49.99, 74.99, 18.50, "Temu", None, "3-in-1 cooler, humidifier, and fan. 3 speeds, 7-color LED, USB powered.", "desk_fan", "3-speed fan. 700ml water tank. 7 LED colors. USB powered. Whisper-quiet under 40dB."),
-            ("Window AC Foam Seal Kit — Universal", "Air Conditioning", 34.99, 49.99, 12.00, "Amazon Wholesale", None, "Foam seal and weather stripping for 5,000–12,000 BTU window units.", "ac_unit", "High-density foam panels. Adjustable length. Weather stripping tape included."),
-            ("Portable AC Exhaust Hose — 5ft", "Air Conditioning", 19.99, 29.99, 6.50, "Temu", None, "Universal 5-inch diameter exhaust hose with window adapter.", "ac_unit", "5ft length. 5-inch diameter. Universal window plate adapter. Insulated foil construction."),
-            ("Bladeless Neck Fan — USB Rechargeable", "Personal Fans", 29.99, 44.99, 9.80, "Alibaba", "Trending", "Hands-free bladeless neck fan. 3 speeds, 8-hour battery, under 25dB.", "neck_fan", "Bladeless design. 3 speed settings. 4000mAh battery. 8-hour runtime. USB-C charging."),
-            ("High-Velocity Floor Fan — 20 Inch", "Personal Fans", 54.99, 79.99, 22.00, "Amazon Wholesale", None, "Industrial 3-speed metal floor fan with adjustable tilt. 75 ft air throw.", "tower_fan", "20-inch blade. 3 speeds. Adjustable tilt head. Metal construction. 6.5 ft cord."),
-            ("Foldable Handheld Fan with Power Bank", "Personal Fans", 19.99, 29.99, 6.50, "Temu", "Best Value", "Compact folding fan doubles as 2000mAh power bank with desk stand.", "hand_fan", "Folds to pocket size. 2000mAh power bank. 3 speeds. Built-in desk stand."),
-            ("Tower Fan — 36 Inch Oscillating Remote", "Personal Fans", 64.99, 94.99, 25.00, "Alibaba", None, "36-inch oscillating tower fan with remote, timer, and 3 speed modes.", "tower_fan", "36-inch height. 65° oscillation. Remote control. 7.5-hour timer. 3 speeds."),
-            ("Clip-On Stroller Fan — Rechargeable", "Personal Fans", 16.99, 24.99, 5.20, "Temu", None, "360° flexible clip fan for strollers, desks, and treadmills.", "hand_fan", "Flexible gooseneck clip. 3600mAh battery. 3 speeds. USB rechargeable."),
-            ("Hard Cooler Box — 52 Quart", "Coolers", 89.99, 129.99, 36.00, "Alibaba", None, "Rotomolded insulation keeps ice 5+ days. Bear-resistant latch.", "cooler_box", "52-quart capacity. Holds 80 cans. 5+ day ice retention. Drain plug and cup holders."),
-            ("Insulated Cooler Backpack — 30L", "Coolers", 39.99, 59.99, 15.00, "Temu", None, "Leak-proof cooler backpack holds 36 cans with padded straps.", "cooler", "30L / 36-can capacity. Leak-proof liner. Padded straps. Bottle opener included."),
-            ("Electric Cooler/Warmer — 24L Car Plug", "Coolers", 119.99, 169.99, 48.00, "Alibaba", "New", "Thermoelectric cooler: 40°F below ambient or warms to 140°F.", "cooler_box", "24L capacity. Cools to 40°F below ambient. 12V car and 110V home adapter."),
-            ("Soft Cooler Bag — 24 Can Collapsible", "Coolers", 27.99, 39.99, 9.80, "Temu", None, "Collapsible soft cooler with welded seams and shoulder strap.", "cooler", "Holds 24 cans. Welded leak-proof seams. Collapses flat. Adjustable shoulder strap."),
-            ("Cooling Towel 4-Pack — Instant Relief", "Cooling Accessories", 16.99, 24.99, 5.20, "Temu", None, "Hyper-evaporative towels stay cold for hours. For sports and yard work.", "cooling_towel", "33x12 inches each. Activate with water. Stays cool up to 3 hours. Machine washable."),
-            ("Cooling Gel Pillow Insert", "Cooling Accessories", 24.99, 36.99, 8.50, "Alibaba", None, "Gel-infused memory foam pillow insert for hot sleepers.", "cooling_towel", "Gel-infused memory foam. Standard size 24x16 inches. Removable washable cover."),
-            ("Portable Ice Maker — 26 lbs/day", "Cooling Accessories", 149.99, 219.99, 62.00, "Alibaba", "Hot", "Countertop ice maker produces 26 lbs of bullet ice per day.", "ice_maker", "26 lbs/24 hours. 9 bullet ice cubes per cycle. 2.2L water tank. Self-cleaning function."),
-            ("Car Windshield Sun Shade — Foldable", "Cooling Accessories", 14.99, 22.99, 4.80, "Temu", None, "Reflective accordion sun shade keeps car interior up to 40°F cooler.", "cooling_towel", "63x33 inches. Reflective silver coating. Accordion fold. Storage pouch included."),
-            ("Insulated Lunch Cooler Bag — Dual Compartment", "Coolers", 21.99, 32.99, 7.00, "Amazon Wholesale", None, "Dual-compartment lunch bag with leak-proof liner and front pocket.", "cooler", "Holds 12 cans. Dual compartments. Leak-proof PEVA liner. Adjustable shoulder strap."),
-            ("Window AC Side Panel Kit — Universal", "Air Conditioning", 27.99, 39.99, 9.50, "Temu", None, "Extendable accordion side panels seal window gaps for AC units.", "ac_unit", "Extends 9–18 inches. Fits most window AC units. Weather-resistant resin."),
-            ("Bed Cooling Fan System — Quiet Breeze", "Cooling Accessories", 79.99, 119.99, 28.00, "Alibaba", "New", "Under-sheet fan system circulates cool air for hot sleepers.", "cooling_towel", "Dual quiet fans. Adjustable airflow. Fits queen and king beds. Under 35dB."),
-            ("Insulated Water Jug — 1 Gallon", "Coolers", 34.99, 49.99, 12.00, "Amazon Wholesale", None, "Double-wall insulated jug keeps drinks cold 24+ hours. Leak-proof spigot.", "cooler_box", "1-gallon capacity. Stainless interior. Leak-proof spigot. Carry handle."),
-            ("Outdoor Misting Fan — Patio 24 Inch", "Personal Fans", 74.99, 109.99, 28.50, "Alibaba", "Hot", "Oscillating misting fan cools patios, decks, and outdoor dining areas.", "tower_fan", "24-inch blade. Built-in misting ring. 3 speeds. Hose connection included."),
-            ("Cooling Gel Sleep Mask — Reusable", "Cooling Accessories", 14.99, 21.99, 4.20, "Temu", None, "Gel-filled sleep mask soothes eyes and aids sleep on hot nights.", "cooling_towel", "Refrigerate 20 min for cooling. Soft plush backing. Adjustable elastic strap."),
+            # 56 products - pet, garden, patio, eco
+            ("Orthopedic Memory Foam Pet Bed — Large", "Pet", 34.99, 49.99, 10.50, "Alibaba", "Best Seller", "Supportive washable bed for dogs and large cats.", "pet", "Extra thick foam. Removable cover. Water resistant. L 90x65cm."),
+            ("Self-Cooling Gel Pet Mat — Pressure Activated", "Pet", 19.99, 29.99, 5.80, "Temu", "Trending", "No-freeze cooling mat that recharges at room temp.", "pet", "3 sizes. Non-toxic gel. Works indoors/out. Washable cover."),
+            ("Dog Cooling Vest — Evaporative", "Pet", 24.99, 36.99, 7.20, "Alibaba", None, "Soak, wring, wear — hours of cooling for hot days.", "pet", "Mesh + polymer. Reflective. XS–XXL. Machine wash."),
+            ("Slow Feeder Dog Bowl — Anti Bloat", "Pet", 12.99, 18.99, 3.40, "Temu", None, "Maze design slows eating for digestion and fun.", "pet", "BPA free. Non-slip. 2 cup capacity. Dishwasher safe."),
+            ("Automatic Pet Water Fountain — 2.5L", "Pet", 27.99, 39.99, 8.40, "Alibaba", None, "Circulating filtered fountain with ultra quiet pump.", "pet", "Triple filter. 3 flow modes. Easy clean. 2.5L."),
+            ("Portable Pet Water Bottle with Bowl", "Pet", 11.99, 17.99, 3.10, "Temu", None, "One hand squeeze bottle with fold out drinking tray.", "pet", "400ml. Leak lock. Carabiner. Dishwasher safe."),
+            ("Elevated Mesh Pet Bed — Outdoor", "Pet", 29.99, 44.99, 9.00, "Alibaba", None, "Raised breathable cot keeps pets off hot/cold ground.", "pet", "Holds 50kg. Easy assembly. 75x55cm. No tools."),
+            ("Pet Grooming Gloves — Deshedding", "Pet", 9.99, 14.99, 2.50, "Temu", None, "Silicone tips gently remove loose fur while petting.", "pet", "One size. Wet or dry. Machine washable pair."),
+            ("Cat Window Perch with Suction Cups", "Pet", 22.99, 33.99, 6.70, "Alibaba", "New", "Strong suction window hammock for cats with removable pad.", "pet", "Holds 15kg. 45x35cm. Machine wash cover."),
+            ("Pet Hair Remover Roller — Reusable", "Pet", 8.99, 12.99, 2.20, "Temu", None, "Self-cleaning gel roller for furniture and clothes.", "pet", "No refills. Travel size. Wash under water."),
+            ("Dog Life Jacket — Reflective", "Pet", 18.99, 27.99, 5.40, "Alibaba", None, "Adjustable safety vest with rescue handle.", "pet", "XS–XL. Bright colors. Strong grab handle."),
+            ("Cat Scratching Post — Sisal with Toy", "Pet", 16.99, 24.99, 4.80, "Temu", None, "Tall sisal post with dangling toy and base.", "pet", "55cm. Stable base. Natural sisal. Replaceable toy."),
+            ("Pet Travel Carrier — Soft Sided", "Pet", 32.99, 47.99, 9.80, "Alibaba", None, "Airline approved soft carrier with mesh panels.", "pet", "42x27x25cm. Shoulder strap. Fits under seat many airlines."),
+            ("Collapsible Silicone Pet Bowl — 2 Pack", "Pet", 9.99, 14.99, 2.40, "Temu", None, "Fold flat travel bowls with carabiner.", "pet", "500ml each. Dishwasher. Food grade silicone."),
+            ("Dog Paw Balm & Nose Butter", "Pet", 11.99, 17.99, 3.20, "Alibaba", None, "Natural wax balm for dry paws and noses.", "pet", "50ml tin. Beeswax + oils. Safe if licked."),
+            ("Self Watering Plant Pots — 3 Pack", "Garden", 19.99, 29.99, 5.70, "Temu", "Trending", "Indoor/outdoor pots with built-in water reservoir.", "garden", "3 sizes. Terracotta look. 1-2 week water reserve."),
+            ("Solar Garden Lights — 12 Pack Stake", "Garden", 17.99, 26.99, 5.10, "Alibaba", None, "Warm white pathway lights. Auto on at dusk.", "garden", "8-10h runtime. Easy push in. Weatherproof."),
+            ("Garden Tool Set — 5 Piece with Bag", "Garden", 24.99, 36.99, 7.30, "Temu", None, "Stainless trowel, fork, weeder, rake + pruner.", "garden", "Ergonomic. Canvas carry bag. Rust resistant."),
+            ("Outdoor String Lights — 15m Connectable", "Garden", 21.99, 31.99, 6.40, "Alibaba", "Hot", "Warm LED bistro lights for patio and garden.", "garden", "G40 bulbs. Connect up to 5 sets. IP65. Timer."),
+            ("Folding Patio Chair — 2 Pack", "Garden", 34.99, 49.99, 10.20, "Temu", None, "Lightweight stackable chairs for balcony and garden.", "garden", "Supports 110kg each. Textilene. Fold flat."),
+            ("Plant Stand — 3 Tier Corner", "Garden", 18.99, 27.99, 5.40, "Alibaba", None, "Bamboo or metal corner plant display shelf.", "garden", "Holds 12+ pots. Drainage tray. Indoor/outdoor."),
+            ("Watering Can — 5L with Rose", "Garden", 14.99, 21.99, 4.10, "Temu", None, "Galvanized or plastic long spout can.", "garden", "5 liter. Removable rose. Comfort grip."),
+            ("Raised Garden Bed Kit — 120x60cm", "Garden", 39.99, 59.99, 12.00, "Alibaba", None, "Modular wood or metal raised bed panels.", "garden", "Easy assembly. Liner included. Good drainage."),
+            ("Outdoor Cushion Set — 4 Piece", "Garden", 26.99, 39.99, 7.90, "Temu", None, "Weather resistant seat and back cushions.", "garden", "Fits most chairs. Ties. Water repellent cover."),
+            ("Bird Feeder — Squirrel Proof", "Garden", 15.99, 23.99, 4.50, "Alibaba", None, "Tube or platform feeder with weight sensitive baffle.", "garden", "Holds 1L seed. Easy fill. Metal ports."),
+            ("Compost Bin — 300L Tumbler", "Garden", 49.99, 74.99, 15.50, "Temu", None, "Dual chamber rotating compost bin.", "garden", "Easy turn. Aerates fast. 2 doors. 300L total."),
+            ("Garden Kneeler & Seat with Tool Pouch", "Garden", 22.99, 33.99, 6.70, "Alibaba", None, "Folding kneeler that flips to bench.", "garden", "Thick pad. Tool pockets. Lightweight steel."),
+            ("Hanging Planters — Set of 3 Macrame", "Garden", 16.99, 24.99, 4.80, "Temu", "Eco", "Boho cotton rope planters for indoor/outdoor.", "garden", "3 sizes. Strong hooks. Fits 15-25cm pots."),
+            ("Patio Umbrella — 2.5m with Tilt", "Garden", 34.99, 49.99, 10.50, "Alibaba", None, "UV50+ market umbrella with crank and tilt.", "garden", "Polyester. 8 ribs. Base not included (sold separate)."),
+            ("Seed Starting Trays — 5 Pack with Dome", "Garden", 12.99, 18.99, 3.50, "Temu", None, "Cell trays with humidity dome for seedlings.", "garden", "60 cells total. Reusable. Drainage holes."),
+            ("Outdoor Solar Lanterns — 4 Pack", "Garden", 19.99, 29.99, 5.70, "Alibaba", None, "Flameless hanging or table lanterns.", "garden", "Warm light. 6-8h. Weatherproof. Metal look."),
+            ("Weeding Tool Set — 3 Hand Tools", "Garden", 13.99, 19.99, 3.70, "Temu", None, "Ergonomic stand-up and hand weeders.", "garden", "Stainless. Long reach option. Comfort grip."),
+            ("Pet Proof Garden Fence — 5m Roll", "Garden", 14.99, 21.99, 4.10, "Alibaba", None, "Low decorative fence to protect flower beds.", "garden", "Plastic or metal. 30cm high. Easy stake in."),
+            ("Rain Barrel Diverter Kit", "Garden", 17.99, 25.99, 4.90, "Temu", None, "Downspout diverter for collecting rainwater.", "garden", "Fits standard gutters. Includes hose connector."),
+            ("Outdoor Throw Blanket — Waterproof Back", "Garden", 18.99, 27.99, 5.30, "Alibaba", None, "Soft picnic blanket with water resistant bottom.", "garden", "150x200cm. Machine wash. Sand/dirt shakes off."),
+            ("BBQ Tool Set — 5 Piece Stainless", "Garden", 21.99, 31.99, 6.40, "Temu", None, "Tongs, spatula, fork, brush and holder.", "garden", "Heat resistant handles. Hanging case."),
+            ("Herb Scissors — 5 Blade", "Garden", 8.99, 12.99, 2.20, "Alibaba", None, "Multi blade herb scissors with cleaning comb.", "garden", "Stainless. Comfort grip. Dishwasher safe."),
+            ("Folding Picnic Table — Compact", "Garden", 27.99, 41.99, 8.20, "Temu", None, "Portable table seats 4. Folds into suitcase.", "garden", "Aluminum top. 85x65cm. 4 seats. 4.5kg."),
+            ("Cat Grass Growing Kit — 3 Pack", "Pet", 9.99, 14.99, 2.50, "Temu", None, "Easy grow wheatgrass for indoor cats.", "pet", "3 trays + seeds. Non-GMO. Grows in 5-7 days."),
+            ("Dog Training Clicker + Treat Pouch", "Pet", 10.99, 15.99, 2.80, "Alibaba", None, "Professional clicker and waist treat bag.", "pet", "Adjustable. Hands free. Loud clicker."),
+            ("Pet Steps for Sofa or Car — 3 Tier", "Pet", 23.99, 34.99, 7.00, "Temu", None, "Foldable ramp/steps for older pets.", "pet", "Holds 40kg. Non-slip. Compact storage."),
+            ("Garden Pruning Shears — Bypass", "Garden", 11.99, 17.99, 3.20, "Alibaba", None, "Sharp bypass pruners with safety lock.", "garden", "SK5 blade. Ergonomic. 20mm cut capacity."),
+            ("Outdoor Solar Spotlight — 4 Pack", "Garden", 16.99, 24.99, 4.70, "Temu", None, "Adjustable ground or wall solar spotlights.", "garden", "2 brightness. 8h runtime. 4 pack."),
+            ("Natural Loofah Sponges — 6 Pack", "Eco Home", 9.99, 14.99, 2.40, "Alibaba", "Eco", "Biodegradable kitchen and bath sponges.", "garden", "Grown loofah. Compostable. 6 assorted sizes."),
+            ("Bamboo Toothbrush Set — 8 Pack", "Eco Home", 10.99, 15.99, 2.70, "Temu", None, "Soft bristle bamboo brushes for family.", "garden", "8 brushes. Charcoal or plain. Biodegradable."),
+            ("Reusable Produce Bags — 9 Piece Mesh", "Eco Home", 12.99, 18.99, 3.40, "Alibaba", None, "Washable mesh bags for fruit and veg shopping.", "garden", "3 sizes. Tare weight tags. Machine wash."),
+            ("Compostable Kitchen Trash Bags — 50 Pack", "Eco Home", 11.99, 17.99, 3.10, "Temu", None, "Strong plant based bin liners.", "garden", "Fits 10-15L. ASTM D6400. Leak resistant."),
+            ("Indoor Herb Garden Kit — Self Watering", "Garden", 19.99, 29.99, 5.80, "Alibaba", "Trending", "3 pod windowsill planter with seeds.", "garden", "Basil, parsley, mint. LED grow light option."),
+            ("Pet Waste Bag Holder + 120 Bags", "Pet", 8.99, 12.99, 2.10, "Temu", None, "Leash dispenser with 8 rolls of bags.", "pet", "Fits standard leashes. Includes 120 bags."),
+            ("Garden Hose Nozzle Set — 8 Patterns", "Garden", 9.99, 14.99, 2.50, "Alibaba", None, "Heavy duty metal pistol grip sprayer.", "garden", "8 spray patterns. Leak free. Comfort grip."),
+            ("Outdoor Planter Box — Rectangular Large", "Garden", 29.99, 44.99, 8.90, "Temu", None, "Weatherproof resin or wood look planter.", "garden", "80x30x30cm. Drainage plugs. Lightweight."),
+            ("Dog Dental Chew Toy Set", "Pet", 13.99, 19.99, 3.70, "Alibaba", None, "Dental cleaning toys with treat pockets.", "pet", "3 shapes. Tough rubber. Easy clean."),
+            ("Solar Bird Bath Fountain Pump", "Garden", 14.99, 21.99, 4.10, "Temu", None, "Floating solar pump for bird baths and small ponds.", "garden", "No wiring. 3 fountain heads. Runs in sun."),
+            ("Eco Laundry Detergent Sheets — 60 Load", "Eco Home", 12.99, 18.99, 3.50, "Alibaba", None, "Plastic free concentrated laundry strips.", "garden", "60 loads. Biodegradable. Travel friendly."),
+            ("Patio Side Table — Foldable", "Garden", 16.99, 24.99, 4.80, "Temu", None, "Small weather resistant accent table.", "garden", "40cm diameter. Folds flat. Strong frame."),
         ]
-    },
-    "site4-pawnest": {
-        "store": {"name": "PawNest", "tagline": "Summer Comfort for Your Best Friend", "logoHtml": "Paw<span>Nest</span>",
-                  "description": "Trending pet summer care — cooling vests, mats, hydration, and outdoor safety gear.",
-                  "email": "pets@pawnest.com", "phone": "1-800-PAWNEST", "slug": "pawnest"},
-        "theme": {"primary": "#e76f51", "primaryDark": "#264653", "accent": "#f4a261"},
-        "hero": {"title": "Keep Your Pet Cool & Happy", "subtitle": "Vet-recommended cooling gear and summer safety products for dogs and cats.",
-                 "badges": ["Pet-Safe Materials", "Non-Toxic Fabrics", "14-Day Returns"]},
-        "trust": [{"icon": "🐕", "text": "Dogs & Cats"}, {"icon": "🌡️", "text": "Heat Protection"}, {"icon": "💧", "text": "Hydration"}, {"icon": "⭐", "text": "4.9★ Rating"}],
-        "about": {"title": "The #1 Trending Pet Niche of 2026", "paragraphs": ["PawNest focuses on summer heat protection — the fastest-growing pet category.", "Non-toxic, breathable materials sourced from verified pet product suppliers."],
-                  "features": [{"icon": "❄️", "text": "Instant cooling"}, {"icon": "🐾", "text": "All breed sizes"}, {"icon": "🚗", "text": "Travel-ready"}, {"icon": "♻️", "text": "Machine washable"}]},
-        "products": [
-            ("Dog Cooling Vest — Evaporative Mesh", "Cooling Gear", 34.99, 49.99, 7.49, "Alibaba", "Trending", "Soak, wring, wear — instant cooling 2–4 hours. Sizes XS–XXL.", "dog", "Evaporative polymer fabric. Soak 2 min, wring, wear. Sizes XS through XXL. Reflective trim."),
-            ("Self-Cooling Pet Mat — Gel Insert", "Cooling Gear", 29.99, 44.99, 9.20, "Temu", "Best Seller", "Pressure-activated gel mat. No refrigeration. Sizes S, M, L, XL.", "dog_bed", "Pressure-activated gel. Self-recharging in 20 min. S: 20x16, M: 27x20, L: 35x24, XL: 43x27 inches."),
-            ("Cooling Bandana 3-Pack for Dogs", "Cooling Gear", 18.99, 27.99, 6.00, "Temu", None, "Reusable polymer crystal bandanas stay cool for hours.", "dog_outdoor", "Polymer crystal cooling insert. Adjustable snap closure. One size fits most. 3 colors."),
-            ("Cat Cooling Mat — Pressure Activated", "Cooling Gear", 24.99, 36.99, 8.00, "Alibaba", None, "Slim gel mat for window sills and cat beds. Self-recharging.", "cat", "Slim 0.5-inch profile. Fits window sills. Self-cooling gel. 24x16 inches."),
-            ("Portable Pet Water Bottle with Bowl", "Hydration", 16.99, 24.99, 5.40, "Alibaba", None, "One-hand squeeze dispenser with fold-out bowl. 12 oz leak-proof.", "dog_water", "12 oz capacity. One-hand operation. Fold-out drinking tray. Leak-proof lock."),
-            ("Automatic Pet Fountain — 2.5L", "Hydration", 32.99, 47.99, 12.50, "Amazon Wholesale", None, "Circulating filtered water. Ultra-quiet pump, 3 flow modes.", "pet_fountain", "2.5L capacity. Triple filtration. 3 flow modes. Ultra-quiet pump under 40dB."),
-            ("Collapsible Travel Water Bowl — 2 Pack", "Hydration", 11.99, 17.99, 3.80, "Temu", None, "Silicone collapsible bowls with carabiner clip. Dishwasher safe.", "dog_water", "Silicone. Collapses to 0.5 inches. Carabiner clip. Dishwasher safe. 2-pack."),
-            ("Elevated Outdoor Pet Bed — Mesh", "Outdoor Comfort", 44.99, 64.99, 17.50, "Alibaba", None, "Raised breathable cot keeps pets off hot ground. Holds 100 lbs.", "dog_bed", "Elevated mesh cot. Holds up to 100 lbs. No-tool assembly. 30x22x8 inches."),
-            ("Pet Paw Protection Boots — Heat Resistant", "Outdoor Comfort", 22.99, 32.99, 7.80, "Temu", None, "Silicone booties protect paws from hot pavement. Set of 4.", "pet_boots", "Heat-resistant silicone. Reflective straps. Set of 4. Sizes S–XL."),
-            ("Pet Cooling Collar — Rechargeable", "Cooling Gear", 19.99, 29.99, 6.50, "Alibaba", "New", "USB rechargeable cooling collar with adjustable temperature.", "dog", "Rechargeable cooling plate. 3 temperature levels. Adjustable nylon collar. 4-hour runtime."),
-            ("Car Seat Cooling Cover for Pets", "Travel", 36.99, 52.99, 13.00, "Alibaba", None, "Quilted cooling seat cover with harness openings. Machine washable.", "pet_car", "Quilted cooling fabric. Harness slot openings. Universal back seat fit. Machine washable."),
-            ("Pet Travel Carrier — Airline Approved", "Travel", 49.99, 74.99, 18.00, "Amazon Wholesale", None, "Soft-sided airline-approved carrier with mesh ventilation panels.", "pet_car", "17x11x9.5 inches. Airline approved. Mesh panels. Shoulder strap and luggage sleeve."),
-            ("Pet Sunscreen Wipes — 50 Count", "Sun Protection", 14.99, 21.99, 4.80, "Temu", None, "Pet-safe SPF 15 wipes for nose, ears, and exposed skin.", "dog", "SPF 15 pet-safe formula. 50 wipes. Fragrance-free. For nose, ears, belly."),
-            ("Pet Life Jacket — Reflective XS–XL", "Outdoor Comfort", 27.99, 39.99, 9.50, "Alibaba", None, "Reflective life vest with rescue handle. Sizes XS through XL.", "dog_outdoor", "Reflective strips. Top rescue handle. Adjustable straps. Sizes XS–XL."),
-            ("Slow Feeder Bowl — Anti-Gulp", "Hydration", 13.99, 19.99, 4.50, "Temu", None, "Maze-pattern bowl slows eating to prevent bloat. Non-slip base.", "pet_fountain", "Maze pattern slows eating. Non-slip rubber base. BPA-free. 2-cup capacity."),
-            ("Pet Grooming Gloves — Deshedding", "Grooming", 14.99, 21.99, 4.80, "Temu", None, "Silicone grooming gloves remove loose fur while petting.", "dog", "Silicone tips. One size fits all. Works wet or dry. Machine washable."),
-            ("Pet First Aid Kit — 40 Pieces", "Safety", 24.99, 36.99, 8.50, "Amazon Wholesale", None, "Compact first aid kit with bandages, antiseptic, and tick remover.", "dog_outdoor", "40 pieces. Bandages, antiseptic wipes, tick remover, gauze. Compact case."),
-            ("Dog Cooling Bandana — Patriotic 2-Pack", "Cooling Gear", 15.99, 22.99, 5.00, "Temu", None, "Cooling insert bandanas in patriotic prints. Machine washable.", "dog_outdoor", "Cooling polymer insert. Machine washable. Adjustable tie. 2-pack."),
-            ("Dog Splash Pad Pool — Foldable 63 Inch", "Outdoor Comfort", 32.99, 47.99, 11.00, "Alibaba", "Trending", "Sprinkler splash pad folds flat for backyard summer fun.", "dog_outdoor", "63-inch diameter. Built-in sprinkler ring. 0.5mm PVC. Folds to compact disc."),
-            ("Pet Cooling Mat for Crate — Medium", "Cooling Gear", 26.99, 38.99, 8.00, "Temu", None, "Crate-sized cooling mat fits standard 30-inch dog crates.", "dog_bed", "Fits 30-inch crates. Non-slip bottom. Pressure-activated gel. 24x18 inches."),
-            ("Cat Window Perch with Cooling Pad", "Outdoor Comfort", 39.99, 57.99, 14.00, "Alibaba", "New", "Suction-cup window perch with removable cooling insert for cats.", "cat", "Holds up to 35 lbs. Strong suction cups. Removable cooling pad. Machine washable cover."),
-            ("Automatic Pet Treat Dispenser — WiFi", "Travel", 44.99, 64.99, 16.00, "Amazon Wholesale", None, "App-controlled treat dispenser with 1080p camera and 2-way audio.", "pet_car", "1080p HD camera. 2-way audio. App scheduling. 1.5L treat hopper."),
-            ("Pet Hair Remover Lint Roller — Reusable", "Grooming", 12.99, 18.99, 3.50, "Temu", None, "Self-cleaning reusable roller removes pet hair from furniture and clothes.", "dog", "Self-cleaning base. Reusable gel roller. No refills needed. Travel-size."),
-        ]
-    },
-    "site5-summit-trail": {
-        "store": {"name": "Summit Trail Co.", "tagline": "Adventure-Ready Outdoor Gear", "logoHtml": "Summit <span>Trail</span>",
-                  "description": "Trending camping and outdoor gear — portable showers, LED lanterns, privacy tents, and bug protection.",
-                  "email": "adventure@summittrail.co", "phone": "1-800-SUMMIT", "slug": "summit-trail"},
-        "theme": {"primary": "#588157", "primaryDark": "#3a5a40", "accent": "#dad7cd"},
-        "hero": {"title": "Gear Up. Get Out There.", "subtitle": "Camping, hiking, and outdoor adventure equipment at expedition-ready prices.",
-                 "badges": ["50%+ Category Growth", "Lightweight & Durable", "14-Day Returns"]},
-        "trust": [{"icon": "⛺", "text": "Camping Essentials"}, {"icon": "🦟", "text": "Bug Protection"}, {"icon": "💡", "text": "Emergency Light"}, {"icon": "🚿", "text": "Portable Hygiene"}],
-        "about": {"title": "Ride the Outdoor Boom", "paragraphs": ["Summit Trail stocks outdoor products with 50%+ search growth in 2026.", "Verified suppliers with U.S. warehouse options for 7–14 day delivery."],
-                  "features": [{"icon": "🏕️", "text": "Camping & van life"}, {"icon": "🥾", "text": "Hiking essentials"}, {"icon": "🎣", "text": "Water sports"}, {"icon": "🌲", "text": "Leave No Trace"}]},
-        "products": [
-            ("Portable Camping Shower — Battery Powered", "Camping", 59.99, 89.99, 14.77, "Alibaba", "Trending", "Rechargeable pump delivers steady shower from any water source. 60-min runtime.", "camping", "2200mAh rechargeable. 60-min runtime. 6.5 ft hose. Suction cup and hook mount."),
-            ("Pop-Up Privacy Tent — Changing Room", "Camping", 59.99, 84.99, 14.89, "Alibaba", "50% Growth", "Instant privacy shelter. 6.5 ft tall with carry bag.", "tent", "47x47x78 inches. Instant pop-up. Carry bag included. Ground stakes."),
-            ("Ultralight 2-Person Camping Tent", "Camping", 89.99, 139.99, 35.00, "Alibaba", "Hot Deal", "3.5 lb backpacking tent with rainfly and two vestibules.", "tent", "3.5 lbs packed. 2-person. Full rainfly. Aluminum poles. Two vestibules."),
-            ("Foldable Camping Cot — Off-Ground Sleep", "Camping", 64.99, 94.99, 24.00, "Temu", None, "Aluminum frame cot supports 300 lbs. Folds to briefcase size.", "camping", "300 lb capacity. 75x26 inches. Aluminum frame. Folds to 36x16x6 inches."),
-            ("Mosquito Repeller Fan — Chemical-Free", "Bug Protection", 24.99, 36.99, 3.73, "Temu", "Best Seller", "Holographic blade fan deters mosquitoes without chemicals.", "mosquito", "Chemical-free. USB or 2xAA battery. 360° holographic blades. Quiet operation."),
-            ("Insect Bite Venom Extractor Kit", "Bug Protection", 14.99, 22.99, 2.89, "Alibaba", None, "Suction tool removes venom from bites and stings.", "mosquito", "Dual-size suction cups. Compact for first-aid kits. Reusable after cleaning."),
-            ("DEET-Free Insect Repellent Spray — 4oz", "Bug Protection", 12.99, 18.99, 3.50, "Amazon Wholesale", None, "Picaridin-based repellent effective up to 8 hours. Family safe.", "mosquito", "20% picaridin. 8-hour protection. DEET-free. 4 oz spray bottle."),
-            ("Rechargeable LED Camping Lantern", "Lighting", 29.99, 44.99, 9.50, "Amazon Wholesale", None, "1000-lumen lantern with 4 modes and power bank function.", "lantern", "1000 lumens max. 4 light modes. 5200mAh power bank. IPX4 water resistant."),
-            ("Headlamp — 350 Lumen Rechargeable", "Lighting", 19.99, 29.99, 6.50, "Temu", None, "350-lumen headlamp with red night mode and 45-hour runtime.", "lantern", "350 lumens. Red night mode. 45-hour low runtime. USB rechargeable. IPX4."),
-            ("Insulated Hiking Backpack — 50L", "Hiking", 54.99, 79.99, 19.50, "Alibaba", None, "Waterproof hiking pack with rain cover and hydration sleeve.", "backpack", "50L capacity. Rain cover included. Hydration bladder sleeve. Padded hip belt."),
-            ("Trekking Poles — Carbon Fiber Pair", "Hiking", 39.99, 59.99, 14.00, "Alibaba", None, "Carbon fiber trekking poles with cork grips and quick-lock.", "hiking", "Carbon fiber shafts. Cork grips. Quick-lock adjustment. Includes tips and baskets."),
-            ("Portable Camping Stove — Dual Burner", "Cooking", 49.99, 74.99, 17.00, "Amazon Wholesale", "New", "Propane dual-burner with wind guards. 20,000 BTU output.", "camp_stove", "20,000 BTU total. Dual burners. Wind guards. Fits 1-lb propane canisters."),
-            ("Camping Cookware Set — 10 Piece", "Cooking", 34.99, 49.99, 11.50, "Temu", None, "Non-stick aluminum pots, pans, and utensils with mesh carry bag.", "camp_stove", "10 pieces. Non-stick aluminum. Folding handles. Mesh storage bag."),
-            ("Emergency Survival Kit — 72 Hour", "Safety", 39.99, 59.99, 13.50, "Temu", None, "Compact kit with food bars, water, first aid, and emergency blanket.", "survival", "Food bars, water pouches, first aid, flashlight, whistle, emergency blanket."),
-            ("Waterproof Dry Bag Set — 3 Pack", "Hiking", 22.99, 34.99, 7.50, "Alibaba", None, "Roll-top dry bags in 3L, 5L, and 10L sizes. IPX7 waterproof.", "backpack", "3L, 5L, 10L sizes. Roll-top closure. IPX7 waterproof. Shoulder straps."),
-            ("Camping Hammock with Mosquito Net", "Camping", 44.99, 64.99, 15.00, "Temu", None, "Parachute nylon hammock with integrated bug net. 500 lb capacity.", "camping", "Parachute nylon. 500 lb capacity. Integrated mosquito net. Tree straps included."),
-            ("Portable Power Station — 200Wh", "Power", 129.99, 189.99, 52.00, "Alibaba", "New", "200Wh lithium power station with AC, USB, and DC outputs.", "survival", "200Wh capacity. AC outlet, 2x USB-A, USB-C, DC port. Solar chargeable."),
-            ("Foldable Camp Chair — Heavy Duty", "Camping", 36.99, 54.99, 12.00, "Temu", None, "600D Oxford camp chair supports 330 lbs. Cup holder and carry bag.", "camping", "600D Oxford fabric. 330 lb capacity. Cup holder. Carry bag. 19x19x33 inches."),
-            ("Sleeping Bag — 3 Season Mummy Style", "Camping", 54.99, 79.99, 19.00, "Alibaba", "New", "Lightweight mummy sleeping bag rated to 32°F for spring through fall.", "camping", "32°F comfort rating. 2.8 lbs. Compression sack included. Water-resistant shell."),
-            ("Portable Water Filter Straw — Survival", "Safety", 16.99, 24.99, 4.50, "Temu", None, "Personal water filter straw removes 99.9% bacteria from outdoor water sources.", "survival", "Filters 1,500 liters. Removes 99.9% bacteria. 0.1-micron membrane. 2 oz weight."),
-            ("Campfire Grill Grate — Folding Steel", "Cooking", 29.99, 44.99, 9.80, "Alibaba", None, "Folding steel grill grate fits over campfires and fire pits.", "camp_stove", "17x11 inch cooking surface. Folding legs. Chrome-plated steel. 2.2 lbs."),
-            ("Waterproof Trekking Gaiters — Pair", "Hiking", 24.99, 36.99, 7.50, "Temu", None, "Breathable gaiters keep mud, snow, and debris out of boots on trails.", "hiking", "600D nylon. Waterproof PU coating. Adjustable top strap. One size fits most."),
-            ("Solar Camp Shower Bag — 5 Gallon", "Camping", 19.99, 29.99, 5.20, "Temu", "Best Value", "Solar-heated PVC shower bag warms water in 3 hours of direct sun.", "camping", "5-gallon capacity. Solar heating panel. On/off valve. Hang rope included."),
-        ]
-    },
+    }
 }
-
 
 def build_product(idx, tpl, site_folder):
     name, cat, price, orig, cost, source, badge, desc, img_key, details = tpl
@@ -309,9 +430,8 @@ def build_product(idx, tpl, site_folder):
         "imageKey": img_key,
         "sku": f"SKU-{idx:04d}",
         "inStock": True,
-        "shippingDays": "7-14 business days",
+        "shippingDays": "7-21 business days to SE/NO/UK/EU",
     }
-
 
 def main():
     for folder, data in STORES.items():
@@ -323,12 +443,13 @@ def main():
             "about": data["about"],
             "policies": POLICIES,
             "products": [build_product(i + 1, p, folder) for i, p in enumerate(data["products"])],
+            "launchReady": True,
         }
         path = os.path.join(ROOT, folder, "products.json")
         with open(path, "w") as f:
             json.dump(out, f, indent=2)
         print(f"Wrote {len(out['products'])} products to {folder}")
-
+    print("Done. Now run fetch_product_images.py (or use Unsplash fallbacks). Update admin and root index.")
 
 if __name__ == "__main__":
     main()

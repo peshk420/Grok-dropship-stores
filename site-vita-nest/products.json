@@ -1,0 +1,1351 @@
+{
+  "store": {
+    "name": "Vita Nest",
+    "tagline": "Thoughtful Living for Pets & Gardens",
+    "logoHtml": "Vita <span>Nest</span>",
+    "description": "Quality pet comfort, garden tools, patio living and eco home accessories. Sourced from trusted suppliers on Alibaba, Temu and wholesale marketplaces for customers in Sweden, Norway, UK and the EU.",
+    "email": "care@vitanest.com",
+    "phone": "+47 22 123 456 (NO support)",
+    "slug": "vita-nest",
+    "currency": "EUR",
+    "pricesIncludeVat": true,
+    "vatRatePct": 25,
+    "legalName": "[YOUR COMPANY NAME] AS",
+    "orgNumber": "[NO Org 9XXXXXX]",
+    "vatNumber": "[VAT e.g. NO999999999MVA]",
+    "registeredAddress": "[Registered address, Oslo, Norway]"
+  },
+  "theme": {
+    "primary": "#3a5f3a",
+    "primaryDark": "#2a472a",
+    "accent": "#d4a373"
+  },
+  "hero": {
+    "title": "Happy Homes, Happy Pets & Gardens",
+    "subtitle": "Comfortable pet products, smart garden tools and beautiful patio accessories that make life outdoors and with animals better.",
+    "badges": [
+      "Free shipping over \u20ac45",
+      "30-day returns",
+      "Full statutory rights for EU/UK/NO/SE"
+    ]
+  },
+  "trust": [
+    {
+      "icon": "\ud83d\udc3e",
+      "text": "Pet Safe"
+    },
+    {
+      "icon": "\ud83c\udf31",
+      "text": "Garden Ready"
+    },
+    {
+      "icon": "\ud83d\ude9a",
+      "text": "7\u201321 Day Delivery"
+    },
+    {
+      "icon": "\ud83c\udf0d",
+      "text": "SE/NO/UK/EU"
+    }
+  ],
+  "about": {
+    "title": "Why Vita Nest?",
+    "paragraphs": [
+      "We curate thoughtful, well-made products for the creatures and plants we love.",
+      "Practical eco-minded items at fair prices from verified suppliers."
+    ],
+    "features": [
+      {
+        "icon": "\ud83d\udc15",
+        "text": "Pet comfort"
+      },
+      {
+        "icon": "\ud83c\udf3f",
+        "text": "Garden tools"
+      },
+      {
+        "icon": "\ud83e\udeb4",
+        "text": "Patio living"
+      },
+      {
+        "icon": "\u267b\ufe0f",
+        "text": "Eco options"
+      }
+    ]
+  },
+  "policies": {
+    "returns": {
+      "title": "Returns, Refunds & Right of Withdrawal",
+      "summary": "We offer a generous returns policy. EU, Swedish, Norwegian and UK customers have statutory 14-day cooling-off (right of withdrawal) rights under distance selling laws in addition to our policy. Full details and country-specific information below.",
+      "sections": [
+        {
+          "heading": "Our Store Return Policy (Voluntary)",
+          "text": "Most unused items in original condition and packaging may be returned within 30 days of delivery for a refund (excluding shipping costs unless item is faulty). Contact us first. No restocking fee for standard returns."
+        },
+        {
+          "heading": "Statutory Right of Withdrawal \u2014 EU & Sweden (14 Days)",
+          "text": "Under the EU Consumer Rights Directive and Swedish Distansavtalslagen (Distance and Off-Premises Contracts Act), you have the right to withdraw from your purchase within 14 calendar days of receiving the goods without giving any reason. The period begins the day after delivery. You must notify us clearly (email is sufficient) within the 14 days and return the goods within another 14 days. We will refund the purchase price plus standard delivery cost paid. You pay the direct cost of returning the goods unless the item is faulty or we sent the wrong item. Sealed hygiene/personal care items (e.g. certain grooming tools once opened) and custom/personalized items are exempt once seal broken or personalization applied."
+        },
+        {
+          "heading": "Statutory Right of Withdrawal \u2014 Norway (EEA)",
+          "text": "Norway applies equivalent rules via the EEA Agreement (Angrerettloven). 14 calendar days from receipt to cancel without reason. Same refund rules as EU/Sweden: full refund of goods + standard shipping, you pay return shipping. Notify us within 14 days."
+        },
+        {
+          "heading": "Statutory Right of Withdrawal \u2014 United Kingdom",
+          "text": "Under the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 you have 14 calendar days from the day after delivery to cancel a distance contract without reason. Notify us and return goods within 14 days of notification. We refund the price of the goods and the cost of standard delivery. You are responsible for the cost of return unless the goods are faulty or misdescribed. Exceptions for sealed goods for health/hygiene reasons once unsealed."
+        },
+        {
+          "heading": "EU Online Withdrawal Button (Mandatory from 19 June 2026)",
+          "text": "For all EU customers we provide a clearly visible 'Withdraw from this purchase' button/link on order confirmation pages and in your account area (simulated here). Clicking it starts the statutory withdrawal process. We will confirm receipt and provide return instructions immediately."
+        },
+        {
+          "heading": "Faulty Goods & Legal Guarantee (Reklamation / Statutory Warranty)",
+          "text": "Separately from the 14-day withdrawal, under Swedish/EU Sale of Goods rules (Konsumentk\u00f6plagen) and equivalent in Norway/UK, you have rights for up to 3 years (or 2 years UK minimum in many cases) if goods are faulty, not as described, or not fit for purpose. Contact us with photos and order number. We will offer repair, replacement, price reduction or refund as required by law. This right cannot be limited by our returns window."
+        },
+        {
+          "heading": "How to Return or Withdraw",
+          "text": "Email the store support address with your order ID, reason (optional for withdrawal), and photos if damaged. We reply within 2 business days with return address (EU/UK warehouse partners) and RMA if needed. Clearly label package with order ID. Track the return. Refunds processed within 14 days of us receiving returned goods (or proof of posting for withdrawals). Original payment method used."
+        },
+        {
+          "heading": "Exceptions & Important Notes",
+          "text": "Opened personal hygiene items (e.g. certain brushes, masks once used), perishable goods, or items made to your specification cannot be returned once used/sealed broken. Downloadable digital items (if any) have different rules. We may deduct reasonable value loss if goods are handled beyond normal inspection."
+        },
+        {
+          "heading": "Delivery Times & Shipping (Estimates Only)",
+          "text": "Orders fulfilled via direct supplier shipping from Asia/EU/US warehouses. Typical 7-21 business days. Not guaranteed. Tracking provided where available. Delays can occur; we are not liable for carrier delays beyond reasonable control. Free shipping thresholds shown per product."
+        }
+      ]
+    },
+    "shipping": {
+      "title": "Shipping & Delivery Policy",
+      "summary": "Direct from verified suppliers in our network (Alibaba/Temu/Shein/eBay wholesale/Fyndiq-style partners). Delivery estimates 7\u201321 business days to Sweden, Norway, UK and EU. Tracking provided on most orders.",
+      "sections": [
+        {
+          "heading": "Processing",
+          "text": "We forward your order to the supplier within 1-3 business days. You receive confirmation email with expected ship date."
+        },
+        {
+          "heading": "Delivery Estimates",
+          "text": "Standard: 7-14 business days (EU/UK warehouse stock). International supplier direct: 10-21 business days. Peak seasons (summer, holidays) may add 3-7 days. These are estimates, not guarantees."
+        },
+        {
+          "heading": "Costs",
+          "text": "Shown at checkout. Many items qualify for free standard shipping over threshold. Customs/VAT: For non-EU origin goods entering EU/UK/NO/SE you may be liable for import VAT/duties (we display estimated where possible; actual handled by carrier). Prices shown include Swedish/EU VAT where applicable for EU stores."
+        },
+        {
+          "heading": "Lost/Damaged",
+          "text": "If package lost (no tracking update 15+ days) or arrives damaged, contact us within 48h with photos. We will work with supplier/carrier for replacement or refund at no extra cost to you for faulty cases."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service & Legal Disclosures",
+      "summary": "We are online retailers operating a dropshipping model. Products are sourced from third-party verified suppliers and shipped directly. This is a demo/local development server only.",
+      "sections": [
+        {
+          "heading": "Business Model & Transparency",
+          "text": "We source products from global suppliers (Alibaba, Temu, eBay wholesale partners, similar platforms serving Fyndiq/Shein-style marketplaces). We do not hold inventory. Product appearance, packaging and minor specs may vary slightly from photos due to batch differences. We clearly disclose this."
+        },
+        {
+          "heading": "Prices & Currency",
+          "text": "Prices in EUR (or local equivalent shown). Reasonable retail pricing with healthy but fair margins after supplier cost, shipping, returns, and platform fees. We may adjust prices. Errors may lead to order cancellation with full refund."
+        },
+        {
+          "heading": "No Health/Medical Claims",
+          "text": "Products are sold for general consumer use. No claims that items diagnose, treat, cure or prevent disease. Cooling products are for general comfort only. Always follow safety instructions."
+        },
+        {
+          "heading": "Limitation of Liability & Governing Law",
+          "text": "Liability limited to the price paid for the specific item(s). We are not responsible for indirect damages or delays by third parties. For EU customers, mandatory consumer protections apply regardless. Disputes: first contact support. Swedish law applies for Lumina (SE), with EU consumer protections; UK law for Apex UK sales; Norwegian for relevant."
+        },
+        {
+          "heading": "Company Information (Demo)",
+          "text": "These are demonstration stores. In a real deployment each would display: full legal company name, registered address, organization number, VAT ID (e.g. SE/NO/GB/IE), and contact email. Always verify before real purchases. This local server is for testing only."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "summary": "We collect minimal data needed to fulfill orders and reply to you. We do not sell your data. GDPR, UK GDPR, and Norwegian privacy rules respected.",
+      "sections": [
+        {
+          "heading": "Data Collected",
+          "text": "Name, email, phone (optional), full shipping address, order details, IP for fraud. Payment handled by third-party processors (we never see full card details)."
+        },
+        {
+          "heading": "Use & Sharing",
+          "text": "To process orders, communicate, improve site, comply with tax/consumer law (records kept 3-7 years). Shared only with fulfillment partners, carriers, and authorities as legally required. No sale of personal data."
+        },
+        {
+          "heading": "Your Rights",
+          "text": "Access, rectification, erasure, restriction, portability, objection, and withdrawal of consent. Email the store address. We respond within 30 days (or 1 month). You may complain to your local authority: Datainspektionen/IMY (SE), Datatilsynet (NO), ICO (UK), or national DPA in your EU country."
+        },
+        {
+          "heading": "Cookies & Marketing",
+          "text": "Essential cookies only for cart/function. No pre-ticked marketing. Every newsletter has instant unsubscribe. We respect Do Not Track where applicable."
+        },
+        {
+          "heading": "Data Retention",
+          "text": "Orders kept for tax, warranty and legal compliance (minimum 3 years, up to 7 for some records)."
+        }
+      ]
+    }
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Orthopedic Memory Foam Pet Bed \u2014 Large",
+      "category": "Pet",
+      "price": 34.99,
+      "originalPrice": 49.99,
+      "cost": 10.5,
+      "source": "Alibaba",
+      "badge": "Best Seller",
+      "description": "Supportive washable bed for dogs and large cats.",
+      "details": "Extra thick foam. Removable cover. Water resistant. L 90x65cm.",
+      "image": "images/1.jpg",
+      "images": [
+        "images/1.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0001",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 2,
+      "name": "Self-Cooling Gel Pet Mat \u2014 Pressure Activated",
+      "category": "Pet",
+      "price": 19.99,
+      "originalPrice": 29.99,
+      "cost": 5.8,
+      "source": "Temu",
+      "badge": "Trending",
+      "description": "No-freeze cooling mat that recharges at room temp.",
+      "details": "3 sizes. Non-toxic gel. Works indoors/out. Washable cover.",
+      "image": "images/2.jpg",
+      "images": [
+        "images/2.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0002",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 3,
+      "name": "Dog Cooling Vest \u2014 Evaporative",
+      "category": "Pet",
+      "price": 24.99,
+      "originalPrice": 36.99,
+      "cost": 7.2,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Soak, wring, wear \u2014 hours of cooling for hot days.",
+      "details": "Mesh + polymer. Reflective. XS\u2013XXL. Machine wash.",
+      "image": "images/3.jpg",
+      "images": [
+        "images/3.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0003",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 4,
+      "name": "Slow Feeder Dog Bowl \u2014 Anti Bloat",
+      "category": "Pet",
+      "price": 12.99,
+      "originalPrice": 18.99,
+      "cost": 3.4,
+      "source": "Temu",
+      "badge": null,
+      "description": "Maze design slows eating for digestion and fun.",
+      "details": "BPA free. Non-slip. 2 cup capacity. Dishwasher safe.",
+      "image": "images/4.jpg",
+      "images": [
+        "images/4.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0004",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 5,
+      "name": "Automatic Pet Water Fountain \u2014 2.5L",
+      "category": "Pet",
+      "price": 27.99,
+      "originalPrice": 39.99,
+      "cost": 8.4,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Circulating filtered fountain with ultra quiet pump.",
+      "details": "Triple filter. 3 flow modes. Easy clean. 2.5L.",
+      "image": "images/5.jpg",
+      "images": [
+        "images/5.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0005",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 6,
+      "name": "Portable Pet Water Bottle with Bowl",
+      "category": "Pet",
+      "price": 11.99,
+      "originalPrice": 17.99,
+      "cost": 3.1,
+      "source": "Temu",
+      "badge": null,
+      "description": "One hand squeeze bottle with fold out drinking tray.",
+      "details": "400ml. Leak lock. Carabiner. Dishwasher safe.",
+      "image": "images/6.jpg",
+      "images": [
+        "images/6.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0006",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 7,
+      "name": "Elevated Mesh Pet Bed \u2014 Outdoor",
+      "category": "Pet",
+      "price": 29.99,
+      "originalPrice": 44.99,
+      "cost": 9.0,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Raised breathable cot keeps pets off hot/cold ground.",
+      "details": "Holds 50kg. Easy assembly. 75x55cm. No tools.",
+      "image": "images/7.jpg",
+      "images": [
+        "images/7.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0007",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 8,
+      "name": "Pet Grooming Gloves \u2014 Deshedding",
+      "category": "Pet",
+      "price": 9.99,
+      "originalPrice": 14.99,
+      "cost": 2.5,
+      "source": "Temu",
+      "badge": null,
+      "description": "Silicone tips gently remove loose fur while petting.",
+      "details": "One size. Wet or dry. Machine washable pair.",
+      "image": "images/8.jpg",
+      "images": [
+        "images/8.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0008",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 9,
+      "name": "Cat Window Perch with Suction Cups",
+      "category": "Pet",
+      "price": 22.99,
+      "originalPrice": 33.99,
+      "cost": 6.7,
+      "source": "Alibaba",
+      "badge": "New",
+      "description": "Strong suction window hammock for cats with removable pad.",
+      "details": "Holds 15kg. 45x35cm. Machine wash cover.",
+      "image": "images/9.jpg",
+      "images": [
+        "images/9.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0009",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 10,
+      "name": "Pet Hair Remover Roller \u2014 Reusable",
+      "category": "Pet",
+      "price": 8.99,
+      "originalPrice": 12.99,
+      "cost": 2.2,
+      "source": "Temu",
+      "badge": null,
+      "description": "Self-cleaning gel roller for furniture and clothes.",
+      "details": "No refills. Travel size. Wash under water.",
+      "image": "images/10.jpg",
+      "images": [
+        "images/10.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0010",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 11,
+      "name": "Dog Life Jacket \u2014 Reflective",
+      "category": "Pet",
+      "price": 18.99,
+      "originalPrice": 27.99,
+      "cost": 5.4,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Adjustable safety vest with rescue handle.",
+      "details": "XS\u2013XL. Bright colors. Strong grab handle.",
+      "image": "images/11.jpg",
+      "images": [
+        "images/11.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0011",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 12,
+      "name": "Cat Scratching Post \u2014 Sisal with Toy",
+      "category": "Pet",
+      "price": 16.99,
+      "originalPrice": 24.99,
+      "cost": 4.8,
+      "source": "Temu",
+      "badge": null,
+      "description": "Tall sisal post with dangling toy and base.",
+      "details": "55cm. Stable base. Natural sisal. Replaceable toy.",
+      "image": "images/12.jpg",
+      "images": [
+        "images/12.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0012",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 13,
+      "name": "Pet Travel Carrier \u2014 Soft Sided",
+      "category": "Pet",
+      "price": 32.99,
+      "originalPrice": 47.99,
+      "cost": 9.8,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Airline approved soft carrier with mesh panels.",
+      "details": "42x27x25cm. Shoulder strap. Fits under seat many airlines.",
+      "image": "images/13.jpg",
+      "images": [
+        "images/13.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0013",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 14,
+      "name": "Collapsible Silicone Pet Bowl \u2014 2 Pack",
+      "category": "Pet",
+      "price": 9.99,
+      "originalPrice": 14.99,
+      "cost": 2.4,
+      "source": "Temu",
+      "badge": null,
+      "description": "Fold flat travel bowls with carabiner.",
+      "details": "500ml each. Dishwasher. Food grade silicone.",
+      "image": "images/14.jpg",
+      "images": [
+        "images/14.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0014",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 15,
+      "name": "Dog Paw Balm & Nose Butter",
+      "category": "Pet",
+      "price": 11.99,
+      "originalPrice": 17.99,
+      "cost": 3.2,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Natural wax balm for dry paws and noses.",
+      "details": "50ml tin. Beeswax + oils. Safe if licked.",
+      "image": "images/15.jpg",
+      "images": [
+        "images/15.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0015",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 16,
+      "name": "Self Watering Plant Pots \u2014 3 Pack",
+      "category": "Garden",
+      "price": 19.99,
+      "originalPrice": 29.99,
+      "cost": 5.7,
+      "source": "Temu",
+      "badge": "Trending",
+      "description": "Indoor/outdoor pots with built-in water reservoir.",
+      "details": "3 sizes. Terracotta look. 1-2 week water reserve.",
+      "image": "images/16.jpg",
+      "images": [
+        "images/16.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0016",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 17,
+      "name": "Solar Garden Lights \u2014 12 Pack Stake",
+      "category": "Garden",
+      "price": 17.99,
+      "originalPrice": 26.99,
+      "cost": 5.1,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Warm white pathway lights. Auto on at dusk.",
+      "details": "8-10h runtime. Easy push in. Weatherproof.",
+      "image": "images/17.jpg",
+      "images": [
+        "images/17.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0017",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 18,
+      "name": "Garden Tool Set \u2014 5 Piece with Bag",
+      "category": "Garden",
+      "price": 24.99,
+      "originalPrice": 36.99,
+      "cost": 7.3,
+      "source": "Temu",
+      "badge": null,
+      "description": "Stainless trowel, fork, weeder, rake + pruner.",
+      "details": "Ergonomic. Canvas carry bag. Rust resistant.",
+      "image": "images/18.jpg",
+      "images": [
+        "images/18.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0018",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 19,
+      "name": "Outdoor String Lights \u2014 15m Connectable",
+      "category": "Garden",
+      "price": 21.99,
+      "originalPrice": 31.99,
+      "cost": 6.4,
+      "source": "Alibaba",
+      "badge": "Hot",
+      "description": "Warm LED bistro lights for patio and garden.",
+      "details": "G40 bulbs. Connect up to 5 sets. IP65. Timer.",
+      "image": "images/19.jpg",
+      "images": [
+        "images/19.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0019",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 20,
+      "name": "Folding Patio Chair \u2014 2 Pack",
+      "category": "Garden",
+      "price": 34.99,
+      "originalPrice": 49.99,
+      "cost": 10.2,
+      "source": "Temu",
+      "badge": null,
+      "description": "Lightweight stackable chairs for balcony and garden.",
+      "details": "Supports 110kg each. Textilene. Fold flat.",
+      "image": "images/20.jpg",
+      "images": [
+        "images/20.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0020",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 21,
+      "name": "Plant Stand \u2014 3 Tier Corner",
+      "category": "Garden",
+      "price": 18.99,
+      "originalPrice": 27.99,
+      "cost": 5.4,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Bamboo or metal corner plant display shelf.",
+      "details": "Holds 12+ pots. Drainage tray. Indoor/outdoor.",
+      "image": "images/21.jpg",
+      "images": [
+        "images/21.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0021",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 22,
+      "name": "Watering Can \u2014 5L with Rose",
+      "category": "Garden",
+      "price": 14.99,
+      "originalPrice": 21.99,
+      "cost": 4.1,
+      "source": "Temu",
+      "badge": null,
+      "description": "Galvanized or plastic long spout can.",
+      "details": "5 liter. Removable rose. Comfort grip.",
+      "image": "images/22.jpg",
+      "images": [
+        "images/22.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0022",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 23,
+      "name": "Raised Garden Bed Kit \u2014 120x60cm",
+      "category": "Garden",
+      "price": 39.99,
+      "originalPrice": 59.99,
+      "cost": 12.0,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Modular wood or metal raised bed panels.",
+      "details": "Easy assembly. Liner included. Good drainage.",
+      "image": "images/23.jpg",
+      "images": [
+        "images/23.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0023",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 24,
+      "name": "Outdoor Cushion Set \u2014 4 Piece",
+      "category": "Garden",
+      "price": 26.99,
+      "originalPrice": 39.99,
+      "cost": 7.9,
+      "source": "Temu",
+      "badge": null,
+      "description": "Weather resistant seat and back cushions.",
+      "details": "Fits most chairs. Ties. Water repellent cover.",
+      "image": "images/24.jpg",
+      "images": [
+        "images/24.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0024",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 25,
+      "name": "Bird Feeder \u2014 Squirrel Proof",
+      "category": "Garden",
+      "price": 15.99,
+      "originalPrice": 23.99,
+      "cost": 4.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Tube or platform feeder with weight sensitive baffle.",
+      "details": "Holds 1L seed. Easy fill. Metal ports.",
+      "image": "images/25.jpg",
+      "images": [
+        "images/25.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0025",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 26,
+      "name": "Compost Bin \u2014 300L Tumbler",
+      "category": "Garden",
+      "price": 49.99,
+      "originalPrice": 74.99,
+      "cost": 15.5,
+      "source": "Temu",
+      "badge": null,
+      "description": "Dual chamber rotating compost bin.",
+      "details": "Easy turn. Aerates fast. 2 doors. 300L total.",
+      "image": "images/26.jpg",
+      "images": [
+        "images/26.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0026",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 27,
+      "name": "Garden Kneeler & Seat with Tool Pouch",
+      "category": "Garden",
+      "price": 22.99,
+      "originalPrice": 33.99,
+      "cost": 6.7,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Folding kneeler that flips to bench.",
+      "details": "Thick pad. Tool pockets. Lightweight steel.",
+      "image": "images/27.jpg",
+      "images": [
+        "images/27.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0027",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 28,
+      "name": "Hanging Planters \u2014 Set of 3 Macrame",
+      "category": "Garden",
+      "price": 16.99,
+      "originalPrice": 24.99,
+      "cost": 4.8,
+      "source": "Temu",
+      "badge": "Eco",
+      "description": "Boho cotton rope planters for indoor/outdoor.",
+      "details": "3 sizes. Strong hooks. Fits 15-25cm pots.",
+      "image": "images/28.jpg",
+      "images": [
+        "images/28.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0028",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 29,
+      "name": "Patio Umbrella \u2014 2.5m with Tilt",
+      "category": "Garden",
+      "price": 34.99,
+      "originalPrice": 49.99,
+      "cost": 10.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "UV50+ market umbrella with crank and tilt.",
+      "details": "Polyester. 8 ribs. Base not included (sold separate).",
+      "image": "images/29.jpg",
+      "images": [
+        "images/29.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0029",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 30,
+      "name": "Seed Starting Trays \u2014 5 Pack with Dome",
+      "category": "Garden",
+      "price": 12.99,
+      "originalPrice": 18.99,
+      "cost": 3.5,
+      "source": "Temu",
+      "badge": null,
+      "description": "Cell trays with humidity dome for seedlings.",
+      "details": "60 cells total. Reusable. Drainage holes.",
+      "image": "images/30.jpg",
+      "images": [
+        "images/30.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0030",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 31,
+      "name": "Outdoor Solar Lanterns \u2014 4 Pack",
+      "category": "Garden",
+      "price": 19.99,
+      "originalPrice": 29.99,
+      "cost": 5.7,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Flameless hanging or table lanterns.",
+      "details": "Warm light. 6-8h. Weatherproof. Metal look.",
+      "image": "images/31.jpg",
+      "images": [
+        "images/31.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0031",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 32,
+      "name": "Weeding Tool Set \u2014 3 Hand Tools",
+      "category": "Garden",
+      "price": 13.99,
+      "originalPrice": 19.99,
+      "cost": 3.7,
+      "source": "Temu",
+      "badge": null,
+      "description": "Ergonomic stand-up and hand weeders.",
+      "details": "Stainless. Long reach option. Comfort grip.",
+      "image": "images/32.jpg",
+      "images": [
+        "images/32.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0032",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 33,
+      "name": "Pet Proof Garden Fence \u2014 5m Roll",
+      "category": "Garden",
+      "price": 14.99,
+      "originalPrice": 21.99,
+      "cost": 4.1,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Low decorative fence to protect flower beds.",
+      "details": "Plastic or metal. 30cm high. Easy stake in.",
+      "image": "images/33.jpg",
+      "images": [
+        "images/33.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0033",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 34,
+      "name": "Rain Barrel Diverter Kit",
+      "category": "Garden",
+      "price": 17.99,
+      "originalPrice": 25.99,
+      "cost": 4.9,
+      "source": "Temu",
+      "badge": null,
+      "description": "Downspout diverter for collecting rainwater.",
+      "details": "Fits standard gutters. Includes hose connector.",
+      "image": "images/34.jpg",
+      "images": [
+        "images/34.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0034",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 35,
+      "name": "Outdoor Throw Blanket \u2014 Waterproof Back",
+      "category": "Garden",
+      "price": 18.99,
+      "originalPrice": 27.99,
+      "cost": 5.3,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Soft picnic blanket with water resistant bottom.",
+      "details": "150x200cm. Machine wash. Sand/dirt shakes off.",
+      "image": "images/35.jpg",
+      "images": [
+        "images/35.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0035",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 36,
+      "name": "BBQ Tool Set \u2014 5 Piece Stainless",
+      "category": "Garden",
+      "price": 21.99,
+      "originalPrice": 31.99,
+      "cost": 6.4,
+      "source": "Temu",
+      "badge": null,
+      "description": "Tongs, spatula, fork, brush and holder.",
+      "details": "Heat resistant handles. Hanging case.",
+      "image": "images/36.jpg",
+      "images": [
+        "images/36.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0036",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 37,
+      "name": "Herb Scissors \u2014 5 Blade",
+      "category": "Garden",
+      "price": 8.99,
+      "originalPrice": 12.99,
+      "cost": 2.2,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Multi blade herb scissors with cleaning comb.",
+      "details": "Stainless. Comfort grip. Dishwasher safe.",
+      "image": "images/37.jpg",
+      "images": [
+        "images/37.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0037",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 38,
+      "name": "Folding Picnic Table \u2014 Compact",
+      "category": "Garden",
+      "price": 27.99,
+      "originalPrice": 41.99,
+      "cost": 8.2,
+      "source": "Temu",
+      "badge": null,
+      "description": "Portable table seats 4. Folds into suitcase.",
+      "details": "Aluminum top. 85x65cm. 4 seats. 4.5kg.",
+      "image": "images/38.jpg",
+      "images": [
+        "images/38.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0038",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 39,
+      "name": "Cat Grass Growing Kit \u2014 3 Pack",
+      "category": "Pet",
+      "price": 9.99,
+      "originalPrice": 14.99,
+      "cost": 2.5,
+      "source": "Temu",
+      "badge": null,
+      "description": "Easy grow wheatgrass for indoor cats.",
+      "details": "3 trays + seeds. Non-GMO. Grows in 5-7 days.",
+      "image": "images/39.jpg",
+      "images": [
+        "images/39.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0039",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 40,
+      "name": "Dog Training Clicker + Treat Pouch",
+      "category": "Pet",
+      "price": 10.99,
+      "originalPrice": 15.99,
+      "cost": 2.8,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Professional clicker and waist treat bag.",
+      "details": "Adjustable. Hands free. Loud clicker.",
+      "image": "images/40.jpg",
+      "images": [
+        "images/40.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0040",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 41,
+      "name": "Pet Steps for Sofa or Car \u2014 3 Tier",
+      "category": "Pet",
+      "price": 23.99,
+      "originalPrice": 34.99,
+      "cost": 7.0,
+      "source": "Temu",
+      "badge": null,
+      "description": "Foldable ramp/steps for older pets.",
+      "details": "Holds 40kg. Non-slip. Compact storage.",
+      "image": "images/41.jpg",
+      "images": [
+        "images/41.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0041",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 42,
+      "name": "Garden Pruning Shears \u2014 Bypass",
+      "category": "Garden",
+      "price": 11.99,
+      "originalPrice": 17.99,
+      "cost": 3.2,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Sharp bypass pruners with safety lock.",
+      "details": "SK5 blade. Ergonomic. 20mm cut capacity.",
+      "image": "images/42.jpg",
+      "images": [
+        "images/42.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0042",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 43,
+      "name": "Outdoor Solar Spotlight \u2014 4 Pack",
+      "category": "Garden",
+      "price": 16.99,
+      "originalPrice": 24.99,
+      "cost": 4.7,
+      "source": "Temu",
+      "badge": null,
+      "description": "Adjustable ground or wall solar spotlights.",
+      "details": "2 brightness. 8h runtime. 4 pack.",
+      "image": "images/43.jpg",
+      "images": [
+        "images/43.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0043",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 44,
+      "name": "Natural Loofah Sponges \u2014 6 Pack",
+      "category": "Eco Home",
+      "price": 9.99,
+      "originalPrice": 14.99,
+      "cost": 2.4,
+      "source": "Alibaba",
+      "badge": "Eco",
+      "description": "Biodegradable kitchen and bath sponges.",
+      "details": "Grown loofah. Compostable. 6 assorted sizes.",
+      "image": "images/44.jpg",
+      "images": [
+        "images/44.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0044",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 45,
+      "name": "Bamboo Toothbrush Set \u2014 8 Pack",
+      "category": "Eco Home",
+      "price": 10.99,
+      "originalPrice": 15.99,
+      "cost": 2.7,
+      "source": "Temu",
+      "badge": null,
+      "description": "Soft bristle bamboo brushes for family.",
+      "details": "8 brushes. Charcoal or plain. Biodegradable.",
+      "image": "images/45.jpg",
+      "images": [
+        "images/45.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0045",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 46,
+      "name": "Reusable Produce Bags \u2014 9 Piece Mesh",
+      "category": "Eco Home",
+      "price": 12.99,
+      "originalPrice": 18.99,
+      "cost": 3.4,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Washable mesh bags for fruit and veg shopping.",
+      "details": "3 sizes. Tare weight tags. Machine wash.",
+      "image": "images/46.jpg",
+      "images": [
+        "images/46.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0046",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 47,
+      "name": "Compostable Kitchen Trash Bags \u2014 50 Pack",
+      "category": "Eco Home",
+      "price": 11.99,
+      "originalPrice": 17.99,
+      "cost": 3.1,
+      "source": "Temu",
+      "badge": null,
+      "description": "Strong plant based bin liners.",
+      "details": "Fits 10-15L. ASTM D6400. Leak resistant.",
+      "image": "images/47.jpg",
+      "images": [
+        "images/47.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0047",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 48,
+      "name": "Indoor Herb Garden Kit \u2014 Self Watering",
+      "category": "Garden",
+      "price": 19.99,
+      "originalPrice": 29.99,
+      "cost": 5.8,
+      "source": "Alibaba",
+      "badge": "Trending",
+      "description": "3 pod windowsill planter with seeds.",
+      "details": "Basil, parsley, mint. LED grow light option.",
+      "image": "images/48.jpg",
+      "images": [
+        "images/48.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0048",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 49,
+      "name": "Pet Waste Bag Holder + 120 Bags",
+      "category": "Pet",
+      "price": 8.99,
+      "originalPrice": 12.99,
+      "cost": 2.1,
+      "source": "Temu",
+      "badge": null,
+      "description": "Leash dispenser with 8 rolls of bags.",
+      "details": "Fits standard leashes. Includes 120 bags.",
+      "image": "images/49.jpg",
+      "images": [
+        "images/49.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0049",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 50,
+      "name": "Garden Hose Nozzle Set \u2014 8 Patterns",
+      "category": "Garden",
+      "price": 9.99,
+      "originalPrice": 14.99,
+      "cost": 2.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Heavy duty metal pistol grip sprayer.",
+      "details": "8 spray patterns. Leak free. Comfort grip.",
+      "image": "images/50.jpg",
+      "images": [
+        "images/50.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0050",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 51,
+      "name": "Outdoor Planter Box \u2014 Rectangular Large",
+      "category": "Garden",
+      "price": 29.99,
+      "originalPrice": 44.99,
+      "cost": 8.9,
+      "source": "Temu",
+      "badge": null,
+      "description": "Weatherproof resin or wood look planter.",
+      "details": "80x30x30cm. Drainage plugs. Lightweight.",
+      "image": "images/51.jpg",
+      "images": [
+        "images/51.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0051",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 52,
+      "name": "Dog Dental Chew Toy Set",
+      "category": "Pet",
+      "price": 13.99,
+      "originalPrice": 19.99,
+      "cost": 3.7,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Dental cleaning toys with treat pockets.",
+      "details": "3 shapes. Tough rubber. Easy clean.",
+      "image": "images/52.jpg",
+      "images": [
+        "images/52.jpg"
+      ],
+      "imageKey": "pet",
+      "sku": "SKU-0052",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 53,
+      "name": "Solar Bird Bath Fountain Pump",
+      "category": "Garden",
+      "price": 14.99,
+      "originalPrice": 21.99,
+      "cost": 4.1,
+      "source": "Temu",
+      "badge": null,
+      "description": "Floating solar pump for bird baths and small ponds.",
+      "details": "No wiring. 3 fountain heads. Runs in sun.",
+      "image": "images/53.jpg",
+      "images": [
+        "images/53.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0053",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 54,
+      "name": "Eco Laundry Detergent Sheets \u2014 60 Load",
+      "category": "Eco Home",
+      "price": 12.99,
+      "originalPrice": 18.99,
+      "cost": 3.5,
+      "source": "Alibaba",
+      "badge": null,
+      "description": "Plastic free concentrated laundry strips.",
+      "details": "60 loads. Biodegradable. Travel friendly.",
+      "image": "images/54.jpg",
+      "images": [
+        "images/54.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0054",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    },
+    {
+      "id": 55,
+      "name": "Patio Side Table \u2014 Foldable",
+      "category": "Garden",
+      "price": 16.99,
+      "originalPrice": 24.99,
+      "cost": 4.8,
+      "source": "Temu",
+      "badge": null,
+      "description": "Small weather resistant accent table.",
+      "details": "40cm diameter. Folds flat. Strong frame.",
+      "image": "images/55.jpg",
+      "images": [
+        "images/55.jpg"
+      ],
+      "imageKey": "garden",
+      "sku": "SKU-0055",
+      "inStock": true,
+      "shippingDays": "7-21 business days to SE/NO/UK/EU",
+      "imageSource": "AliExpress supplier (edited)"
+    }
+  ],
+  "launchReady": true
+}
